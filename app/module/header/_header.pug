@@ -1,3 +1,116 @@
 mixin header()
 	//block header
+	.head
+		.main-cont
+			.head-top
+				.head-location
+					.drop
+						.drop__icon
+							+icon("arrow-down","icon")
+						.drop__current Санкт-Петербург
+						.drop-container.drop-container--town
+							.drop-container-wrap
+								a(href="#").drop-container__el Москва
+								a(href="#").drop-container__el Смоленск
+								a(href="#").drop-container__el Казань
+								a(href="#").drop-container__el Великий новгород
+				.head-top-nav
+					-
+						var items = [
+							'Доставка',
+							'Акции',
+							'Отзывы',
+							'Кафе',
+							'Вакансии',
+							'Контакты'
+							];
+					each item in items
+						a(href="#").head-top-nav__el #{item}
+				.head-soc
+					.soc-row
+						a(href="#").soc-row__el
+							+icon("soc-instagram","icon")
+						a(href="#").soc-row__el
+							+icon("soc-vk","icon")
+				.login
+					.login-enter Вход в личный кабинет
+					.login-drop
+						.login-drop__head
+							.login-toggle.login-toggle--enter Вход
+							.login-toggle.login-toggle--register Регистрация
+						.login-wrap.login-wrap--enter
+							form(action="#")
+								input(type="text" placeholder="Электр. почта/Телефон" class="input")
+								input(type="text" placeholder="Пароль" class="input")
+								input(type="submit" value="Войти")
+								+checkbox('Запомнить меня')
+							.login-fogot Забыли пароль?
+							.login-soc
+								.login-soc__text Войти с помощью соц. сетей
+								//.login-soc-row
+									a(href="#").login-soc-el
+										+icon("vk--color","icon")
+									a(href="#").login-soc-el
+										+icon("facebook--color","icon")
+			.head-info
+				a(href="#").logo
+					img(src="img/logo.png", alt="")
+				a(href="tel:8 (843) 233 44 33").head-phone 8 (843) 233 44 33
+				.work-time
+					.drop
+						.drop__icon
+							+icon("arrow-down","icon")
+						.drop__current мы работаем с 10 до 24
+						.drop-container.drop-container--town
+							.drop-container-wrap
+								a(href="#").drop-container__el Москва
+								a(href="#").drop-container__el Смоленск
+								a(href="#").drop-container__el Казань
+								a(href="#").drop-container__el Великий новгород
+
+				form(action="").header-search
+					.header-search-wrap
+						.header-search-icon
+							+icon("serch","icon")
+							input(type="text" placeholder="Активный поиск" class="input input-search")
+	.head-main-wrap
+		.main-cont
+			.head-main
+				.head-nav
+					-
+						var items = [
+							'суши',
+							'горячие закуски',
+							'пицца',
+							'сеты',
+							'роллы',
+							'десерты',
+							'блюда wok',
+							'супы',
+							'салаты',
+							'напитки',
+							'соусы'
+							];
+					each item in items
+							if (item === 'роллы')
+								.head-nav__el-wrap
+									a(href="#").head-nav__el
+										+icon("arrow-down","icon")
+										span #{item}
+									.head-sub
+										.head-sub-wrap
+											a(href="#").head-sub__item жаренные роллы
+											a(href="#").head-sub__item острые роллы
+											a(href="#").head-sub__item основные роллы
+											a(href="#").head-sub__item запеченные роллы
+											a(href="#").head-sub__item классические роллы
+							else
+								.head-nav__el-wrap
+									a(href="#").head-nav__el #{item}
+				a(href="#").cart
+					.cart-icon
+						+icon("cart","icon")
+					.cart-info
+						.cart-condition корзина пуста
+						.cart-size 0 товаров
 	//block header end
