@@ -3,6 +3,159 @@ include block_html/_include.pug
 
 +header()
 
-+footer()
+.main-cont
+	.main-slider
+		.slider-wrap
+			.slider-control-simple.slider-control--left
+				+icon("circle-arrow--left","icon")
+			.slider-control-simple.slider-control--right
+				+icon("circle-arrow--right","icon")
+			.slider.slider-item
+				- for (var i=0;i<3;i++)
+					a(href="#").slider__el(style="background-image:url('img/banner.jpg')")
+		.slider-footer
+			.slider-footer__info за заказы можно получать бонусные баллы
+			a(href="#").slider-footer__get узнать подробности
 
+.main-cont
+	//tags
+	.tag
+			-
+				var items = [
+						{"icon":"sushi","name":"суши","class":"tag__el--red"},
+						{"icon":"snack","name":"горячие закуски","class":"tag__el--fiolet"},
+						{"icon":"pizza","name":"пицца","class":"tag__el--purpur"},
+						{"icon":"set","name":"сеты","class":"tag__el--blue"},
+						{"icon":"roll","name":"роллы","class":"tag__el--sky"},
+						{"icon":"cake","name":"десерты","class":"tag__el--green"},
+						{"icon":"wok","name":"блюда wok","class":"tag__el--grass"},
+						{"icon":"supe","name":"супы","class":"tag__el--yellow"},
+						{"icon":"salad","name":"салаты","class":"tag__el--orange"},
+						{"icon":"drink","name":"напитки","class":"tag__el--rose"},
+						{"icon":"sauce","name":"соусы","class":"tag__el--gray"}
+					];
+			each item in items
+				a(href="#" class="tag__el "+item.class)
+					.tag__el-icon
+						+icon(item.icon,"icon")
+					.tag__el-text #{item.name}
+
+
+	//list items
+	.title.title--list
+		span Популярные товары
+		a(href="#").title__more показать все
+
+	.items
+		- for (var i=0;i<12;i++)
+			.item
+				.item-check
+					+icon("checked","icon")
+				a(href="#").item__img(style="background-image:url('img/card-image-1.jpg')")
+					.item-tag
+						.item-tag__el.item-tag__el--purpur
+							+icon("pizza","icon")
+						.item-tag__el.item-tag__el--fire
+							+icon("fire","icon")
+						.item-tag__el.item-tag__el--veg
+							+icon("veg","icon")
+				.item__content
+					a(href="#").item__title Пицца Вегетарианская
+					.item__descr Салями, колбаски охотничьи, грибы опята маринованные, томаты, корнешоны, лук красный...
+					.item__footer
+						.item__price 399р
+						.item__weight 490г
+						.item__get
+							.icr-btn.item__btn купить
+							.elements-icr-block.item__incr.hidden
+								.incr
+									.incr__minus.incr__nav
+										+icon("minus","icon")
+									.incr__val
+										span 1
+										.incr__val-coner
+									.incr__plus.incr__nav
+										+icon("plus","icon")
+
+	//sale
+	.title Акции
+	.sale-list
+		- for (var i=1;i<7;i++)
+			a(href="#").sale-list__el(style="background-image:url('img/sale-block-"+i+".jpg')")
+				.sale-list__el-filter
+				.sale-list__el-title
+					span популярныe блюда с 13:00 до 16:00 по цене всего от 119 рублей
+
+
+	//advant
+	.advant
+		.advant__el
+			.advant__el-icon
+				+icon("like","icon")
+			.advant__el-text Сытные порции
+		.advant__el
+			.advant__el-icon
+				+icon("leaflet","icon")
+			.advant__el-text Только свежие продукты
+		.advant__el
+			.advant__el-icon
+				+icon("car","icon")
+			.advant__el-text Быстрая доставка
+		.advant__el
+			.advant__el-icon
+				+icon("pig","icon")
+			.advant__el-text Доступные цены
+		.advant__el
+			.advant__el-icon
+				+icon("heart","icon")
+			.advant__el-text Готовим с любовью
+
+
+	//review
+	.title.title--list
+		span Отзывы клиентов
+		a(href="#").title__more показать все
+	.review
+		- for (var i=1;i<5;i++)
+			a(href="#").review__el
+				.review__el-img
+					.review__el-img-el(style="background-image:url('img/review-"+i+".jpg')")
+					.review__el-img-el(style="background-image:url('img/review-"+i+".jpg')")
+					.review__el-img-el(style="background-image:url('img/review-"+i+".jpg')")
+				.review__el-content
+					.review__el-title Вероника
+					.review__el-text Очень вкусные роллы!! Нам понравились. И упакованы хорошо. Доставка вовремя. Будем заказывать ещё)
+
+	.add-text
+		.add-text__col
+			.add-text__col-title Впечатляющий ассортимент вкусных блюд
+			p Наше меню включает:
+			ul
+				li классические и оригинальные виды суши с угрем, окунем, икрой тобико, лососем, тунцом, тигровой креветкой, курицей и пр.;
+				li разнообразные классические роллы (рисом внутрь) и урамаки (рисом наружу), в том числе острые, запеченные, горячие;
+				li аппетитные сеты для романтического ужина или вечеринки в большой компании.
+
+			p Помимо блюд японской кухни мы с радостью приготовим для вас экзотические воки с разными начинками, ароматную пиццу, горячие и холодные супы, свежие и сытные салаты, нежные десерты.
+
+			p Чтобы заказать суши и другие кушанья, зайдите в соответствующий раздел нашего меню. Каждый товар сопровождается фотографией, указанием состава ингредиентов, веса порции и стоимости. Кликните по плашке «Добавить в корзину» возле понравившихся суши. Скорректируйте количество порций и введите контактные данные. Наш менеджер свяжется с вами для подтверждения покупки.
+
+		.add-text__col
+			.add-text__col-title Преимущества заказа суши в «Окинаве»
+			ul
+				li Повара начинают готовить блюда только после вашего звонка.
+				li Мы используем только отборные, свежие продукты.
+				li Готовим суши по фирменной рецептуре.
+				li Предлагаем приемлемую стоимость щедрых порций свежих блюд.
+				li Регулярно проводим акции.
+				li Гарантируем доставку с соблюдением всех технологий транспортировки, чтобы вы всегда получали свежую и теплую еду.
+				li Располагаем собственным автопарком из 25 машин, что позволяет максимально оперативно развозить заказы по всему городу.
+				li Покупки на сумму от 600 рублей доставляем за свой счет.
+				li Возможен самовывоз из удобного для вас кафе нашей сети.
+
+			p Мы первыми в Казани открыли службу доставки суши на дом или в офис и остаемся лидерами в этой сфере.
+
+			p
+				strong Всегда рады вашим заказам!
+
++footer()
 include ./block_html/_script.pug

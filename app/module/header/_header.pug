@@ -33,28 +33,64 @@ mixin header()
 						a(href="#").soc-row__el
 							+icon("soc-vk","icon")
 				.login
-					.login-enter Вход в личный кабинет
-					.login-drop
-						.login-drop__head
-							.login-toggle.login-toggle--enter Вход
-							.login-toggle.login-toggle--register Регистрация
-						.login-wrap.login-wrap--enter
-							form(action="#")
-								input(type="text" placeholder="Электр. почта/Телефон" class="input")
-								input(type="text" placeholder="Пароль" class="input")
-								input(type="submit" value="Войти")
-								+checkbox('Запомнить меня')
-							.login-fogot Забыли пароль?
-							.login-soc
-								.login-soc__text Войти с помощью соц. сетей
-								//.login-soc-row
-									a(href="#").login-soc-el
-										+icon("vk--color","icon")
-									a(href="#").login-soc-el
-										+icon("facebook--color","icon")
+					.login-drop-toggle.login-enter Вход в личный кабинет
+					.login-drop-wrap
+						.login-drop
+							.login-drop__head
+								.login-toggle.login-switch.login-toggle--active(data-switch='enter') Вход
+								.login-toggle.login-switch(data-switch='registration') Регистрация
+
+							//enter form
+							.login-wrap.login-wrap--active(data-cont='enter')
+								form(action="#").login-form
+									input(type="text" placeholder="Электр. почта/Телефон" class="input")
+									input(type="text" placeholder="Пароль" class="input")
+									input(type="submit" value="Войти" class="btn--md btn--mark")
+								.login-remember
+									+checkbox('Запомнить меня')
+								.login-fogot.login-switch(data-switch='fogot') Забыли пароль?
+								.login-soc
+									.login-soc__text Войти с помощью соц. сетей
+									.login-soc-row
+										a(href="#").login-soc-el
+											+icon("vk--color","icon")
+										a(href="#").login-soc-el
+											+icon("facebook--color","icon")
+
+							//registration form
+							.login-wrap.login-wrap--registration(data-cont='registration')
+								form(action="#").login-form
+									input(type="text" placeholder="Имя" class="input")
+									input(type="text" placeholder="Телефон" class="input")
+									input(type="text" placeholder="E-mail" class="input")
+									input(type="password" placeholder="Пароль" class="input")
+									input(type="password" placeholder="Повторить пароль" class="input")
+									.login-remember
+										+checkbox('Соглашаюсь с условиями обработки персональных данных')
+									input(type="submit" value="Войти" class="btn--md btn--mark")
+								.login-soc
+									.login-soc__text Зарегистрироваться с помощью соц. сетей
+									.login-soc-row
+										a(href="#").login-soc-el
+											+icon("vk--color","icon")
+										a(href="#").login-soc-el
+											+icon("facebook--color","icon")
+							//registration form
+							.login-wrap.login-wrap--registration(data-cont='fogot')
+								form(action="#").login-form
+									input(type="text" placeholder="Электр. почта" class="input")
+									.login-btn-code.login-switch(data-switch='code') Отправить код
+							.login-wrap.login-wrap--registration(data-cont='code')
+								.login-code-text Вам на e-mail/телефон отправлен код подтверждения
+								form(action="#").login-form
+									input(type="text" placeholder="Введите код" class="input")
+									.login-btn-code Подтвердить
+									.login-btn-recode Выслать повторно
+									.login-btn-back.login-switch(data-switch='fogot') Назад к восстановлению
+
 			.head-info
 				a(href="#").logo
-					img(src="img/logo.png", alt="")
+					img(src="img/logo.svg", alt="")
 				a(href="tel:8 (843) 233 44 33").head-phone 8 (843) 233 44 33
 				.work-time
 					.drop
@@ -107,7 +143,7 @@ mixin header()
 							else
 								.head-nav__el-wrap
 									a(href="#").head-nav__el #{item}
-				a(href="#").cart
+				a(href="#").cart.cart--full
 					.cart-icon
 						+icon("cart","icon")
 					.cart-info

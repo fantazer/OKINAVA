@@ -198,7 +198,9 @@ body
 	margin-bottom: -5px
 	&:hover
 		.drop-container
-			display: block
+			opacity:1
+			left 0
+			transform translateY(0)
 		.drop__current
 			border-bottom 0
 			margin-bottom: 1px
@@ -215,9 +217,12 @@ body
 //.drop__current
 .drop-container
 	position: absolute
-	display: none
 	top 100%
 	z-index 3
+	opacity:0
+	left -9999px
+	transform translateY(-20px)
+	transition opacity .4s, transform .4s
 .drop-container-wrap
 	background: white
 	padding: 20px
@@ -287,7 +292,6 @@ body
 .head-info
 	f()
 	align-items: flex-end
-	margin-bottom: 10px
 //.logo
 .head-phone
 	font-size 30px
@@ -320,9 +324,10 @@ body
 	background: white
 .head-main
 	f()
+	align-items: center
 .head-nav
 	flex(between)
-	width: 85%
+	width: 82%
 .head-nav__el
 	@extend .type--lg
 	padding: 25px 0
@@ -352,9 +357,12 @@ body
 	f()
 	position: relative
 .head-nav__el-wrap
+	position: relative
 	&:hover
 		.head-sub
-			display: block
+			opacity:1
+			left 0
+			transform translateY(0)
 		.icon
 			transform rotate(180deg)
 			fill $red
@@ -365,9 +373,13 @@ body
 //.drop__current
 .head-sub
 	position: absolute
-	display: none
+	left -9999px
+	opacity:0
 	top 100%
 	z-index 3
+	transform translateY(-20px)
+	transition opacity .8s, transform .4s
+	width: 250px
 .head-sub-wrap
 	background: white
 	padding: 25px
@@ -395,11 +407,629 @@ body
 	&:hover
 		color $red
 
-.login-drop
+.login-drop-wrap
 	position: absolute
-	top 100%
+	right: 0
 	background: white
+	z-index 3
+	top 100%
+.login-drop
+	display: none
+	position: relative
+	top 100%
 	padding: 20px
 	border 1px solid $border-color
-	right: 0
-	z-index 3
+	width: 250px
+	&:before
+		content ''
+		position: absolute
+		size 16px
+		border-left 1px solid $border-color
+		border-top 1px solid $border-color
+		transform rotate(45deg)
+		top - 8px
+		left 50%
+		margin-left: -8px
+		background: white
+.login-drop--active
+	opacity:1
+
+.login
+	position: relative
+	padding-bottom: 10px
+	margin-bottom: -10px
+//.login-enter
+.login-enter--active
+	color $red
+	border-bottom 0
+.login-drop__head
+	f()
+	margin-bottom: 20px
+.login-toggle
+	opacity:.6
+	border-bottom 1px dashed $border-color
+	&:nth-child(1)
+		padding-right: 5px
+		margin-right: 5px
+		border-right 1px solid $border-color
+
+.login-toggle--active
+	opacity:1
+	border-bottom 0
+
+.login-wrap
+	.input
+		margin-bottom: 20px
+	input
+		width: 100%
+	opacity:0
+	left -9999px
+	height: 0
+	overflow: hidden
+.login-wrap--active
+	opacity:1
+	left 0
+	height: auto
+	transition opacity .6s
+.login-form
+	margin-bottom: 20px
+.login-remember
+	margin-bottom: 20px
+
+.login-fogot
+	color $red
+	text-decoration: underline
+	text-decoration-color #e5e5e5
+
+.login-soc
+	margin-top: 20px
+	padding-top: 20px
+	border-top 1px solid $border-color
+
+.login-soc__text
+	opacity:.6
+	margin-bottom: 20px
+.login-soc-row
+	f()
+.login-soc-el
+	.icon
+		size 25px
+	&:nth-child(1)
+		margin-right: 10px
+
+.visible
+	opacity: 1
+	transform translateY(0)
+	top 0
+
+.login-btn-code
+	@extend .btn--mark
+	@extend .btn--md
+	width: 100%
+
+.login-btn-recode
+	@extend .btn--md
+	@extend .btn--light
+	width: 100%
+	margin: 20px 0
+
+.login-btn-back
+	@extend .btn--light
+	@extend .btn--md
+	width: 100%
+	padding: 12px
+
+.login-code-text
+	font-size: 11px
+	margin-bottom: 20px
+	line-height: 1.4
+
+.cart--full
+	background: $red
+	color white!important
+	border-radius 30px
+	padding: 5px 20px
+	tr(all)
+	&:hover
+		background: lighten($red,5)
+	.icon
+		fill white
+
+.slider__el
+	bg-full()
+	padding: 12.5% 10%
+
+//for custom navigation
+.slider-control
+	round()
+	flex(mid)
+	tr(all)
+	size 40px
+	background: white
+	position: absolute
+	top 50%
+	margin-top: -20px
+	box-shadow 0px 2px 10px #c5c2c2
+	z-index 10
+	cp()
+	&:hover
+		background: $red
+		.icon
+			fill white
+	.icon
+		size 14px
+
+.slider-control-simple
+	position: absolute
+	top 50%
+	margin-top: -30px
+	z-index 10
+	cp()
+	&:hover
+		.icon
+			opacity:1
+	.icon
+		size 60px
+		opacity:.7
+		fill white
+		tr(all)
+
+.slider-wrap
+	position: relative
+
+.slider-control--left
+	left 10px
+
+.slider-control--right
+	right 10px
+
+.slick-slide
+	&:hover
+		outline none!important
+	&:active
+		outline none!important
+	&:focus
+		outline none!important
+
+.slider-footer
+	flex(mid)
+	padding: 10px
+	border 1px solid $red
+	border-radius 0 0 59px 60px
+	border-top 0px
+	margin-top: -5px
+.slider-footer__info
+	@extend .type--md
+	color $red
+	margin-right: 20px
+.slider-footer__get
+	@extend .btn--md
+	@extend .btn--mark
+
+.main-slider
+	margin-bottom: 30px
+	overflow: hidden
+.tag
+	f()
+	fw()
+	margin-bottom: 40px
+.tag__el
+	flex(mid)
+	br(18px)
+	border 1px solid
+	margin-right: 15px
+	margin-bottom: 15px
+	padding: 10px 20px
+	height: 38px
+	text-decoration: none
+.tag__el-icon
+	.icon
+		size 26px
+		margin-right: 10px
+.tag__el-text
+	@extend .type--lg
+	font-weight: 500
+	margin-top: -3px
+	white-space nowrap
+
+tag($color)
+	border-color $color
+	tr(all)
+	.tag__el-text
+		color $color
+	.icon
+		fill $color
+	&:hover
+		.tag__el-text
+			color white
+		.icon
+			fill white
+		background: $color
+
+.tag__el--red
+	tag($red)
+
+.tag__el--fiolet
+	tag($fiolet)
+
+.tag__el--purpur
+	tag($purpur)
+
+.tag__el--blue
+	tag($blue)
+
+.tag__el--sky
+	tag($sky)
+
+.tag__el--green
+	tag($green)
+
+.tag__el--grass
+	tag($grass)
+
+.tag__el--yellow
+	tag($yellow)
+
+.tag__el--orange
+	tag($orange)
+
+.tag__el--rose
+	tag($rose)
+
+.tag__el--gray
+	tag($gray)
+
+.title
+	@extend .type--xxl
+	font-weight: 700
+	margin-bottom: 25px
+
+.title__more
+	@extend .type--md
+	font-weight: 400
+	text-decoration-color $red
+	display: inline-block
+	margin-left: 20px
+
+.items
+	display: grid
+	grid-gap 30px
+	grid-template-columns repeat(4,1fr)
+	margin-bottom: 60px
+
+.item
+	f()
+	fl()
+	position: relative
+.item__img
+	bg-full()
+	padding: 30% 10%
+	height: 285px!important
+	border-radius 30px 30px 0 0
+	position: relative
+.item__content
+	background: white
+	padding: 20px
+	border-radius 0 0 30px 30px
+	border 1px solid $border-color
+	border-top 0
+.item__title
+	@extend .type--xl
+	font-weight:700
+	margin-bottom: 15px
+	display: inline-block
+.item__descr
+	line-height: 1.4
+	margin-bottom: 15px
+.item__footer
+	flex(between)
+.item__price
+	@extend .type--xl
+	font-weight 700
+//.item__weight
+//.item__get
+.item__btn
+	@extend .btn--md
+	@extend .btn--light
+	font-weight: 700
+	color black
+	padding: 10px 25px
+	width: 100px
+
+
+//increment
+.incr
+	+below(768px)
+		margin-bottom: 20px
+	f()
+	justify-content: space-between
+	position relative
+	width 100px
+	border-top 1px solid $border-color
+	border-bottom 1px solid $border-color
+	border-radius 38px
+.incr__nav
+	flex(mid)
+	tr(background )
+	round()
+	size 35px
+	border 1px solid $border-color
+	background white
+	.icon
+		size 12px
+		fill #b3b3b3
+		opacity:1
+	&:hover
+		cp()
+		background-color $red
+		border 0
+		.icon
+			fill white
+	&:active
+		background-color $red
+.incr__val
+	flex(mid)
+	background white
+	position relative
+	tr(all)
+	color black
+	font-weight 700
+
+.item__incr
+	width: 100px
+//increment===end
+
+.item-check
+	display: none
+	position: absolute
+	size 36px
+	round()
+	background: $red
+	top -10px
+	left -10px
+	z-index 2
+	.icon
+		size 20px
+		fill white
+
+.item--add
+	.item-check
+		flex(mid)
+
+.item-tag
+	position: absolute
+	top 20px
+	right: 20px
+.item-tag__el
+	size 36px
+	round()
+	flex(mid)
+	margin-bottom: 10px
+	.icon
+		fill white
+		size 20px
+
+.item-tag__el--red
+	background $red
+
+.item-tag__el--fiolet
+	background $fiolet
+
+.item-tag__el--purpur
+	background $purpur
+
+.item-tag__el--blue
+	background $blue
+
+.item-tag__el--sky
+	background $sky
+
+.item-tag__el--green
+	background $green
+
+.item-tag__el--grass
+	background $grass
+
+.item-tag__el--yellow
+	background $yellow
+
+.item-tag__el--orange
+	background $orange
+
+.item-tag__el--rose
+	background $rose
+
+.item-tag__el--gray
+	background $gray
+
+.item-tag__el--fire
+	background: white
+	.icon
+		fill $red
+
+.item-tag__el--veg
+	background: white
+	.icon
+		fill $green
+
+.sale-list
+	display: grid
+	grid-gap 30px
+	grid-template-columns repeat(3,1fr)
+	margin-bottom: 65px
+
+.sale-list__el
+	bg-full()
+	padding: 20% 10%
+	position: relative
+	border-radius 30px
+	overflow: hidden
+.sale-list__el-title
+	f()
+	align-items: stretch
+	position: absolute
+	padding: 30px
+	width: 100%
+	height: 100%
+	left 0
+	top 0
+	up()
+	span
+		margin-top: auto
+		color white
+		font-weight: 700
+		line-height: 1.6
+
+.sale-list__el-filter
+	position: absolute
+	top 0
+	left 0
+	background-image linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%)
+	height: 100%
+	width: 100%
+
+.advant
+	f()
+	justify-content: space-between
+	margin-bottom: 65px
+
+.advant__el
+	flex-grow 1
+	f()
+	align-items: center
+
+.advant__el-icon
+	.icon
+		size 34px
+		fill $red
+		margin-right: 15px
+
+.advant__el-text
+	@extend .type--md
+
+.review
+	f()
+	justify-content: space-between
+	align-items: stretch
+	margin-bottom: 65px
+.review__el
+	f()
+	fl()
+	width: 24%
+	text-decoration: none
+
+.review__el-img
+	width: 100%
+	border-radius 30px 30px 0 0
+	overflow: hidden
+.review__el-img-el
+	bg-full()
+	width: 100%
+	height: 285px
+.review__el-content
+	padding: 20px
+	border 1px solid $border-color
+	margin-top: -5px
+	border-top 0
+	border-radius 0 0 30px 30px
+	flex-grow 1
+.review__el-title
+	@extend .type--xl
+	font-weight 700
+	margin-bottom: 10px
+
+.review__el-text
+	line-height: 1.4
+
+.add-text
+	f()
+	justify-content: space-between
+	margin-bottom: 65px
+
+.add-text__col
+	width: 48%
+
+	p
+		line-height: 1.4
+	ul
+		list-style none
+		padding-left: 0
+	li
+		margin-bottom: 10px
+		position: relative
+		&:before
+			content ''
+			size 4px
+			round()
+			background: $red
+			position: absolute
+			left: -10px
+			top 5px
+
+.add-text__col-title
+	@extend .type--xl
+	font-weight: 700
+	margin-bottom: 25px
+
+//.footer
+.footer-top
+	flex(between)
+	margin-bottom: 60px
+.footer-top__el
+	text-align: center
+	@extend .type--md
+.footer-top__el--payment
+	flex(mid)
+	img
+		width 100px
+		padding: 10px
+		br(5px)
+		border 1px solid $border-color
+		margin-left: 20px
+.footer-top__el--location
+	flex(mid)
+	.icon
+		size 25px
+		fill $red
+		margin-right: 10px
+
+.footer-main
+	f()
+	justify-content: space-between
+	padding-bottom: 50px
+.footer-info
+	width: 25%
+.footer-copyright
+	margin-bottom: 20px
+.footer-info__link
+	display: inline-block
+	margin-bottom: 20px
+.footer-list
+	width: 40%
+.footer-menu
+	flex(between)
+	margin-bottom: 20px
+//.footer-menu__el 
+.footer-adress
+	width: 35%
+.footer-contact
+	f()
+	align-items: center
+	justify-content: flex-end
+	margin-bottom: 30px
+	margin-top: -5px
+.footer-phone
+	font-size: 30px
+	font-weight:700
+	text-decoration: none
+	margin-right: 20px
+//.soc-row 
+//.soc-row__el 
+//.icon 
+
+.create
+	f()
+	align-items: center
+	justify-content: flex-end
+	span
+		margin-right: 10px

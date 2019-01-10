@@ -1,4 +1,44 @@
 mixin footer()
+	.main-cont
+		.footer
+			.footer-top
+				.footer-top__el.footer-top__el--payment
+					span Принимаем к оплате
+					img(src="img/payment.svg", alt="")
+				.footer-top__el Бесплатная доставка от 600 рублей
+				.footer-top__el Время доставки до 45 минут
+				.footer-top__el.footer-top__el--location
+					+icon("location","icon")
+					a(href="#") Зона доставки
+			.footer-main
+				.footer-info
+					.footer-copyright © 2018 «Окинава»
+					a(href="#").footer-info__link Политика конфединциальности
+					a(href="#").footer-info__link Публичная оферта
+				.footer-list
+					.footer-menu
+						a(href="#").footer-menu__el Доставка
+						a(href="#").footer-menu__el Акции
+						a(href="#").footer-menu__el Отзывы
+						a(href="#").footer-menu__el Кафе
+						a(href="#").footer-menu__el Вакансии
+						a(href="#").footer-menu__el Контакты
+					p Реклама и сотрудничество:
+						a(href="mailto:marketolog@okinavakazan.ru") marketolog@okinavakazan.ru
+					p Для коммерческих предложений:
+						a(href="mailto:commerce@okinavakazan.ru") commerce@okinavakazan.ru
+				.footer-adress   
+					.footer-contact   
+						a(href="tel:8 (843) 233 44 33").footer-phone 8 (843) 233 44 33
+						.soc-row
+							a(href="#").soc-row__el
+								+icon("soc-instagram","icon")
+							a(href="#").soc-row__el
+								+icon("soc-vk","icon")
+					.create 
+						span Сайт создан в
+						img(src="img/jq.png", alt="")
+
 	//block footer
 	.modal-layer
 		.modal-filter

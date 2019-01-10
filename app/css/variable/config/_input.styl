@@ -2,7 +2,7 @@
 .input,.textarea,.select
 	placeholder(#888888)
 	tr(all)
-	padding 10px 20px
+	padding 12px 20px
 	border 1px solid $border-color
 	resize: none
 	outline: 0 !important
@@ -18,7 +18,9 @@
 	display flex
 	position relative
 	align-items center
-
+	&:hover
+		.sytle-input-text
+			color black
 .style-label--disable
 	@extend .disabled
 
@@ -31,11 +33,10 @@
 		br(2px)
 		cp()
 		tr(all)
-		width 32px
-		height 32px
+		size 17px
 		position relative
 		display inline-block
-		margin-right 30px
+		margin-right 10px
 		background white
 		border 1px solid $border-color
 		&:hover
@@ -46,12 +47,10 @@
 		&:checked ~ .sytle-input-element
 			flex(mid)
 			color white
-			background: $mark
-			border 1px solid $mark
 			.icon-check
 				display block
-				fill white
-				size 16px
+				fill $red
+				size 12px
 
 .style-label--radio
 	input
@@ -83,8 +82,10 @@
 				background $mark
 
 .sytle-input-text
-	color black
-	width: calc(100% - 80px)
-	line-height: 1.6
+	color #aaadb2
+	width: calc(100% - 30px)
+	line-height: 1.2
+	tr(all)
+	font-size: 10px
 	a
 		color $mark
