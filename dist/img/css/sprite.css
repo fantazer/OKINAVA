@@ -8,7 +8,7 @@
     display: inline-block;
     background-image: url("../svg/sprite.svg");
     background-repeat: no-repeat;
-    background-size: 51.2em 1435.3em;
+    background-size: 51.2em 1387.8em;
 }
 
 .no-svg .icon:before {
@@ -550,15 +550,15 @@
 
   .icon.star:before {
       background-position: 0em -1297em;
-      width: 49.0727em;
-      height: 49.0727em;
+      width: 1.6em;
+      height: 1.6em;
   }
 
 
 
 
   .icon.supe:before {
-      background-position: 0em -1346.1em;
+      background-position: 0em -1298.6em;
       width: 2.6em;
       height: 2.6em;
   }
@@ -567,7 +567,7 @@
 
 
   .icon.sushi:before {
-      background-position: 0em -1348.7em;
+      background-position: 0em -1301.2em;
       width: 2.6em;
       height: 1.6em;
   }
@@ -576,7 +576,7 @@
 
 
   .icon.user:before {
-      background-position: 0em -1350.3em;
+      background-position: 0em -1302.8em;
       width: 35em;
       height: 35em;
   }
@@ -585,7 +585,7 @@
 
 
   .icon.veg:before {
-      background-position: 0em -1385.3em;
+      background-position: 0em -1337.8em;
       width: 1.7em;
       height: 1.8em;
   }
@@ -594,7 +594,7 @@
 
 
   .icon.vk--color:before {
-      background-position: 0em -1387.1em;
+      background-position: 0em -1339.6em;
       width: 45.5731em;
       height: 45.5731em;
   }
@@ -603,7 +603,7 @@
 
 
   .icon.wok:before {
-      background-position: 0em -1432.7em;
+      background-position: 0em -1385.2em;
       width: 2.6em;
       height: 2.6em;
   }

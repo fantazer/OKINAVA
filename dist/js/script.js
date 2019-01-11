@@ -53,7 +53,7 @@ $(document).ready(function () {
 		arrows: false,
 		speed: 500,
 		//autoplay: true,
-		dots:true,
+		//dots:true,
 		//fade: true
 		//autoplaySpeed: 8000, time between
 	});
