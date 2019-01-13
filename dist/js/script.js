@@ -53,11 +53,21 @@ $(document).ready(function () {
 		arrows: false,
 		speed: 500,
 		//autoplay: true,
-		//dots:true,
+		dots:true,
 		//fade: true
 		//autoplaySpeed: 8000, time between
 	});
 	//review slider===end
+
+	//position slider
+	$('.position-slider').slick({
+		slidesToShow: 1,
+		arrows: false,
+		speed: 500,
+		dots:true
+	});
+
+	//position slider===end
 
 	//slider custom control
 	$('.slider-control--right').click(function(){
@@ -96,6 +106,42 @@ $(document).ready(function () {
 		count = count > 100 ? 100 : count;
 		$input.html(count);
 	});
-
 	//increment field end
+
+	//position tab
+	$('.position-list__el').click(function(){
+		var current = $(this).index();
+		$('.position-list__el').not(this).removeClass('position-list__el--active');
+		$(this).addClass('position-list__el--active');
+
+		//console.log(current);
+		$('.position-img .slider-wrap').each(function(){
+			if($(this).index()===current){
+				console.log($(this).index());
+				$(this).addClass('position-slider-wrap--active');
+			}else{
+				$(this).removeClass('position-slider-wrap--active');
+			}
+		})
+	});
+	//position tab===end
+
+	//map tab
+	$('.contact-list__el').click(function(){
+		var current = $(this).index();
+		$('.contact-list__el').not(this).removeClass('contact-list__el--active');
+		$(this).addClass('contact-list__el--active');
+
+		//console.log(current);
+		$('.contact-map__el').each(function(){
+			if($(this).index()===current){
+				console.log($(this).index());
+				$(this).addClass('contact-map__el--active');
+			}else{
+				$(this).removeClass('contact-map__el--active');
+			}
+		})
+	});
+	//map tab===end
+
 });

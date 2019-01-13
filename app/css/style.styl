@@ -20,6 +20,8 @@ body
 .main-cont
 	center(1250px,10px)
 
+
+
 //modal
 .modal-layer
 	width: 100%
@@ -252,6 +254,8 @@ body
 .head-top-nav__el
 	padding-bottom: 2px
 	tr(color)
+	link()
+	text-decoration: none
 	&:hover
 		color $red
 		text-decoration: none
@@ -687,9 +691,8 @@ tag($color)
 .title__more
 	@extend .type--md
 	font-weight: 400
-	text-decoration-color $red
-	display: inline-block
 	margin-left: 20px
+	link($red)
 
 .items
 	display: grid
@@ -717,10 +720,11 @@ tag($color)
 	@extend .type--xl
 	font-weight:700
 	margin-bottom: 15px
-	display: inline-block
+	link()
+	line-height: 1.4
 .item__descr
 	line-height: 1.4
-	margin-bottom: 15px
+	margin: 15px 0
 .item__footer
 	flex(between)
 .item__price
@@ -918,16 +922,16 @@ tag($color)
 	width: 24%
 	text-decoration: none
 	position: relative
-	.slick-dotted.slick-slider
-		margin-bottom: 0 !important
-	.slick-dots li button:before
-		font-size: 14px
-		round()
-		color white
-	.slick-dots li.slick-active button:before
-		color white
-	.slick-dots
-		bottom 20px!important
+.slick-dotted.slick-slider
+	margin-bottom: 0 !important
+.slick-dots li button:before
+	font-size: 14px
+	round()
+	color white
+.slick-dots li.slick-active button:before
+	color white
+.slick-dots
+	bottom 20px!important
 
 .review__el-img
 	width: 100%
@@ -1006,7 +1010,9 @@ tag($color)
 		size 25px
 		fill $red
 		margin-right: 10px
-
+	a
+		text-decoration: none
+		link()
 .footer-main
 	f()
 	justify-content: space-between
@@ -1018,12 +1024,16 @@ tag($color)
 .footer-info__link
 	display: inline-block
 	margin-bottom: 20px
+	link()
 .footer-list
 	width: 40%
+	a
+		link()
 .footer-menu
 	flex(between)
 	margin-bottom: 20px
-//.footer-menu__el 
+.footer-menu__el
+	link()
 .footer-adress
 	width: 35%
 .footer-contact
@@ -1061,3 +1071,275 @@ tag($color)
 
 .review-star__el--empty
 	opacity: .5
+
+
+.position-slider__el
+	bg-full()
+	padding: 25% 10%
+
+.position
+	flex(between)
+	margin-bottom: 60px
+
+.position-info
+	width: 35%
+.position-title
+	@extend .title
+
+.position-img
+	width: 63%
+	border-radius 30px
+	overflow: hidden
+	max-height 390px
+.position-list
+	f()
+	fw()
+	margin-bottom: 30px
+.position-list__el
+	width: 48%
+	margin-bottom: 20px
+	cp()
+	span
+		tr(all)
+		border-bottom: 1px dashed #e2e2e2
+		padding-bottom: 3px;
+		&:hover
+			color $red
+.position-list__el--active
+	span
+		border 0
+		link($red)
+		color $red
+
+.position-list__all
+	link($red)
+	@extend .type--md
+	&:hover
+		color $red
+
+
+.position-slider-wrap
+	position: relative
+	height: 0
+	top 100%
+	z-index 3
+	opacity:0
+	left -9999px
+	transform translateY(-20px)
+
+.hidden-block
+	position: relative
+	height: 0
+	z-index 3
+	opacity:0
+	left -9999px
+	transform translateY(-20px)
+
+.visible-block
+	transition opacity 1.9s
+	opacity:1
+	left 0
+	transform translateY(0)
+	height: auto
+
+.position-slider-wrap--active
+	transition opacity 1.9s
+	opacity:1
+	left 0
+	transform translateY(0)
+	height: auto
+
+.bread-row
+	flex(between)
+	margin-top: 50px
+	margin-bottom: 30px
+.bread
+	f()
+	fw()
+	a
+		link()
+.bread__el
+	margin-right: 20px
+	position: relative
+	opacity: .6
+	&:before
+		content ''
+		width: 1px
+		height: 100%
+		background: $border-color
+		position: absolute
+		right: -12px
+	&:last-child
+		&:before
+			content ''
+			display: none
+.page-nav
+	flex(mid)
+	&:hover
+		.icon
+			fill $red
+		color $red
+.page-nav__icon
+	.icon
+		tr(all)
+		size 36px
+		margin-right: 15px
+		fill black
+.page-nav__text
+	@extend .type--md
+
+
+.contact
+	f()
+	justify-content: space-between
+	margin-bottom: 40px
+
+.contact-info
+	width: 25%
+.contact-title
+	font-size: 24px
+	font-weight:700
+	margin-bottom: 20px
+//.contact-list
+.contact-list__el
+	@extend .type--md
+	span
+		link()
+		&:hover
+			color $red
+	cp()
+	margin-bottom: 25px
+
+.contact-list__el--active
+	color $red
+	span
+		background-image: linear-gradient(to bottom, $red 0%, $red 100%);
+
+.contact-map
+	width: 72%
+	border-radius 30px
+	overflow hidden
+
+.contact-map__el
+	@extend .hidden-block
+	background: $gray
+
+.contact-map__el--active
+	@extend .visible-block
+	height: 400px
+
+.contact-val
+	f()
+	justify-content: space-between
+	margin-bottom: 60px
+
+.contact-val__col
+	width: 20%
+.contact-val__title
+	font-size: 24px
+	font-weight:700
+	margin-bottom: 25px
+.contact-val__phone
+	display: block
+	margin-bottom: 25px
+	@extend .type--md
+	span
+		link()
+
+.contact-val__mail
+	display: block
+	@extend .type--md
+	span
+		link()
+.contact-val__col--lg
+	width: 45%
+
+.contact-val__time
+	f()
+.contact-val__day
+	@extend .type--md
+	width: 35%
+	up()
+.contact-val__text
+	@extend .type--md
+	width: 65%
+.contact-val-soc
+	f()
+	align-items: center
+	margin-bottom: 20px
+	@extend .type--md
+	&:hover
+		color $red
+	span
+		link()
+.contact-val-soc__icon
+	round()
+	flex(mid)
+	tr(all)
+	margin-right: 20px
+	size 25px
+	background: #c2c2c2
+	&:hover
+		background: darken(#c2c2c2,10)
+	.icon
+		size 15px
+		fill white
+
+.feedback
+	center(835px,0)
+.feedback__title
+	text-align: center
+	font-size: 24px
+	font-weight:700
+	margin-bottom: 30px
+
+.feedback__form
+	f()
+	justify-content: space-between
+	margin-bottom: 100px
+.feedback-msg
+	width: 65%
+	.input
+		width: 100%
+.feedback-val
+	width: 33%
+	.input
+		width: 100%
+		margin-bottom: 20px
+.feedback-get
+	margin-bottom: 0
+	@extend .btn--md
+	@extend .btn--mark
+	width: 100%
+
+.about-text
+	max-width 850px
+	line-height: 1.4
+	margin-bottom: 60px
+
+.company
+	margin-bottom: 100px
+
+.company-row
+	f()
+	margin-bottom: 10px
+	align-items: center
+.company-val
+	width: 25%
+	margin-right: 25px
+	font-size:60px
+	color $red
+	font-weight:700
+	text-align: right
+
+.company-text
+	width: 43%
+	line-height: 1.4
+	margin-right: 25px
+.company-get
+	width: 25%
+	.company-get__el
+		@extend .btn--md
+		@extend .btn--light
+		color $red
+		width: 100%

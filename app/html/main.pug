@@ -112,6 +112,32 @@ include block_html/_include.pug
 
 
 
+
+	//position
+	.position
+		.position-info
+			.position-title Мы вас очень ждём в наших заведениях
+			.position-list
+				.position-list__el.position-list__el--active
+					span ул. Университетская, д. 10
+				- for (var i=0;i<4;i++)
+					.position-list__el
+						span ул. Глушко, д. 17а
+					.position-list__el
+						span пр. Ямашева, д. 82
+			a(href="#").position-list__all показать все
+		.position-img
+			- for (var j=0;j<4;j++)
+				.slider-wrap.position-slider-wrap(class=j===0?'position-slider-wrap--active':'')
+					.slider-control-simple.slider-control--left
+						+icon("circle-arrow--left","icon")
+					.slider-control-simple.slider-control--right
+						+icon("circle-arrow--right","icon")
+					.position-slider.slider-item
+						- for (var i=0;i<3;i++)
+							a(href="#" style="background-image:url('img/slider-restaraunt.jpg')").position-slider__el
+
+
 	//review
 	.title.title--list
 		span Отзывы клиентов
@@ -133,6 +159,7 @@ include block_html/_include.pug
 				.review__el-content
 					.review__el-title Вероника
 					.review__el-text Очень вкусные роллы!! Нам понравились. И упакованы хорошо. Доставка вовремя. Будем заказывать ещё)
+
 
 	.add-text
 		.add-text__col
