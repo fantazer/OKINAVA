@@ -33,7 +33,10 @@ mixin header()
 						a(href="#").soc-row__el
 							+icon("soc-vk","icon")
 				.login
-					.login-drop-toggle.login-enter Вход в личный кабинет
+					.login-drop-toggle.login-enter
+						.login-enter-mobile
+							+icon("profile","icon")
+						span.login-enter-mobile-text Вход в личный кабинет
 					.login-drop-wrap
 						.login-drop
 							.login-drop__head
@@ -146,6 +149,7 @@ mixin header()
 				a(href="#").cart.cart--full
 					.cart-icon
 						+icon("cart","icon")
+						.cart-icon__val 2
 					.cart-info
 						.cart-condition корзина пуста
 						.cart-size 0 товаров

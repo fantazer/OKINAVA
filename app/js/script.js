@@ -144,4 +144,24 @@ $(document).ready(function () {
 	});
 	//map tab===end
 
+	//animate header
+	var shrinkHeader = 250;
+	var heightHeader=$('.head-main-wrap').height();
+	$(window).scroll(function() {
+		var scroll = $(this).scrollTop();
+		if ( scroll >= shrinkHeader ) {
+				$('body').css('paddingTop',heightHeader);
+				$('.head-main-wrap').addClass('shrink');
+			}
+			else {
+					$('body').css('paddingTop',0);
+					$('.head-main-wrap').removeClass('shrink');
+			}
+	});
+
+	$(window).resize(function(){
+		heightHeader=$('.head-main-wrap').height();
+	});
+
+	//animate header===end
 });

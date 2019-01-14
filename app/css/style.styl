@@ -247,6 +247,10 @@ body
 	&:last-child
 		margin-bottom: 0
 .head-top-nav
+	+below(960px)
+		width: 55%
+		margin-right: 5%
+		margin-left: 5%
 	width: 40%
 	flex(between)
 	margin-right: 10%
@@ -289,7 +293,6 @@ body
 	tr(all)
 	position: relative
 .login-enter
-	border-bottom 1px dashed $border-color
 	display: inline-block
 	&:hover
 		color $red
@@ -298,6 +301,8 @@ body
 	align-items: flex-end
 //.logo
 .head-phone
+	+below(1200px)
+		font-size: 24px
 	font-size 30px
 	font-weight 700
 	letter-spacing 0.18px
@@ -306,8 +311,12 @@ body
 	display: block
 	margin-right: 10px
 .work-time
+	+below(960px)
+		display: none
 	padding-bottom: 3px
 .header-search
+	+below(960px)
+		width: 28%
 	margin-left: auto
 	width: 22%
 	.input
@@ -330,9 +339,17 @@ body
 	f()
 	align-items: center
 .head-nav
+	+below(1200px)
+		width calc(100% - 100px)
+	+below(960px)
+		width calc(100% - 40px)
 	flex(between)
 	width: 82%
 .head-nav__el
+	+below(1200px)
+		font-size: 14px
+	+below(1024px)
+		font-size: 12px
 	@extend .type--lg
 	padding: 25px 0
 	font-weight 500
@@ -344,15 +361,29 @@ body
 	&:hover
 		color $red
 .cart
+	+below(1200px)
+		padding: 0
 	flex(mid)
 	margin-left: auto
 	text-decoration: none
+	padding: 5px 20px
+
 .cart-icon
 	margin-right: 10px
+	position: relative
 	.icon
 		size 22px
 		fill $red
+.cart-icon__val
+	+above(1201px)
+		display: none
+	position: absolute
+	right: -5px
+	top -10px
+
 .cart-info
+	+below(1200px)
+		display: none
 	font-size: 16px
 //.cart-condition
 //.cart-size
@@ -380,7 +411,7 @@ body
 	left -9999px
 	opacity:0
 	top 100%
-	z-index 3
+	z-index 10
 	transform translateY(-20px)
 	transition opacity .8s, transform .4s
 	width: 250px
@@ -435,6 +466,9 @@ body
 		left 50%
 		margin-left: -8px
 		background: white
+		+below(1200px)
+			left initial
+			right 2px
 .login-drop--active
 	opacity:1
 
@@ -532,12 +566,20 @@ body
 	background: $red
 	color white!important
 	border-radius 30px
-	padding: 5px 20px
 	tr(all)
 	&:hover
 		background: lighten($red,5)
 	.icon
 		fill white
+	.cart-condition
+		font-weight:700
+	+below(1200px)
+		background: none
+		color black!important
+		.icon
+			fill $red
+		&:hover
+			background: none
 
 .slider__el
 	bg-full()
@@ -695,6 +737,10 @@ tag($color)
 	link($red)
 
 .items
+	+below(1200px)
+		grid-template-columns repeat(3,1fr)
+	+below(960px)
+		grid-template-columns repeat(2,1fr)
 	display: grid
 	grid-gap 30px
 	grid-template-columns repeat(4,1fr)
@@ -711,22 +757,28 @@ tag($color)
 	border-radius 30px 30px 0 0
 	position: relative
 .item__content
+	f()
+	fl()
 	background: white
 	padding: 20px
 	border-radius 0 0 30px 30px
 	border 1px solid $border-color
 	border-top 0
+	flex-grow 1
 .item__title
 	@extend .type--xl
 	font-weight:700
 	margin-bottom: 15px
 	link()
 	line-height: 1.4
+	display: inline
+	width: auto
 .item__descr
 	line-height: 1.4
 	margin: 15px 0
 .item__footer
 	flex(between)
+	margin-top: auto
 .item__price
 	@extend .type--xl
 	font-weight 700
@@ -857,12 +909,16 @@ tag($color)
 		fill $green
 
 .sale-list
+	+below(960px)
+		grid-template-columns repeat(2,1fr)
 	display: grid
 	grid-gap 30px
 	grid-template-columns repeat(3,1fr)
 	margin-bottom: 65px
 
 .sale-list__el
+	+below(1024px)
+		padding: 25% 10%
 	bg-full()
 	padding: 20% 10%
 	position: relative
@@ -893,11 +949,18 @@ tag($color)
 	width: 100%
 
 .advant
+	+below(1024px)
+		fw()
+		justify-content: flex-start
 	f()
 	justify-content: space-between
 	margin-bottom: 65px
 
 .advant__el
+	+below(1024px)
+		width: 33%
+		flex-grow initial
+		margin-bottom: 20px
 	flex-grow 1
 	f()
 	align-items: center
@@ -912,11 +975,17 @@ tag($color)
 	@extend .type--md
 
 .review
+	+below(1024px)
+		fw()
 	f()
 	justify-content: space-between
 	align-items: stretch
 	margin-bottom: 65px
 .review__el
+	+below(1024px)
+		width: 32%
+		&:last-child
+			display: none
 	f()
 	fl()
 	width: 24%
@@ -939,6 +1008,8 @@ tag($color)
 	overflow: hidden
 
 .review__el-img-el
+	+below(768px)
+		height: 200px
 	bg-full()
 	width: 100%
 	height: 285px
@@ -971,7 +1042,7 @@ tag($color)
 		line-height: 1.4
 	ul
 		list-style none
-		padding-left: 0
+		padding-left: 10px
 	li
 		margin-bottom: 10px
 		position: relative
@@ -991,9 +1062,16 @@ tag($color)
 
 //.footer
 .footer-top
+	+below(960px)
+		display: none
+		align-items: flex-start
 	flex(between)
 	margin-bottom: 60px
 .footer-top__el
+	+below(1024px)
+		text-align: left
+		font-size: 14px
+		width: 22%
 	text-align: center
 	@extend .type--md
 .footer-top__el--payment
@@ -1014,6 +1092,8 @@ tag($color)
 		text-decoration: none
 		link()
 .footer-main
+	+below(1024px)
+		fw()
 	f()
 	justify-content: space-between
 	padding-bottom: 50px
@@ -1024,8 +1104,12 @@ tag($color)
 .footer-info__link
 	display: inline-block
 	margin-bottom: 20px
-	link()
+	span
+		link()
+		line-height: 1.6
 .footer-list
+	+below(1024px)
+		width: 70%
 	width: 40%
 	a
 		link()
@@ -1035,8 +1119,13 @@ tag($color)
 .footer-menu__el
 	link()
 .footer-adress
+	+below(1024px)
+		width: 100%
+		flex(between)
 	width: 35%
 .footer-contact
+	+below(1024px)
+		margin-bottom: 0
 	f()
 	align-items: center
 	justify-content: flex-end
@@ -1052,6 +1141,8 @@ tag($color)
 //.icon 
 
 .create
+	+below(1024px)
+		width: 50%
 	f()
 	align-items: center
 	justify-content: flex-end
@@ -1074,31 +1165,47 @@ tag($color)
 
 
 .position-slider__el
+	+below(1024px)
+		padding: 20% 10%
 	bg-full()
 	padding: 25% 10%
 
 .position
+	+below(1024px)
+		width: 100%
+		fw()
 	flex(between)
 	margin-bottom: 60px
 
 .position-info
+	+below(1024px)
+		width: 100%
+		margin-bottom: 20px
 	width: 35%
 .position-title
 	@extend .title
 
 .position-img
+	+below(1024px)
+		width: 100%
 	width: 63%
 	border-radius 30px
 	overflow: hidden
 	max-height 390px
 .position-list
+	+below(1024px)
+		margin-bottom: 10px
 	f()
 	fw()
+	justify-content: space-between
 	margin-bottom: 30px
 .position-list__el
+	+below(1024px)
+		width: 25%
 	width: 48%
 	margin-bottom: 20px
 	cp()
+	line-height: 1.6
 	span
 		tr(all)
 		border-bottom: 1px dashed #e2e2e2
@@ -1150,10 +1257,15 @@ tag($color)
 	height: auto
 
 .bread-row
+	+below(1200px)
+		margin-top: 0
+		margin-bottom: 30px
 	flex(between)
 	margin-top: 50px
 	margin-bottom: 30px
 .bread
+	+below(768px)
+		display: none
 	f()
 	fw()
 	a
@@ -1162,6 +1274,7 @@ tag($color)
 	margin-right: 20px
 	position: relative
 	opacity: .6
+	line-height: 1.6
 	&:before
 		content ''
 		width: 1px
@@ -1186,8 +1299,9 @@ tag($color)
 		margin-right: 15px
 		fill black
 .page-nav__text
+	+below(1024px)
+		display: none
 	@extend .type--md
-
 
 .contact
 	f()
@@ -1195,8 +1309,12 @@ tag($color)
 	margin-bottom: 40px
 
 .contact-info
+	+below(1024px)
+		width: 35%
 	width: 25%
 .contact-title
+	+below(768px)
+		font-size: 16px
 	font-size: 24px
 	font-weight:700
 	margin-bottom: 20px
@@ -1216,6 +1334,8 @@ tag($color)
 		background-image: linear-gradient(to bottom, $red 0%, $red 100%);
 
 .contact-map
+	+below(1024px)
+		width: 67%
 	width: 72%
 	border-radius 30px
 	overflow hidden
@@ -1234,8 +1354,12 @@ tag($color)
 	margin-bottom: 60px
 
 .contact-val__col
+	+below(1024px)
+		width: 32%
 	width: 20%
 .contact-val__title
+	+below(1200px)
+		font-size: 18px
 	font-size: 24px
 	font-weight:700
 	margin-bottom: 25px
@@ -1252,17 +1376,23 @@ tag($color)
 	span
 		link()
 .contact-val__col--lg
+	+below(1024px)
+		width: 32%
 	width: 45%
-
 .contact-val__time
-	f()
+	+below(1024px)
+		width: 100%
+	width: 40%
 .contact-val__day
 	@extend .type--md
-	width: 35%
 	up()
+	margin-bottom: 20px
 .contact-val__text
+	+below(1024px)
+		width: 100%
 	@extend .type--md
-	width: 65%
+	width: 60%
+	line-height: 1.6
 .contact-val-soc
 	f()
 	align-items: center
@@ -1313,18 +1443,42 @@ tag($color)
 	width: 100%
 
 .about-text
+	+below(1024px)
+		margin-bottom: 30px
 	max-width 850px
 	line-height: 1.4
 	margin-bottom: 60px
 
 .company
+	+below(768px)
+		margin-bottom: 50px
 	margin-bottom: 100px
 
 .company-row
+	+below(640px)
+		fw()
+		max-width 480px
+		margin-left: auto
+		margin-right: auto
 	f()
 	margin-bottom: 10px
 	align-items: center
+
+.bread-title
+	+above(769px)
+		display: none
+	font-size: 24px
+	font-weight:700
+
 .company-val
+	+below(1024px)
+		font-size: 36px
+	+below(640px)
+		width: 100%
+		margin-bottom: 20px
+		text-align: center
+		margin-right: 0
+		font-size: 48px
 	width: 25%
 	margin-right: 25px
 	font-size:60px
@@ -1333,13 +1487,61 @@ tag($color)
 	text-align: right
 
 .company-text
+	+below(640px)
+		width: 100%
+		margin-bottom: 20px
+		margin-right: 0
 	width: 43%
 	line-height: 1.4
 	margin-right: 25px
 .company-get
+	+below(640px)
+		width: 100%
 	width: 25%
 	.company-get__el
 		@extend .btn--md
 		@extend .btn--light
 		color $red
 		width: 100%
+
+.login-enter-mobile
+	.icon
+		size 24px
+	+above(1200px)
+		display: none
+
+.login-enter-mobile-text
+	border-bottom 1px dashed $border-color
+	+below(1200px)
+		display: none
+
+.title--mobile
+	+below(768px)
+		display: none
+
+.contact-val__time-wrap
+	f()
+	fw()
+
+.shrink
+	position fixed
+	top 0
+	left 0
+	background white
+	width 100%
+	margin 0
+	animation:  slideInDown  1s 1 ease-in-out;
+	z-index 20
+	background: white
+
+@-webkit-keyframes slideInDown {
+	from {
+		transform: translate3d(0, -100%, 0);
+		visibility: visible;
+	}
+
+	to {
+		transform: translate3d(0, 0, 0);
+	}
+}
+

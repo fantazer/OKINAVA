@@ -69,7 +69,14 @@
                     </div>
                 </div>
                 <div class="login">
-                    <div class="login-drop-toggle login-enter">Вход в личный кабинет</div>
+                    <div class="login-drop-toggle login-enter">
+                        <div class="login-enter-mobile">
+                            <svg class="icon">
+                                <use xlink:href="#profile"></use>
+                            </svg>
+                        </div>
+                        <span class="login-enter-mobile-text">Вход в личный кабинет</span>
+                    </div>
                     <div class="login-drop-wrap">
                         <div class="login-drop">
                             <div class="login-drop__head">
@@ -265,6 +272,7 @@
                         <svg class="icon">
                             <use xlink:href="#cart"></use>
                         </svg>
+                        <div class="cart-icon__val">2</div>
                     </div>
                     <div class="cart-info">
                         <div class="cart-condition">корзина пуста</div>
@@ -277,6 +285,7 @@
     <!--block header end-->
     <div class="main-cont">
         <div class="bread-row">
+            <div class="bread-title">Заголовок</div>
             <div class="bread">
                 <a class="bread__el" href="#">Главная</a>
                 <div class="bread__el">О нас</div>
@@ -284,7 +293,7 @@
             <a class="page-nav" href="#">
                 <div class="page-nav__icon">
                     <svg class="icon">
-                        <use xlink:href="#circle-arrow--left"></use>
+                        <use xlink:href="#arrow-back"></use>
                     </svg>
                 </div>
                 <div class="page-nav__text">на главную</div>
@@ -374,8 +383,12 @@
             <div class="footer-main">
                 <div class="footer-info">
                     <div class="footer-copyright">© 2018 «Окинава»</div>
-                    <a class="footer-info__link" href="#">Политика конфединциальности</a>
-                    <a class="footer-info__link" href="#">Публичная оферта</a>
+                    <a class="footer-info__link" href="#">
+                        <span>Политика конфединциальности</span>
+                    </a>
+                    <a class="footer-info__link" href="#">
+                        <span>Публичная оферта</span>
+                    </a>
                 </div>
                 <div class="footer-list">
                     <div class="footer-menu">
