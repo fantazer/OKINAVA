@@ -20,7 +20,22 @@ body
 .main-cont
 	center(1250px,10px)
 
+.hidden-block
+	position: relative
+	height: 0
+	z-index 3
+	opacity:0
+	left -9999px
+	transform translateY(-20px)
+	margin: 0
+	padding: 0
 
+.visible-block
+	transition opacity .8s
+	opacity:1
+	left 0
+	transform translateY(0)
+	height: initial
 
 //modal
 .modal-layer
@@ -182,7 +197,9 @@ body
 	font-weight: bold
 //modal===end
 
-//.head
+.head
+	+below(767px)
+		display: none
 //.main-cont
 .head-top
 	flex(between)
@@ -248,7 +265,7 @@ body
 		margin-bottom: 0
 .head-top-nav
 	+below(960px)
-		width: 55%
+		width: 45%
 		margin-right: 5%
 		margin-left: 5%
 	width: 40%
@@ -256,6 +273,8 @@ body
 	margin-right: 10%
 	margin-left: 13%
 .head-top-nav__el
+	+below(960px)
+		font-size: 10px
 	padding-bottom: 2px
 	tr(color)
 	link()
@@ -270,6 +289,8 @@ body
 		&:hover
 			color $red
 .head-soc
+	+below(1200px)
+		display: none
 	margin-right: 3%
 .soc-row
 	f()
@@ -334,8 +355,14 @@ body
 	.input-search
 		padding-right: 30px
 .head-main-wrap
+	+below(767px)
+		padding: 10px 0
+		//margin-bottom: 20px
+		border-bottom 1px solid $border-color
 	background: white
 .head-main
+	+below(767px)
+		align-items: flex-end
 	f()
 	align-items: center
 .head-nav
@@ -343,6 +370,8 @@ body
 		width calc(100% - 100px)
 	+below(960px)
 		width calc(100% - 40px)
+	+below(767px)
+		display: none
 	flex(between)
 	width: 82%
 .head-nav__el
@@ -363,6 +392,11 @@ body
 .cart
 	+below(1200px)
 		padding: 0
+	+below(767px)
+		margin-left:initial
+		f()
+		fl()
+		margin-bottom: -7px
 	flex(mid)
 	margin-left: auto
 	text-decoration: none
@@ -373,13 +407,18 @@ body
 	position: relative
 	.icon
 		size 22px
+		+below(768px)
+			fill black!important
 		fill $red
 .cart-icon__val
 	+above(1201px)
 		display: none
+	+below(768px)
+		color $red
 	position: absolute
 	right: -5px
 	top -10px
+	font-weight:700
 
 .cart-info
 	+below(1200px)
@@ -638,6 +677,8 @@ body
 		outline none!important
 
 .slider-footer
+	+below(767px)
+		display: none
 	flex(mid)
 	padding: 10px
 	border 1px solid $red
@@ -655,11 +696,22 @@ body
 .main-slider
 	margin-bottom: 30px
 	overflow: hidden
+	+below(767px)
+		margin-left: -10px
+		width calc(100% + 20px)
+		.slider-control-simple
+			display: none
 .tag
+	+below(767px)
+		justify-content: space-between
+		margin-bottom: 10px
 	f()
 	fw()
 	margin-bottom: 40px
 .tag__el
+	+below(767px)
+		width: 48%
+		margin-right: 0
 	flex(mid)
 	br(18px)
 	border 1px solid
@@ -673,6 +725,8 @@ body
 		size 26px
 		margin-right: 10px
 .tag__el-text
+	+below(640px)
+		font-size: 12px
 	@extend .type--lg
 	font-weight: 500
 	margin-top: -3px
@@ -729,8 +783,11 @@ tag($color)
 	@extend .type--xxl
 	font-weight: 700
 	margin-bottom: 25px
+	line-height: 1.6
 
 .title__more
+	+below(767px)
+		margin-left: 0
 	@extend .type--md
 	font-weight: 400
 	margin-left: 20px
@@ -741,24 +798,71 @@ tag($color)
 		grid-template-columns repeat(3,1fr)
 	+below(960px)
 		grid-template-columns repeat(2,1fr)
+	+below(640px)
+		grid-template-columns 1fr
+		margin-bottom: 40px
 	display: grid
 	grid-gap 30px
 	grid-template-columns repeat(4,1fr)
 	margin-bottom: 60px
 
 .item
+	+below(640px)
+		flex-flow row
+		align-items: flex-start
+		margin-left: -10px
 	f()
 	fl()
 	position: relative
+	&:hover
+		.item__content
+			border-color $red
+		.item__descr
+			@extend .hidden-block
+		.item-ingr
+			@extend .visible-block
+
+.item-ingr
+	@extend .hidden-block
+	margin-top: 10px
+.item-ingr__text
+	margin-bottom: 10px
+.item-ingr__cont
+	flex(between)
+.item-ingr__el
+	flex(mid)
+	fl()
+	margin-bottom: 20px
+.item-ingr__el-val
+	font-size: 16px
+	font-weight:700
+	margin-bottom: 5px
+
+//.item-ingr__el-name
+
+.item__descr-wrap
+	height: 100px
+
 .item__img
+	+below(640px)
+		height: auto!important
+		padding: 15% 10%
+		width: 35%
+		border-radius 0 30px 30px 0
+		min-height 150px
 	bg-full()
 	padding: 30% 10%
 	height: 285px!important
 	border-radius 30px 30px 0 0
 	position: relative
 .item__content
+	+below(640px)
+		width: 65%
+		border 0
+		padding: 0 0 0 10px
 	f()
 	fl()
+	tr(all)
 	background: white
 	padding: 20px
 	border-radius 0 0 30px 30px
@@ -776,6 +880,7 @@ tag($color)
 .item__descr
 	line-height: 1.4
 	margin: 15px 0
+	tr(all)
 .item__footer
 	flex(between)
 	margin-top: auto
@@ -783,8 +888,13 @@ tag($color)
 	@extend .type--xl
 	font-weight 700
 //.item__weight
-//.item__get
+.item__get
+	+below(640px)
+		width: 90px
 .item__btn
+	+below(640px)
+		padding: 10px
+		width: 100%
 	@extend .btn--md
 	@extend .btn--light
 	font-weight: 700
@@ -795,8 +905,8 @@ tag($color)
 
 //increment
 .incr
-	+below(768px)
-		margin-bottom: 20px
+	+below(640px)
+		width: 100%
 	f()
 	justify-content: space-between
 	position relative
@@ -808,7 +918,7 @@ tag($color)
 	flex(mid)
 	tr(background )
 	round()
-	size 35px
+	size 34px
 	border 1px solid $border-color
 	background white
 	.icon
@@ -832,10 +942,15 @@ tag($color)
 	font-weight 700
 
 .item__incr
+	+below(640px)
+		width: 100%
 	width: 100px
 //increment===end
 
 .item-check
+	+below(640px)
+		left calc(100% - 20px)
+		size 24px
 	display: none
 	position: absolute
 	size 36px
@@ -845,23 +960,34 @@ tag($color)
 	left -10px
 	z-index 2
 	.icon
+		+below(640px)
+			size 14px
 		size 20px
 		fill white
 
 .item--add
+	.item__content
+		border-color $red
 	.item-check
 		flex(mid)
 
 .item-tag
+	+below(640px)
+		top 10px
+		right: 10px
 	position: absolute
 	top 20px
 	right: 20px
 .item-tag__el
+	+below(640px)
+		size 25px
 	size 36px
 	round()
 	flex(mid)
 	margin-bottom: 10px
 	.icon
+		+below(640px)
+			size 14px
 		fill white
 		size 20px
 
@@ -911,6 +1037,9 @@ tag($color)
 .sale-list
 	+below(960px)
 		grid-template-columns repeat(2,1fr)
+	+below(480px)
+		grid-template-columns 1fr
+		margin-bottom: 40px
 	display: grid
 	grid-gap 30px
 	grid-template-columns repeat(3,1fr)
@@ -952,6 +1081,8 @@ tag($color)
 	+below(1024px)
 		fw()
 		justify-content: flex-start
+	+below(640px)
+		display: none
 	f()
 	justify-content: space-between
 	margin-bottom: 65px
@@ -977,15 +1108,20 @@ tag($color)
 .review
 	+below(1024px)
 		fw()
+	+below(640px)
+		margin-bottom: 20px
 	f()
 	justify-content: space-between
 	align-items: stretch
 	margin-bottom: 65px
+
 .review__el
 	+below(1024px)
 		width: 32%
 		&:last-child
 			display: none
+	+below(640px)
+		width: 100%
 	f()
 	fl()
 	width: 24%
@@ -1031,13 +1167,18 @@ tag($color)
 	line-height: 1.4
 
 .add-text
+	+below(640px)
+		display: block
+		margin-bottom: 30px
 	f()
 	justify-content: space-between
 	margin-bottom: 65px
 
 .add-text__col
-	width: 48%
+	+below(640px)
+		width: 100%
 
+	width: 48%
 	p
 		line-height: 1.4
 	ul
@@ -1055,12 +1196,19 @@ tag($color)
 			left: -10px
 			top 5px
 
+.add-text__col--more
+	+below(640px)
+		display: none
+		margin-top: 20px
+
 .add-text__col-title
 	@extend .type--xl
 	font-weight: 700
 	margin-bottom: 25px
 
-//.footer
+.footer
+	+below(640px)
+		display: none
 .footer-top
 	+below(960px)
 		display: none
@@ -1132,6 +1280,8 @@ tag($color)
 	margin-bottom: 30px
 	margin-top: -5px
 .footer-phone
+	+below(768px)
+		font-size: 24px
 	font-size: 30px
 	font-weight:700
 	text-decoration: none
@@ -1174,6 +1324,8 @@ tag($color)
 	+below(1024px)
 		width: 100%
 		fw()
+	+below(640px)
+		margin-bottom: 20px
 	flex(between)
 	margin-bottom: 60px
 
@@ -1188,6 +1340,8 @@ tag($color)
 .position-img
 	+below(1024px)
 		width: 100%
+	+below(640px)
+		display: none
 	width: 63%
 	border-radius 30px
 	overflow: hidden
@@ -1199,9 +1353,19 @@ tag($color)
 	fw()
 	justify-content: space-between
 	margin-bottom: 30px
+.position-list--active
+	.position-list__el
+		display: block!important
+
 .position-list__el
 	+below(1024px)
 		width: 25%
+	+below(768px)
+		width: 32%
+	+below(640px)
+		width: 100%
+		&:nth-child(n+4)
+			display: none
 	width: 48%
 	margin-bottom: 20px
 	cp()
@@ -1219,6 +1383,8 @@ tag($color)
 		color $red
 
 .position-list__all
+	+below(640px)
+		display: none
 	link($red)
 	@extend .type--md
 	&:hover
@@ -1227,27 +1393,8 @@ tag($color)
 
 .position-slider-wrap
 	position: relative
-	height: 0
-	top 100%
-	z-index 3
-	opacity:0
-	left -9999px
-	transform translateY(-20px)
 
-.hidden-block
-	position: relative
-	height: 0
-	z-index 3
-	opacity:0
-	left -9999px
-	transform translateY(-20px)
 
-.visible-block
-	transition opacity 1.9s
-	opacity:1
-	left 0
-	transform translateY(0)
-	height: auto
 
 .position-slider-wrap--active
 	transition opacity 1.9s
@@ -1294,6 +1441,8 @@ tag($color)
 		color $red
 .page-nav__icon
 	.icon
+		+below(1024px)
+			margin-right: 0
 		tr(all)
 		size 36px
 		margin-right: 15px
@@ -1304,6 +1453,8 @@ tag($color)
 	@extend .type--md
 
 .contact
+	+below(640px)
+		fw()
 	f()
 	justify-content: space-between
 	margin-bottom: 40px
@@ -1311,6 +1462,9 @@ tag($color)
 .contact-info
 	+below(1024px)
 		width: 35%
+	+below(640px)
+		width: 100%
+		margin-bottom: 20px
 	width: 25%
 .contact-title
 	+below(768px)
@@ -1336,6 +1490,8 @@ tag($color)
 .contact-map
 	+below(1024px)
 		width: 67%
+	+below(640px)
+		width: 100%
 	width: 72%
 	border-radius 30px
 	overflow hidden
@@ -1343,12 +1499,15 @@ tag($color)
 .contact-map__el
 	@extend .hidden-block
 	background: $gray
-
+	br(30px)
 .contact-map__el--active
 	@extend .visible-block
 	height: 400px
 
 .contact-val
+	+below(640px)
+		fw()
+		margin-bottom: 0px
 	f()
 	justify-content: space-between
 	margin-bottom: 60px
@@ -1356,10 +1515,15 @@ tag($color)
 .contact-val__col
 	+below(1024px)
 		width: 32%
+	+below(640px)
+		width: 100%
+		margin-bottom: 20px
 	width: 20%
 .contact-val__title
 	+below(1200px)
 		font-size: 18px
+	+below(768px)
+		font-size: 16px
 	font-size: 24px
 	font-weight:700
 	margin-bottom: 25px
@@ -1378,6 +1542,8 @@ tag($color)
 .contact-val__col--lg
 	+below(1024px)
 		width: 32%
+	+below(640px)
+		width: 100%
 	width: 45%
 .contact-val__time
 	+below(1024px)
@@ -1418,20 +1584,33 @@ tag($color)
 .feedback
 	center(835px,0)
 .feedback__title
+	+below(768px)
+		font-size: 16px
+		margin-bottom: 20px
+		text-align: left
 	text-align: center
 	font-size: 24px
 	font-weight:700
 	margin-bottom: 30px
 
 .feedback__form
+	+below(768px)
+		margin-bottom: 20px
 	f()
+	fw()
 	justify-content: space-between
 	margin-bottom: 100px
 .feedback-msg
+	+below(640px)
+		width: 100%
+		margin-bottom: 20px
 	width: 65%
 	.input
 		width: 100%
 .feedback-val
+	+below(640px)
+		width: 100%
+		margin-bottom: 20px
 	width: 33%
 	.input
 		width: 100%
@@ -1533,7 +1712,7 @@ tag($color)
 	animation:  slideInDown  1s 1 ease-in-out;
 	z-index 20
 	background: white
-
+	border-bottom 1px solid $border-color
 @-webkit-keyframes slideInDown {
 	from {
 		transform: translate3d(0, -100%, 0);
@@ -1544,4 +1723,176 @@ tag($color)
 		transform: translate3d(0, 0, 0);
 	}
 }
+
+
+.head-main-toggle
+	+above(768px)
+		display: none
+	margin-right: 25px
+	cp()
+	.icon
+		size 24px
+
+.head-main-logo
+	+above(767px)
+		display: none
+	width: 130px
+
+.head-main-call
+	+above(768px)
+		display: none
+	margin-right: 20px
+	margin-left: auto
+	.icon
+		size 24px
+
+.cart-bonus
+	+above(768px)
+		display: none
+	font-size: 9px
+	font-weight: 700
+
+.tag__el--hidden
+	+below(767px)
+		display: none
+
+.tag__el--full
+	+below(767px)
+		width: 100%
+		justify-content: flex-start
+
+.tag__el-drop
+	+above(767px)
+		display: none
+	cp()
+.tag__el-drop--active
+	background: black
+	color white
+	.icon
+		fill white
+.tag__el-sub-wrap
+	display: none
+.tag__el-sub
+	padding-left: 30px
+	flex(between)
+	fw()
+
+.tag__el-sub__el
+	@extend .tag__el
+	width: 100%
+	&:nth-child(1)
+		width: 48%
+	&:nth-child(2)
+		width: 48%
+
+.title--list
+	+below(767px)
+		font-size: 24px
+		span
+			display: block
+
+.banner-bonus
+	+above(640px)
+		display: none
+	background: $red
+	margin-left: -10px
+	width calc(100% + 20px)
+	padding: 20px 0
+	flex(mid)
+	fl()
+
+.banner-bonus__text
+	text-align: center
+	color white
+	font-size: 15px
+	max-width 220px
+	line-height: 1.6
+	margin-bottom: 20px
+.banner-bonus__get
+	@extend .btn--md
+	@extend .btn--empty
+
+.footer-mobile
+	+above(641px)
+		display: none
+	flex(between)
+	padding: 10px
+	border-top 1px solid $border-color
+.footer-mobile__phone
+	font-size: 18px
+	font-weight: 700
+
+.footer-mobile__logo
+	size 35px
+.footer-mobile__jq
+	size 30px
+
+.slide-trigger
+	+above(641px)
+		display: none
+	span
+		link($red)
+		font-size: 15px
+		cp()
+	.slide-trigger--false
+		display: none
+
+.slide-trigger--active
+	.slide-trigger--false
+		display: inline
+	.slide-trigger--true
+		display: none
+
+
+.title--list-review
+	.title__more
+		+below(640px)
+			display: none
+
+.review-slider__control
+	+above(641px)
+		display: none
+	flex(between)
+	margin-bottom: 20px
+.review-slider__control-el
+	cp()
+	.icon
+		size 36px
+
+.review-slider__all
+	link($red)
+	font-size: 15px
+
+.login--false
+	.login-auth
+		display: none
+
+.login--true
+	.login-enter
+		display: none
+
+.login-auth
+	f()
+	align-items: center
+.login-auth__icon
+	position: relative
+	.icon
+		size 24px
+
+.login-auth__icon-check
+	position: absolute
+	size 12px
+	round()
+	flex(mid)
+	background: $red
+	top -8px
+	right: 0
+	.icon
+		size 8px
+		fill white
+
+.login-auth__name
+	display: inline-block
+	margin: 10px
+	border-bottom 1px dashed $border-color
 

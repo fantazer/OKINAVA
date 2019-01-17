@@ -32,11 +32,19 @@ mixin header()
 							+icon("soc-instagram","icon")
 						a(href="#").soc-row__el
 							+icon("soc-vk","icon")
-				.login
+				//toggle class .login--false .login--true
+				.login.login--true
 					.login-drop-toggle.login-enter
 						.login-enter-mobile
 							+icon("profile","icon")
 						span.login-enter-mobile-text Вход в личный кабинет
+					a(href="#").login-auth
+						.login-auth__icon
+							+icon("profile","icon")
+							.login-auth__icon-check
+								+icon("checked","icon")
+						.login-auth__name Константин
+						.login-auth__bonus +140 Б
 					.login-drop-wrap
 						.login-drop
 							.login-drop__head
@@ -115,6 +123,10 @@ mixin header()
 	.head-main-wrap
 		.main-cont
 			.head-main
+				.head-main-toggle
+					+icon("menu","icon")
+				a(href="/").head-main-logo
+					img(src="img/logo.svg", alt="")
 				.head-nav
 					-
 						var items = [
@@ -146,6 +158,8 @@ mixin header()
 							else
 								.head-nav__el-wrap
 									a(href="#").head-nav__el #{item}
+				a(href="tel:8 (843) 233 44 33").head-main-call
+					+icon("call","icon")
 				a(href="#").cart.cart--full
 					.cart-icon
 						+icon("cart","icon")
@@ -153,4 +167,5 @@ mixin header()
 					.cart-info
 						.cart-condition корзина пуста
 						.cart-size 0 товаров
+					.cart-bonus +150 б.б.
 	//block header end

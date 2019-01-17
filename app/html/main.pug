@@ -21,25 +21,43 @@ include block_html/_include.pug
 .main-cont
 	//tags
 	.tag
-			-
-				var items = [
-						{"icon":"sushi","name":"суши","class":"tag__el--red"},
-						{"icon":"snack","name":"горячие закуски","class":"tag__el--fiolet"},
-						{"icon":"pizza","name":"пицца","class":"tag__el--purpur"},
-						{"icon":"set","name":"сеты","class":"tag__el--blue"},
-						{"icon":"roll","name":"роллы","class":"tag__el--sky"},
-						{"icon":"cake","name":"десерты","class":"tag__el--green"},
-						{"icon":"wok","name":"блюда wok","class":"tag__el--grass"},
-						{"icon":"supe","name":"супы","class":"tag__el--yellow"},
-						{"icon":"salad","name":"салаты","class":"tag__el--orange"},
-						{"icon":"drink","name":"напитки","class":"tag__el--rose"},
-						{"icon":"sauce","name":"соусы","class":"tag__el--gray"}
-					];
-			each item in items
-				a(href="#" class="tag__el "+item.class)
-					.tag__el-icon
-						+icon(item.icon,"icon")
-					.tag__el-text #{item.name}
+		.tag__el.tag__el-drop.tag__el--full
+			.tag__el-icon
+				+icon('set-suchi',"icon")
+			.tag__el-text японская кухня
+		.tag__el-sub-wrap
+			.tag__el-sub
+				-
+					var items = [
+						'суши',
+						'сэты',
+						'жаренные роллы',
+						'основные роллы',
+						'острые роллы',
+						'запеченные роллы',
+						'классические роллы'
+						];
+				each item in items
+					a(href="#").tag__el-sub__el #{item}
+		-
+			var items = [
+					{"icon":"sushi","name":"суши","class":"tag__el--red tag__el--hidden"},
+					{"icon":"snack","name":"горячие закуски","class":"tag__el--fiolet tag__el--full"},
+					{"icon":"pizza","name":"пицца","class":"tag__el--purpur tag__el--full"},
+					{"icon":"set","name":"сеты","class":"tag__el--blue tag__el--hidden"},
+					{"icon":"roll","name":"роллы","class":"tag__el--sky tag__el--hidden"},
+					{"icon":"cake","name":"десерты","class":"tag__el--green"},
+					{"icon":"wok","name":"блюда wok","class":"tag__el--grass"},
+					{"icon":"supe","name":"супы","class":"tag__el--yellow"},
+					{"icon":"salad","name":"салаты","class":"tag__el--orange"},
+					{"icon":"drink","name":"напитки","class":"tag__el--rose"},
+					{"icon":"sauce","name":"соусы","class":"tag__el--gray"}
+				];
+		each item in items
+			a(href="#" class="tag__el "+item.class)
+				.tag__el-icon
+					+icon(item.icon,"icon")
+				.tag__el-text #{item.name}
 
 
 	//list items
@@ -48,37 +66,13 @@ include block_html/_include.pug
 		a(href="#").title__more показать все
 
 	.items
-		- for (var i=0;i<12;i++)
-			.item
-				.item-check
-					+icon("checked","icon")
-				a(href="#" style="background-image:url('img/card-image-1.jpg')").item__img
-					.item-tag
-						.item-tag__el.item-tag__el--purpur
-							+icon("pizza","icon")
-						.item-tag__el.item-tag__el--fire
-							+icon("fire","icon")
-						.item-tag__el.item-tag__el--veg
-							+icon("veg","icon")
-				.item__content
-					.item__title-wrap
-						a(href="#").item__title Пицца Вегетарианская
-					.item__descr Салями, колбаски охотничьи, грибы опята маринованные, томаты, корнешоны, лук красный...
-					.item__footer
-						.item__price 399р
-						.item__weight 490г
-						.item__get
-							.icr-btn.item__btn купить
-							.elements-icr-block.item__incr.hidden
-								.incr
-									.incr__minus.incr__nav
-										+icon("minus","icon")
-									.incr__val
-										span 1
-										.incr__val-coner
-									.incr__plus.incr__nav
-										+icon("plus","icon")
-
+		- for (var i=0;i<3;i++)
+			+item()
+		.banner-bonus
+			.banner-bonus__text за заказы можно получать бонусные баллы
+			a(href="#").banner-bonus__get узнать подробности
+		- for (var i=0;i<9;i++)
+			+item()
 	//sale
 	.title Акции
 	.sale-list
@@ -114,22 +108,29 @@ include block_html/_include.pug
 
 
 
+
 	//position
 	.position
 		.position-info
 			.position-title Мы вас очень ждём в наших заведениях
 			.position-list
-				.position-list__el.position-list__el--active
+				a(href="#").position-list__el
+					span ул. Глушко, д. 17а
+				a(href="#").position-list__el
+					span пр. Ямашева, д. 82
+				a(href="#").position-list__el
 					span ул. Университетская, д. 10
-				- for (var i=0;i<4;i++)
-					.position-list__el
+				- for (var i=0;i<3;i++)
+					a(href="#").position-list__el
 						span ул. Глушко, д. 17а
-					.position-list__el
+					a(href="#").position-list__el
 						span пр. Ямашева, д. 82
 			a(href="#").position-list__all показать все
+			.slide-trigger.slide-trigger--position
+				span.slide-trigger--true развернуть
+				span.slide-trigger--false свернуть
 		.position-img
-			- for (var j=0;j<4;j++)
-				.slider-wrap.position-slider-wrap(class=j===0?'position-slider-wrap--active':'')
+				.slider-wrap
 					.slider-control-simple.slider-control--left
 						+icon("circle-arrow--left","icon")
 					.slider-control-simple.slider-control--right
@@ -139,11 +140,18 @@ include block_html/_include.pug
 							a(href="#" style="background-image:url('img/slider-restaraunt.jpg')").position-slider__el
 
 
+
 	//review
-	.title.title--list
+	.title.title--list.title--list-review
 		span Отзывы клиентов
 		a(href="#").title__more показать все
-	.review
+	.review-slider__control
+		.review-slider__control-el.review-slider__control-el--left
+			+icon("circle-arrow--left","icon")
+		a(href="#").review-slider__all  показать все
+		.review-slider__control-el.review-slider__control-el--right
+			+icon("circle-arrow--right","icon")
+	.review.slider-mobile
 		- for (var i=1;i<5;i++)
 			.review__el
 				.review-star
@@ -162,36 +170,7 @@ include block_html/_include.pug
 					.review__el-text Очень вкусные роллы!! Нам понравились. И упакованы хорошо. Доставка вовремя. Будем заказывать ещё)
 
 
-	.add-text
-		.add-text__col
-			.add-text__col-title Впечатляющий ассортимент вкусных блюд
-			p Наше меню включает:
-			ul
-				li классические и оригинальные виды суши с угрем, окунем, икрой тобико, лососем, тунцом, тигровой креветкой, курицей и пр.;
-				li разнообразные классические роллы (рисом внутрь) и урамаки (рисом наружу), в том числе острые, запеченные, горячие;
-				li аппетитные сеты для романтического ужина или вечеринки в большой компании.
-
-			p Помимо блюд японской кухни мы с радостью приготовим для вас экзотические воки с разными начинками, ароматную пиццу, горячие и холодные супы, свежие и сытные салаты, нежные десерты.
-
-			p Чтобы заказать суши и другие кушанья, зайдите в соответствующий раздел нашего меню. Каждый товар сопровождается фотографией, указанием состава ингредиентов, веса порции и стоимости. Кликните по плашке «Добавить в корзину» возле понравившихся суши. Скорректируйте количество порций и введите контактные данные. Наш менеджер свяжется с вами для подтверждения покупки.
-
-		.add-text__col
-			.add-text__col-title Преимущества заказа суши в «Окинаве»
-			ul
-				li Повара начинают готовить блюда только после вашего звонка.
-				li Мы используем только отборные, свежие продукты.
-				li Готовим суши по фирменной рецептуре.
-				li Предлагаем приемлемую стоимость щедрых порций свежих блюд.
-				li Регулярно проводим акции.
-				li Гарантируем доставку с соблюдением всех технологий транспортировки, чтобы вы всегда получали свежую и теплую еду.
-				li Располагаем собственным автопарком из 25 машин, что позволяет максимально оперативно развозить заказы по всему городу.
-				li Покупки на сумму от 600 рублей доставляем за свой счет.
-				li Возможен самовывоз из удобного для вас кафе нашей сети.
-
-			p Мы первыми в Казани открыли службу доставки суши на дом или в офис и остаемся лидерами в этой сфере.
-
-			p
-				strong Всегда рады вашим заказам!
+	+addtext()
 
 +footer()
 include ./block_html/_script.pug
