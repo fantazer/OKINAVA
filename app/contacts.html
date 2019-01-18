@@ -18,6 +18,7 @@
     <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
     <link rel="stylesheet" href="bower/slick-carousel/slick/slick.css" />
     <link rel="stylesheet" href="bower/slick-carousel/slick/slick-theme.css" />
+    <link rel="stylesheet" href="bower/fancybox/dist/jquery.fancybox.css" />
     <!--endbuild-->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/style-edit.css" />
@@ -532,6 +533,88 @@
     <div class="modal-layer">
         <div class="modal-filter"></div>
         <div class="modal-wrap">
+            <!--review-->
+            <div class="modal" data-modal="review">
+                <div class="modal-content">
+                    <div class="modal-close">
+                        <svg class="icon">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </div>
+                    <div class="modal-title">Добавление отзыва</div>
+                    <div class="get-rating">
+                        <div class="get-rating-text">Ваша оценка</div>
+                        <div class="star-row star-row--red">
+                            <div class="star-row__el">
+                                <svg class="icon">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+                            </div>
+                            <div class="star-row__el">
+                                <svg class="icon">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+                            </div>
+                            <div class="star-row__el">
+                                <svg class="icon">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+                            </div>
+                            <div class="star-row__el">
+                                <svg class="icon">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+                            </div>
+                            <div class="star-row__el">
+                                <svg class="icon">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <form action="javascript:void(null);">
+                        <div class="input-row">
+                            <input class="input" type="text" name="name" placeholder="Ваше имя" />
+                        </div>
+                        <div class="input-row">
+                            <input class="input" type="text" name="phone" placeholder="Телефон или e-mail" />
+                        </div>
+                        <div class="input-row">
+                            <textarea class="input" name="info" cols="30" rows="5" placeholder="Сообщение"></textarea>
+                        </div>
+                        <div class="agree-row">
+                            <div class="check-el">
+                                <label class="style-label style-label--checkbox">
+                                    <input class="sytle-input" type="checkbox" name="agree" />
+                                    <div class="sytle-input-element">
+                                        <svg class="icon-check">
+                                            <use xlink:href="#checked"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="sytle-input-text"></div>
+                                </label>
+                            </div>
+                            <div class="agree-row__text">Согласен с
+                                <a href="#">условиями обработки персональных данных</a>
+                            </div>
+                        </div>
+                        <div class="upload-wrap">
+                            <div class="upload-img"></div>
+                            <label class="upload">
+                                <div class="upload__icon">
+                                    <svg class="icon">
+                                        <use xlink:href="#upload"></use>
+                                    </svg>
+                                </div>
+                                <div class="upload__text">Прикрепить фото</div>
+                                <input class="upload-btn" type="file" />
+                            </label>
+                        </div>
+                        <input class="modal-send" type="submit" value="Отправить заявку" />
+                    </form>
+                </div>
+            </div>
+            <!--review === end-->
             <div class="modal" data-modal="order">
                 <div class="modal-content">
                     <div class="modal-close">
@@ -588,6 +671,7 @@
     <script src="bower/jquery/dist/jquery.js"></script>
     <script src="bower/slick-carousel/slick/slick.js"></script>
     <script src="js/add-on.js"></script>
+    <script src="bower/fancybox/dist/jquery.fancybox.js"></script>
     <!-- endbuild-->
     <script src="js/script.js"></script>
     <script src="js/script-edit.js"></script>

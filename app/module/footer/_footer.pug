@@ -51,6 +51,44 @@ mixin footer()
 	.modal-layer
 		.modal-filter
 		.modal-wrap
+			//review
+			.modal(data-modal="review")
+				.modal-content
+					.modal-close
+						+icon("close","icon")
+					.modal-title Добавление отзыва
+					.get-rating
+						.get-rating-text Ваша оценка
+						.star-row.star-row--red
+							- for (var i=1;i<6;i++)
+								.star-row__el
+									+icon("star","icon")
+					form(action="javascript:void(null);")
+						.input-row
+							input(type="text" name="name" placeholder="Ваше имя").input
+						.input-row
+							input(type="text" name="phone" placeholder="Телефон или e-mail").input
+						.input-row
+							textarea(name="info", cols="30", rows="5" placeholder="Сообщение").input
+						.agree-row
+							.check-el
+								label.style-label.style-label--checkbox
+									input(type="checkbox" name="agree").sytle-input
+									.sytle-input-element
+										+icon("checked","icon-check")
+									.sytle-input-text=text
+							.agree-row__text Согласен с
+								a(href="#") условиями обработки персональных данных
+						.upload-wrap
+							.upload-img
+							label.upload
+								.upload__icon
+									+icon("upload","icon")
+								.upload__text Прикрепить фото
+								input(type="file").upload-btn
+						input(type="submit" value="Отправить заявку").modal-send
+
+			//review === end
 			.modal(data-modal="order")
 				.modal-content
 					.modal-close

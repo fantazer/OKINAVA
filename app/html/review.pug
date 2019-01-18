@@ -1,0 +1,77 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
++header()
+
+.main-cont
+	.bread-row
+		.bread-title Заголовок
+		.bread
+			a(href="#").bread__el Главная
+			.bread__el О нас
+		a(href="#").page-nav
+			.page-nav__icon
+				+icon("arrow-back","icon")
+			.page-nav__text на главную
+
+	//review
+	.title.title--list.title--list-review
+		span Отзывы клиентов
+		.title__more(data-modal="review").modal-get оставить отзыв
+	.review-slider__control
+		.review-slider__control-el.review-slider__control-el--left
+			+icon("circle-arrow--left","icon")
+		.review-slider__all  оставить отзыв
+		.review-slider__control-el.review-slider__control-el--right
+			+icon("circle-arrow--right","icon")
+	.review.slider-mobile
+		- for (var i=1;i<9;i++)
+			.review__el
+				.review-star
+					- for (var j=0;j<4;j++)
+						.review-star__el
+							+icon("star","icon")
+					.review-star__el.review-star__el--empty
+						+icon("star","icon")
+
+				.review__el-img
+					a(href="img/review-1.jpg" data-fancybox="images"+i).fancybox
+						.review__el-img-el(style="background-image:url('img/review-1.jpg')")
+					a(href="img/review-1.jpg" data-fancybox="images"+i).fancybox
+						.review__el-img-el(style="background-image:url('img/review-1.jpg')")
+					a(href="img/review-1.jpg" data-fancybox="images"+i).fancybox
+						.review__el-img-el(style="background-image:url('img/review-1.jpg')")
+				.review__el-content.review__el-content--answer
+					.review__el-user
+						.review__el-title Вероника
+						.review__el-text Очень вкусные роллы!! Нам понравились. И упакованы хорошо. Доставка вовремя. Будем заказывать ещё)
+					.review-answer
+						.review-answer__title Окинава
+						.review-answer__text Спасибо за ваш отзыв. Будем рады видеть вас в нашем кафе!
+
+					.review-toggle Окинава
+
+
+
+	.comment-wrap
+		.comment
+			- for (var j=0;j< 4;j++)
+				.comment__el
+					.comment-head
+						.comment-name Вероника
+						.star-row.star-row--red
+							- for (var i=1;i<6;i++)
+								.star-row__el(class=i===5?'star-row__el--empty':'')
+									+icon("star","icon")
+					.comment-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequatur cupiditate debitis, delectus deleniti dignissimos ducimus odit quis recusandae velit.
+					.comment-add
+						.comment-add__title Окинава
+						.comment-add__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda cum eligendi eos iusto nemo nobis nostrum repellendus similique? Id, molestiae?
+		.row-middle
+			.add-more показать еще
+
+
+	+addtext()
+
++footer()
+include ./block_html/_script.pug

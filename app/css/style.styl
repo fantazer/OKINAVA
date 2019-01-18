@@ -132,9 +132,11 @@ body
 .modal-title
 	+below(768px)
 		font-size: 20px
-	margin-bottom: 20px
+	margin-bottom: 40px
 	text-align: center
 	color black
+	font-size: 24px
+	font-weight: 700
 
 .modal-text
 	+below(768px)
@@ -789,10 +791,11 @@ tag($color)
 	+below(767px)
 		margin-left: 0
 	@extend .type--md
+	link($red)
+	cp()
 	font-weight: 400
 	margin-left: 20px
-	link($red)
-
+	display: inline
 .items
 	+below(1200px)
 		grid-template-columns repeat(3,1fr)
@@ -823,6 +826,8 @@ tag($color)
 			@extend .visible-block
 
 .item-ingr
+	+below(1024px)
+		display: none !important
 	@extend .hidden-block
 	margin-top: 10px
 .item-ingr__text
@@ -841,6 +846,8 @@ tag($color)
 //.item-ingr__el-name
 
 .item__descr-wrap
+	+below(1024px)
+		height: auto !important
 	height: 100px
 
 .item__img
@@ -878,6 +885,12 @@ tag($color)
 	display: inline
 	width: auto
 .item__descr
+	+below(1024px)
+		opacity:1!important
+		left initial!important
+		height: auto !important
+		transform translateY(0)!important
+		margin: 15px 0!important
 	line-height: 1.4
 	margin: 15px 0
 	tr(all)
@@ -1109,22 +1122,32 @@ tag($color)
 	+below(1024px)
 		fw()
 	+below(640px)
-		margin-bottom: 20px
+		margin:0 0 20px 0
 	f()
-	justify-content: space-between
+	fw()
 	align-items: stretch
 	margin-bottom: 65px
-
+	margin-left: -10px
+	margin-right: -10px
+.review--treeple
+	.review__el
+		+below(1024px)
+			&:last-child
+				display: none
 .review__el
 	+below(1024px)
-		width: 32%
-		&:last-child
-			display: none
+		width calc(100% / 3 - 20px)
 	+below(640px)
 		width: 100%
-	f()
+		margin: 0
+		padding-bottom: 40px
+	flex(mid)
 	fl()
-	width: 24%
+	f()
+	width calc(100% / 4 - 20px)
+	fl()
+	margin 10px
+	margin-bottom: 40px
 	text-decoration: none
 	position: relative
 .slick-dotted.slick-slider
@@ -1152,12 +1175,13 @@ tag($color)
 
 
 .review__el-content
-	padding: 20px
+	padding: 20px 20px 40px 20px
 	border 1px solid $border-color
 	margin-top: -5px
 	border-top 0
 	border-radius 0 0 30px 30px
 	flex-grow 1
+	position: relative
 .review__el-title
 	@extend .type--xl
 	font-weight 700
@@ -1407,6 +1431,8 @@ tag($color)
 	+below(1200px)
 		margin-top: 0
 		margin-bottom: 30px
+	+below(768px)
+		margin-top: 20px
 	flex(between)
 	margin-top: 50px
 	margin-bottom: 30px
@@ -1896,3 +1922,176 @@ tag($color)
 	margin: 10px
 	border-bottom 1px dashed $border-color
 
+.review-answer
+	display: none
+
+.review-answer__title
+	@extend .type--xl
+	font-weight 700
+	margin-bottom: 10px
+	color $red
+.review-answer__text
+	line-height: 1.4
+
+.review-toggle
+	position: absolute
+	border-radius 18px
+	border 1px solid $red
+	padding: 10px 20px
+	left 50%
+	transform translate(-50%,50%)
+	bottom 0
+	background: white
+	font-weight: 700
+	tr(all)
+	cp()
+
+.review-toggle--active
+	tr(all)
+	background: $red
+	color white
+
+.comment
+	+below(640px)
+		grid-template-columns 1fr
+	display: grid
+	grid-column-gap 50px
+	grid-row-gap 30px
+	grid-template-columns 1fr 1fr
+	margin-bottom: 50px
+//.comment__el
+
+.comment-head
+	f()
+	fw()
+	margin-bottom: 20px
+.comment-name
+	@extend .type--xl
+	font-weight: 700
+	margin-right: 20px
+.star-row
+	f()
+
+.star-row--red
+	.icon
+		fill $red
+	.star-row__el--empty
+		.icon
+			opacity:.2
+
+.star-row__el
+	margin-right: 10px
+	.icon
+		size 18px
+.comment-text
+	@extend .type--md
+	line-height: 1.4
+.comment-add
+	padding-left: 30px
+	margin-top: 30px
+.comment-add__title
+	@extend .type--xl
+	font-weight:700
+	margin-bottom: 20px
+	color $red
+
+.comment-add__text
+	@extend .type--md
+	line-height: 1.4
+
+.row-middle
+	flex(mid)
+
+.add-more
+	link($red)
+	cp()
+.comment-wrap
+	+below(768px)
+		margin-bottom: 40px
+	margin-bottom: 100px
+
+.upload-image__el
+	size 60px
+	bg-full()
+	border 1px solid $border-color
+
+.input-row
+	.input
+		width: 100%
+		margin-bottom: 20px
+
+.get-rating
+	f()
+	align-items: center
+	.icon
+		opacity: .3
+		cp()
+	margin-bottom: 20px
+.get-rating-text
+	@extend .type--md
+	margin-right: 20px
+.star--active
+	.icon
+		opacity: 1
+
+.upload-wrap
+	flex(mid)
+	fw()
+	margin-bottom: 20px
+.upload
+	f()
+	cp()
+	br(10px)
+	align-items: flex-start
+	justify-content: center
+	border 1px solid $border-color
+	box-shadow 0px 3px 14px white
+	tr(all)
+	margin-bottom: 10px
+	&:hover
+		bsh()
+.upload__icon
+	padding: 10px
+	border-right 1px solid $border-color
+	height: 50px
+	.icon
+		size 25px
+		fill $red
+.upload__text
+	height: 50px
+	margin-left: -1px
+	padding: 15px
+	width: auto
+.upload-img
+	flex(mid)
+.upload-img__el
+	size 50px
+	br(10px)
+	border 1px solid $border-color
+	margin-right: 10px
+	margin-bottom: 10px
+	background-size: cover
+	background-repeat: no-repeat
+	position: relative
+	overflow: hidden
+	cp()
+	&:hover
+		&:before
+			content 'X'
+			opacity:1
+
+	&:before
+		content 'X'
+		position: absolute
+		background: #000000b3
+		width: 100%
+		height: 100%
+		left 0
+		top 0
+		flex(mid)
+		color white
+		opacity:0
+		tr(all)
+.upload-btn
+	position: absolute
+	left -9999px
