@@ -89,6 +89,7 @@ body
 		overflow-y scroll
 		width: 100%!important
 		br(0)
+		padding-bottom: 40px
 	background: white
 	position: relative
 	padding: 40px
@@ -189,11 +190,16 @@ body
 	flex(mid)
 	fl()
 	br(10px)
-	.icon
+	max-width 360px
+	.icon-true
 		fill green
-		size 120px
+		size 140px
+		margin 40px 0
+	.modal-title
 		margin-bottom: 20px
-
+	.modal-text
+		margin: 0
+		font-size: 14px
 .modal-text-true
 	text-align: center
 	font-weight: bold
@@ -764,7 +770,7 @@ tag($color)
 	tag($sky)
 
 .tag__el--green
-	tag($green)
+	tag($red)
 
 .tag__el--grass
 	tag($grass)
@@ -1020,7 +1026,7 @@ tag($color)
 	background $sky
 
 .item-tag__el--green
-	background $green
+	background $red
 
 .item-tag__el--grass
 	background $grass
@@ -1045,7 +1051,7 @@ tag($color)
 .item-tag__el--veg
 	background: white
 	.icon
-		fill $green
+		fill $red
 
 .sale-list
 	+below(960px)
@@ -1397,7 +1403,7 @@ tag($color)
 	span
 		tr(all)
 		border-bottom: 1px dashed #e2e2e2
-		padding-bottom: 3px;
+		padding-bottom: 3px
 		&:hover
 			color $red
 .position-list__el--active
@@ -1477,7 +1483,7 @@ tag($color)
 	+below(1024px)
 		display: none
 	@extend .type--md
-
+	margin-top: -6px
 .contact
 	+below(640px)
 		fw()
@@ -1511,7 +1517,7 @@ tag($color)
 .contact-list__el--active
 	color $red
 	span
-		background-image: linear-gradient(to bottom, $red 0%, $red 100%);
+		background-image: linear-gradient(to bottom, $red 0%, $red 100%)
 
 .contact-map
 	+below(1024px)
@@ -1735,18 +1741,18 @@ tag($color)
 	background white
 	width 100%
 	margin 0
-	animation:  slideInDown  1s 1 ease-in-out;
+	animation:  slideInDown  1s 1 ease-in-out
 	z-index 20
 	background: white
 	border-bottom 1px solid $border-color
 @-webkit-keyframes slideInDown {
 	from {
-		transform: translate3d(0, -100%, 0);
-		visibility: visible;
+		transform: translate3d(0, -100%, 0)
+		visibility: visible
 	}
 
 	to {
-		transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0)
 	}
 }
 
@@ -2095,3 +2101,615 @@ tag($color)
 .upload-btn
 	position: absolute
 	left -9999px
+
+.modal-btn-close
+	@extend .btn--md
+	@extend .btn--green
+	min-width 240px
+
+.item--clone
+	.item-tag
+		display: none !important
+	.item-check
+		display: none !important
+	width: 300px
+
+@keyframes shake
+	from,11.1%,to
+		transform: translate3d(0, 0, 0)
+	22.2%
+		transform: skewX(-12.5deg) skewY(-12.5deg)
+	33.3%
+		transform: skewX(6.25deg) skewY(6.25deg)
+	44.4%
+		transform: skewX(-3.125deg) skewY(-3.125deg)
+	55.5%
+		transform: skewX(1.5625deg) skewY(1.5625deg)
+	66.6%
+		transform: skewX(-0.78125deg) skewY(-0.78125deg)
+	77.7%
+		transform: skewX(0.390625deg) skewY(0.390625deg)
+	88.8%
+		transform: skewX(-0.1953125deg) skewY(-0.1953125deg)
+
+
+.shake
+	animation: shake 1.2s cubic-bezier(.36,.07,.19,.97) both
+	transform: translate3d(0, 0, 0)
+	backface-visibility: hidden
+	perspective: 1000px
+
+//LK
+/.lk-bg
+.lk-bg__left
+	width: 50%
+	height: 100%
+	position: absolute
+	top 0
+	left 0
+.lk-bg__right
+	+below(1024px)
+		display: none
+	width: 50%
+	height: 100%
+	position: absolute
+	top 0
+	right 0
+	background: $gray--light
+.lk
+	+below(1024px)
+		fw()
+	f()
+
+
+.lk-user
+	+below(1024px)
+		width: 100%
+		padding-right: 0
+	width: 50%
+	padding-right: 40px
+.lk-title
+	+below(768px)
+		margin-bottom: 30px
+	flex(between)
+	margin-bottom: 30px
+.lk-title__text
+	+below(1200px)
+		font-size: 40px
+	+below(768px)
+		font-size: 16px
+	@extend .title
+	font-weight 900
+	up()
+	margin-bottom: 0
+.lk-title__exit
+	+below(768px)
+		display: none
+	@extend .btn--md
+	min-width auto
+	padding: 20px 30px
+.user
+	+below(640px)
+		margin-bottom: 30px
+	margin-bottom: 50px
+.user-row
+	+below(640px)
+		fw()
+		margin-bottom: 20px
+	f()
+	margin-bottom: 35px
+	align-items: center
+.user__name
+	+below(640px)
+		width: 100%
+		margin-bottom: 10px
+	width: 40%
+.user__val
+	@extend .type--lg
+	font-weight: 700
+.lk-title-sub
+	@extend .type--xl
+	font-weight:700
+	margin-bottom: 30px
+.user-card
+	+below(480px)
+		grid-template-columns repeat(1,1fr);
+	display: grid
+	grid-gap 20px
+	grid-template-columns repeat(2,1fr);
+	margin-bottom: 50px
+.user-card__el
+	height: 160px
+	border 1px solid $gray
+	tr(all)
+	&:hover
+		border 1px solid #93908e
+		.user-card__add-text
+			color #93908e
+		.user-card__add
+			border 1px solid #93908e
+			.icon
+				fill #93908e
+.user-card__el--active
+	f()
+	fl()
+	tr(all)
+	padding: 25px 20px
+	background: $red
+	position: relative
+	border 0!important
+	&:hover
+		background: darken($red,5)
+.user-card-remove
+	flex(mid)
+	br(2px)
+	opacity .6
+	size 22px
+	border 1px solid white
+	position: absolute
+	right: 20px
+	top 20px
+	tr(all)
+	&:hover
+		opacity 1
+		.icon
+			opacity 1
+	.icon
+		tr(all)
+		opacity .6
+		size 8px
+		fill white
+.user-card-icon
+	.icon
+		fill white
+		width 50px
+		height: 15px
+.user-card-numb
+	@extend .type--lg
+	color white
+	margin-top: auto
+	margin-bottom: 10px
+.user-card__el--add
+	flex(mid)
+	fl()
+	cp()
+.user-card__add
+	size 40px
+	border 1px solid #e3ddd8
+	flex(mid)
+	br(4px)
+	tr(all)
+	margin-bottom: 5px
+	.icon
+		tr(all)
+		size 18px
+		fill #e3ddd8
+.user-card__add-text
+	color #e3ddd8
+	tr(all)
+.lk-adr
+	+below(640px)
+		margin-bottom: 0
+	+below(480px)
+		grid-template-columns repeat(1,1fr);
+	display: grid
+	grid-gap 20px
+	grid-template-columns repeat(2,1fr);
+	margin-bottom: 50px
+.lk-adr__el
+	border 1px solid $border-color
+	cp()
+	br(10px)
+	padding: 30px 20px
+	position: relative
+	&:hover
+		border 1px solid #93908e
+		.lk-adr__add-text
+			color #93908e
+		.lk-adr__add
+			border 1px solid #93908e
+			.icon
+				fill #93908e
+.lk-adr__el--active
+	position: relative
+	f()
+	fl()
+	border 1px solid $red
+.lk-adr-remove
+	flex(mid)
+	br(2px)
+	opacity .6
+	size 22px
+	border 1px solid #cbbaac
+	position: absolute
+	right: 20px
+	top 20px
+	&:hover
+		border 1px solid $red
+		opacity 1
+		.icon
+			opacity 1
+			fill green
+	.icon
+		tr(all)
+		opacity .6
+		size 8px
+		fill #cbbaac
+.lk-adr-adress
+	margin-top: auto
+	margin-bottom: 10px
+.lk-adr-text
+	tr(all)
+	@extend .type--lg
+	color $red
+	font-weight: 700
+	margin-bottom: 20px
+//.lk-adr-edit
+.lk-adr__el--add
+	flex(mid)
+	fl()
+	cp()
+.lk-adr__add
+	size 40px
+	border 1px solid #e3ddd8
+	flex(mid)
+	br(4px)
+	tr(all)
+	margin-bottom: 15px
+	.icon
+		tr(all)
+		size 18px
+		fill #e3ddd8
+.lk-adr__add-text
+	tr(all)
+	color #e3ddd8
+.lk-order
+	+below(1024px)
+		padding: 30px 10px
+		background: $gray--light
+		margin-left: -10px
+		margin-right: -10px
+		width calc(100% + 20px)
+	+below(640px)
+		margin-bottom: -30px
+	width: 47%
+	padding: 0 0 30px 40px
+.user__val-info
+	f()
+
+.user__val-edit
+	margin-left: 20px
+	cp()
+	color $red
+	font-weight: 400
+	font-size: 14px
+.user__val-input
+	f()
+	.input-name
+		margin-bottom: 0
+.user__val--add
+	cp()
+	font-size: 14px
+	link($red)
+
+.user__val--bonus
+	color $red
+.user__val-send
+	+below(640px)
+		font-size: 12px
+	@extend .btn--md
+	@extend .btn--mark
+	padding: 10px 20px
+	min-width auto
+	height: 50px
+
+.history-title
+	+below(640px)
+		text-align: center
+	@extend .type--xl
+	font-weight: 700
+	margin-bottom: 35px
+
+.history
+	width: 100%
+	border-radius 10px
+	overflow: hidden
+	padding-bottom 30px
+	+below(640px)
+		max-width 340px
+		margin-left: auto
+		margin-right: auto
+.history-card
+	+below(1024px)
+		.top
+			display: none
+	perspective 600px
+	padding: 5px
+
+	&:last-child
+		border-bottom 0px
+.history-card__wrap
+	+below(640px)
+		fw()
+	cp()
+	f()
+	br(10px)
+	tr(all)
+	background: #f7f7f7
+	padding: 20px
+	align-items: center
+	transform-style: preserve-3d;
+	//transition all .6s
+	&:hover
+		box-shadow 0 10px 15px rgba(0, 0, 0, 0.1)
+.history-card__wrap--active
+	transform rotateX(90deg)
+	backface-visibility hidden
+.history-card__info
+	+below(640px)
+		width: 100%
+	margin-right: 5%
+.history-card__date
+	margin-bottom: 5px
+	+below(640px)
+		margin-bottom: 10px
+.history-card__numb
+	opacity .6
+.history-card__price
+	+below(640px)
+		margin-left:initial
+		width: 100%
+		flex(between)
+	margin-left: auto
+	@extend .type--lg
+
+.history-card__list
+	+below(640px)
+		width: 100%
+		margin: 20px 0
+	+below(480px)
+		grid-template-columns repeat(auto-fit, minmax(35px, 35px));
+	display: grid
+	grid-gap 15px
+	grid-template-columns repeat(4,1fr);
+.history-card__list-el
+	+below(480px)
+		size 35px
+	size 40px
+	round()
+	bg-full()
+	position: relative
+.history-card__list-el-val
+	position: absolute
+	right: -8px
+	top -2px
+	size 24px
+	background: #ca0000
+	color white
+	font-weight 700
+	round()
+	flex(mid)
+	@extend .type--sm
+
+
+.history-card__list-el--last
+	.history-card__list-el-val
+		width: 100%
+		height: 100%
+		left 0
+		top 0
+		opacity .8
+		font-size: 14px
+//.history-card--open
+
+.history-info
+	box-shadow 0 10px 15px rgba(0, 0, 0, 0.1)
+	background-color #ffffff
+	padding: 20px
+	margin-bottom: 20px
+	display: none
+	br(10px)
+.history-info--active
+	display: block
+//.history-card
+
+.history-info__head
+	+below(640px)
+		margin-left: auto
+		margin-right: auto
+		max-width 320px
+	f()
+	margin-bottom: 20px
+.history-info__head-date
+	margin-right: 15px
+.history-info__head-state
+	color $red
+.history-info__head-numb
+	margin-left: auto
+	opacity .6
+	font-weight: 700
+.history-info__list
+	+below(640px)
+		margin-bottom: 20px
+	margin-bottom: 25px
+.history-info__el
+	+below(640px)
+		fw()
+		max-width 320px
+		margin-left: auto
+		margin-right: auto
+		padding-bottom: 10px
+		position: relative
+	f()
+	align-items: center
+	margin-bottom: 10px
+	padding-bottom: 20px
+	border-bottom 1px solid $gray--light
+.history-info__el-img
+	+below(480px)
+		size 35px
+	size 40px
+	round()
+	bg-full()
+	border 1px solid #cbbaac
+	position: relative
+	margin-right: 20px
+.history-info__el-about
+	+below(640px)
+		width: 70%
+	width: 50%
+.history-info__el-title
+	margin-bottom: 5px
+.history-info__el-text
+	opacity .6
+.history-info__el-count
+	+below(640px)
+		margin-left:initial
+		margin-top: 10px
+		position: absolute
+		size 20px
+		background: white
+		top -10px
+		font-weight:700
+		font-size: 10px
+
+	size 40px
+	border 1px solid $gray
+	flex(mid)
+	round()
+	margin-left: auto
+	margin-right: 10%
+.history-info__el-price
+	+below(640px)
+		margin-top: 10px
+	flex(mid)
+	@extend .type--lg
+	font-weight:700
+
+.history-info-footer
+	+below(640px)
+		fw()
+		justify-content: space-between
+		padding-top: 0
+	f()
+	padding-top: 20px
+	margin-top: 20px
+	border-top 1px solid $border-color
+	align-items: center
+.history-info-total
+	+below(640px)
+		width: 100%
+		justify-content: space-between
+	f()
+	align-items: center
+.history-info-total__text
+	margin-right: 10px
+.history-info-total__val
+	color $red
+	@extend .type--xl
+	font-weight: 700
+	font-size: 24px
+.history-info-get
+	+below(640px)
+		width: 100%
+		margin: 20px 0
+	@extend .btn--sm
+	@extend .btn--mark
+	margin-right: auto
+	padding: 10px 20px
+	flex(mid)
+	.icon
+		size 18px
+		margin-right: 10px
+		fill white
+.histiry-empty
+	+below(480px)
+		width: 100%
+	width: 320px
+	line-height: 1.6
+.lk-user__wrap,.lk-order__wrap
+	+below(1024px)
+		max-width 768px
+		margin-left: auto
+		margin-right: auto
+
+.history-card__price_text
+	+above(641px)
+		display: none
+.history-card__price_val
+	font-weight:700
+.content--lk
+	position: relative
+
+.lk-adr-conf
+	position: absolute
+	f()
+	top 20px
+	right: 20px
+	.icon
+		opacity:.2
+		tr(all)
+		&:hover
+			opacity:1
+
+.lk-adr-conf__el--edit
+	.icon
+		size 18px
+		margin-right: 10px
+.lk-adr-conf__el--remove
+	.icon
+		size 20px
+
+.user-config
+	f()
+	.icon
+		opacity:.2
+		tr(all)
+		cp()
+		&:hover
+			opacity:1
+
+.user-config__el--edit
+	.icon
+		size 25px
+		margin-right: 30px
+.user-config__el--remove
+	.icon
+		size 25px
+
+.history-card--active
+	//box-shadow 0 10px 15px rgba(0,0,0,0.1)
+	.history-card__wrap
+		border-radius 10px 10px 0 0
+		box-shadow 0 0 0!important
+	.history-info
+		box-shadow 0 0 0!important
+		border 1px solid #f7f7f7
+		border-radius 0 0 10px 10px
+
+
+//LK ===end
+
+.input-row-half
+	+below(640px)
+		fw()
+		margin-bottom: 0
+	f()
+	justify-content: space-between
+	margin-bottom: 20px
+	.input-wrap
+		+below(640px)
+			width: 100%
+			margin-bottom: 20px
+		width: 48%
+
+.input-row__title
+	margin-bottom: 10px
+	opacity: .6
+
+.modal-content--mail
+	width: 300px
+
+.input-wrap
+	.input
+		width: 100%

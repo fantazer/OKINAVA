@@ -47,6 +47,24 @@
 	.nav-icon
 		fill white
 
+
+.btn--green
+	@extend .btn
+	color white
+	background $green
+	.nav-icon
+		fill white
+	&:hover
+		background-color darken($green,5)
+		color white!important
+	&:active
+		background-color darken($green,5)
+		color white!important
+	input[type="submit"]
+		border 0
+	.nav-icon
+		fill white
+
 .btn--disable
 	@extend .disabled
 	border 1px solid $border-color

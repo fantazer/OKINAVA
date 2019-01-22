@@ -86,7 +86,7 @@ mixin footer()
 									+icon("upload","icon")
 								.upload__text Прикрепить фото
 								input(type="file").upload-btn
-						input(type="submit" value="Отправить заявку").modal-send
+						input(type="submit" value="Отправить заявку" data-modal="truemessage").modal-send.modal-get
 
 			//review === end
 			.modal(data-modal="order")
@@ -115,6 +115,97 @@ mixin footer()
 			//success message
 			.modal(data-modal="truemessage")
 				.modal-content.modal-content--true
-					+icon("interface","icon")
-					.modal-text-true Ваша заявка принята
+					.modal-close
+						+icon("close","icon")
+					.modal-title Отлично!
+					.modal-text Спасибо за Ваш отзыв, мы ценим внимание каждого клиента
+					+icon("success--color","icon icon-true")
+					.modal-btn-close.hide-modal Продолжить
+
+			.modal(data-modal="adress")
+				.modal-content
+					.modal-close
+						+icon("close","icon")
+					.modal-title Добавить адрес
+					form( action="#")
+						.select-city
+						.input-row
+							input(type="text" name="name" placeholder="Улица").input
+						.input-row-half
+							.input-wrap
+								input(type="text" name="name" placeholder="Дом").input
+							.input-wrap
+								input(type="text" name="name" placeholder="Квартира").input
+						.input-row-half
+							.input-wrap
+								input(type="text" name="name" placeholder="Подъезд").input
+							.input-wrap
+								input(type="text" name="name" placeholder="Этаж").input
+						.input-row
+							input(type="text" name="name" placeholder="Подпись (например: работа)").input
+						input(type="submit" value="Cохранить").modal-send
+
+			//modal profile-edit
+			.modal(data-modal="profile-edit")
+				.modal-content
+					.modal-close
+						+icon("close","icon")
+					.modal-title Изменить профиль
+					form( action="#")
+						.select-city
+						.input-row
+							.input-row__title Имя
+							input(type="text" name="name"  value="Александр").input
+						.input-row
+							.input-row__title Телефон:
+							input(type="text" name="name"  value="+7 923 666 7667").input
+						.input-row
+							.input-row__title День рождения:
+							input(type="text" name="name"  value="30.20.1982").input
+						input(type="submit" value="Cохранить").modal-send
+			//modal profile-edit === end
+
+			//modal adres-edit
+			.modal(data-modal="adress-edit")
+				.modal-content
+					.modal-close
+						+icon("close","icon")
+					.modal-title Изменить адрес
+					form( action="#")
+						.select-city
+						.input-row
+							.input-row__title Улица
+							input(type="text" name="name"  value="Ленина").input
+						.input-row-half
+							.input-wrap
+								.input-row__title Улица
+								input(type="text" name="name"  value="14").input
+							.input-wrap
+								.input-row__title Квартира
+								input(type="text" name="name"  value="35").input
+						.input-row-half
+							.input-wrap
+								.input-row__title Подъезд
+								input(type="text" name="name"  value="2").input
+							.input-wrap
+								.input-row__title Этаж
+								input(type="text" name="name"  value="17").input
+						.input-row
+							.input-row__title Подпись (например: работа)
+							input(type="text" name="name" placeholder="Подпись (например: работа)" value="Дом").input
+						input(type="submit" value="Cохранить").modal-send
+			//modal adres-edit === end
+
+			//modal-mail
+			.modal(data-modal="mail")
+				.modal-content.modal-content--mail
+					.modal-close
+						+icon("close","icon")
+					.modal-title Добавить e-mail
+					form( action="#")
+						.input-row.input-row--add-mail
+							input(type="text" name="name" placeholder="Ваша почта").input
+						input(type="submit" value="Cохранить").modal-send
+			//modal-mail === end
+
 	//block footer end
