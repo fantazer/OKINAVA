@@ -123,8 +123,10 @@ mixin header()
 	.head-main-wrap
 		.main-cont
 			.head-main
-				.head-main-toggle
-					+icon("menu","icon")
+				.head-toggle
+					+icon("menu","icon icon-open")
+					+icon("close","icon icon-close")
+
 				a(href="/").head-main-logo
 					img(src="img/logo.svg", alt="")
 				.head-nav
@@ -168,4 +170,97 @@ mixin header()
 						.cart-condition корзина пуста
 						.cart-size 0 товаров
 					.cart-bonus +150 б.б.
+
+	//мобильное меню
+	.slide-menu
+		.slide-menu-wrap
+			//Подменю главное
+			.slide-menu__list.slide-menu__list--active.slide-menu__list--up(data-menu="main")
+				.slide-el.slide-el--sub(data-menu="menu")
+					span Меню
+					+icon("arrow-right","icon")
+				.slide-el.slide-el--sub(data-menu="town")
+					span Ваш город
+					+icon("arrow-right","icon")
+				a(href="#").slide-el Доставка
+				a(href="#").slide-el Акции
+				a(href="#").slide-el Отзывы
+				a(href="#").slide-el Кафе
+				a(href="#").slide-el Вакансии
+				a(href="#").slide-el Контакты
+
+				//toggle class .login--false .login--true
+				.slide-menu-contact
+					.login.login--false
+						.login-enter
+							+icon("profile","icon")
+							span.login-enter-mobile-text Вход в личный кабинет
+						a(href="#").login-auth
+							.login-auth__icon
+								+icon("profile","icon")
+								.login-auth__icon-check
+									+icon("checked","icon")
+							.login-auth__name Константин
+							.login-auth__bonus +140 Б
+					form(action="").header-search
+						.header-search-wrap
+							.header-search-icon
+								+icon("serch","icon")
+								input(type="text" placeholder="Активный поиск" class="input input-search")
+					a(href="tel:8 (843) 233 44 33").slide-menu-phone 8 (843) 233 44 33
+					.soc-row
+						a(href="#").soc-row__el
+							+icon("soc-instagram","icon")
+						a(href="#").soc-row__el
+							+icon("soc-vk","icon")
+
+			//Подменю список блюд
+			.slide-menu__list.slide-menu__list--down(data-menu="menu")
+				.slide-el.slide-el--sub(data-menu="main")
+					span Меню
+					+icon("arrow-left","icon")
+				.slide-el.slide-el--sub.tag__el--sky(data-menu="roll")
+					.tag__el-icon
+						+icon("roll","icon")
+						.tag__el-text роллы
+					+icon("arrow-right","icon")
+				-
+					var items = [
+							{"icon":"sushi","name":"суши","class":"tag__el--red tag__el--hidden"},
+							{"icon":"snack","name":"горячие закуски","class":"tag__el--fiolet tag__el--full"},
+							{"icon":"pizza","name":"пицца","class":"tag__el--purpur tag__el--full"},
+							{"icon":"set","name":"сеты","class":"tag__el--blue tag__el--hidden"},
+							{"icon":"roll","name":"роллы","class":"tag__el--sky tag__el--hidden"},
+							{"icon":"cake","name":"десерты","class":"tag__el--green"},
+							{"icon":"wok","name":"блюда wok","class":"tag__el--grass"},
+							{"icon":"supe","name":"супы","class":"tag__el--yellow"},
+							{"icon":"salad","name":"салаты","class":"tag__el--orange"},
+							{"icon":"drink","name":"напитки","class":"tag__el--rose"},
+							{"icon":"sauce","name":"соусы","class":"tag__el--gray"}
+					];
+				each item in items
+					a(href="#" class="slide-el "+item.class)
+						.tag__el-icon
+							+icon(item.icon,"icon")
+							.tag__el-text #{item.name}
+
+			//Подменю список роллы
+			.slide-menu__list.slide-menu__list--down(data-menu="roll")
+				.slide-el.slide-el--sub(data-menu="menu")
+					span Виды роллов
+					+icon("arrow-left","icon")
+				a(href="#").slide-el жаренные роллы
+				a(href="#").slide-el основные роллы
+				a(href="#").slide-el острые роллы
+				a(href="#").slide-el классические роллы
+
+			//Подменю города
+			.slide-menu__list.slide-menu__list--down(data-menu="town")
+				.slide-el.slide-el--sub(data-menu="main")
+					span Выберите свой город
+					+icon("arrow-left","icon")
+				.slide-el Москва
+				.slide-el.slide-el--active Санкт-Петербург
+				.slide-el Казань
+				.slide-el Чебоксары
 	//block header end

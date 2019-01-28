@@ -37,6 +37,22 @@ body
 	transform translateY(0)
 	height: initial
 
+.content
+	ul
+		list-style none
+		padding-left: 10px
+	li
+		margin-bottom: 10px
+		position: relative
+		&:before
+			content ''
+			size 4px
+			round()
+			background: $red
+			position: absolute
+			left: -10px
+			top 5px
+
 //modal
 .modal-layer
 	width: 100%
@@ -366,6 +382,7 @@ body
 	+below(767px)
 		padding: 10px 0
 		//margin-bottom: 20px
+		height: 50px
 		border-bottom 1px solid $border-color
 	background: white
 .head-main
@@ -1200,6 +1217,7 @@ tag($color)
 	+below(640px)
 		display: block
 		margin-bottom: 30px
+		display: none
 	f()
 	justify-content: space-between
 	margin-bottom: 65px
@@ -1211,20 +1229,8 @@ tag($color)
 	width: 48%
 	p
 		line-height: 1.4
-	ul
-		list-style none
-		padding-left: 10px
-	li
-		margin-bottom: 10px
-		position: relative
-		&:before
-			content ''
-			size 4px
-			round()
-			background: $red
-			position: absolute
-			left: -10px
-			top 5px
+
+
 
 .add-text__col--more
 	+below(640px)
@@ -1656,6 +1662,8 @@ tag($color)
 .about-text
 	+below(1024px)
 		margin-bottom: 30px
+	+below(640px)
+		margin-bottom: 20px
 	max-width 850px
 	line-height: 1.4
 	margin-bottom: 60px
@@ -1757,13 +1765,6 @@ tag($color)
 }
 
 
-.head-main-toggle
-	+above(768px)
-		display: none
-	margin-right: 25px
-	cp()
-	.icon
-		size 24px
 
 .head-main-logo
 	+above(767px)
@@ -1901,7 +1902,7 @@ tag($color)
 
 .login--true
 	.login-enter
-		display: none
+		display: none!important
 
 .login-auth
 	f()
@@ -1968,10 +1969,16 @@ tag($color)
 //.comment__el
 
 .comment-head
+	+below(640px)
+		margin-bottom: 10px
 	f()
 	fw()
 	margin-bottom: 20px
 .comment-name
+	+below(640px)
+		width: 100%
+		margin-bottom: 10px
+		line-height: 1.4
 	@extend .type--xl
 	font-weight: 700
 	margin-right: 20px
@@ -1990,18 +1997,27 @@ tag($color)
 	.icon
 		size 18px
 .comment-text
+	+below(640px)
+		font-size: 13px
 	@extend .type--md
 	line-height: 1.4
 .comment-add
+	+below(640px)
+		margin-top: 20px
+		padding-left: 15px
 	padding-left: 30px
 	margin-top: 30px
 .comment-add__title
+	+below(640px)
+		margin-bottom: 10px
 	@extend .type--xl
 	font-weight:700
 	margin-bottom: 20px
 	color $red
 
 .comment-add__text
+	+below(640px)
+		font-size: 13px
 	@extend .type--md
 	line-height: 1.4
 
@@ -2060,6 +2076,7 @@ tag($color)
 	padding: 10px
 	border-right 1px solid $border-color
 	height: 50px
+	flex(mid)
 	.icon
 		size 25px
 		fill $red
@@ -2068,6 +2085,7 @@ tag($color)
 	margin-left: -1px
 	padding: 15px
 	width: auto
+	flex(mid)
 .upload-img
 	flex(mid)
 .upload-img__el
@@ -2713,3 +2731,231 @@ tag($color)
 .input-wrap
 	.input
 		width: 100%
+
+.vacancy-list
+	+below(1024px)
+		grid-template-columns repeat(3, 1fr)
+	+below(764px)
+		grid-template-columns repeat(2, 1fr)
+		margin-bottom: 40px
+	+below(420px)
+		grid-template-columns 1fr
+	display: grid
+	grid-gap 30px
+	grid-template-columns repeat(4, 1fr)
+	margin-bottom: 100px
+.vacancy-list__el
+	overflow: hidden
+	border-radius 10px
+	bsh-hover()
+	cp()
+.vacancy-list__img
+	padding: 45% 10%
+	bg-full()
+	position: relative
+.vacancy-list__info
+	padding: 30px 25px 60px 25px
+.vacancy-list__title
+	@extend .type--lg
+	font-weight: 700
+	margin-top: auto
+	line-height: 1.4
+	margin-bottom: 20px
+.vacancy-list__decr
+	line-height: 1.6
+	opacity: .8
+	font-family: 'PT Sans', sans-serif
+	font-weight: 500
+
+
+.vacancy-list__el-cont
+	position: absolute
+	width: 100%
+	height: 100%
+	left 0
+	top 0
+	f()
+.vacancy-list__loc
+	f()
+	align-items: center
+	margin-top: auto
+	padding: 8px 8px 8px 20px
+	background: #e5e5e5
+	border-radius 0 20px 20px 0
+	height: 40px
+.vacancy-list__loc-title
+	color #1b2230
+	margin-right: 10px
+.vacancy-list__loc-val
+	round()
+	size 25px
+	background: white
+	flex(mid)
+
+.vacancy-tag
+	+below(768px)
+		margin-bottom: 0
+	f()
+	fw()
+	margin-bottom: 40px
+.vacancy-tag__el
+	+below(640px)
+		padding: 5px 10px
+		width: 100%
+	padding: 10px 20px
+	background: #e5e5e5
+	border-radius 18px
+	margin-right: 10px
+	margin-bottom: 10px
+
+.vacancy-wrap
+	+below(768px)
+		margin-bottom: 40px
+	f()
+	fw()
+	justify-content: space-between
+	margin-bottom: 100px
+
+.vacancy-content
+	+below(1024px)
+		width: 60%
+	+below(640px)
+		width: 100%
+	width: 70%
+	ul
+		margin-bottom: 40px
+.vacancy-get
+	+below(1024px)
+		width: 35%
+	+below(640px)
+		width: 100%
+	width: 25%
+
+.upload-img--doc
+	.upload-img__el
+		position: relative
+		&:before
+			content '+doc'
+			position: absolute
+			width: 100%
+			height: 100%
+			left 0
+			top 0
+			background: $red
+			z-index 2
+			opacity: 1
+
+//slide menu
+.head-toggle
+	flex(mid)
+	cp()
+	margin-right: 20px
+	+above(767px)
+		display: none
+	.icon
+		size 25px
+	.icon-close
+		display: none
+
+.head-toggle--open
+	.icon-close
+		display: block
+	.icon-open
+		display: none
+
+.slide-menu
+	+above(767px)
+		display: none !important
+	+below(640px)
+		top: 50px //Высота хедера
+	+below(480px)
+		width: 100%
+	background: white
+	position: fixed
+	height: calc(100% - 50px) //Отступ хедер
+	z-index 1250
+	top 50px
+	left 0
+	width: 320px
+	transform translateX(-100%)
+	tr(all)
+	overflow-x: hidden
+	.header-search
+		width: 100%
+		padding: 20px
+.slide-menu--open
+	transform translateX(0%)
+	overflow-y: auto
+.body-fix
+	position: fixed!important
+	overflow-Y: scroll!important
+	width:100%!important
+
+.slide-menu-wrap
+	height: 100%
+	position: relative
+.slide-menu__list
+	position: absolute
+	width: 100%
+	left 0
+	top 0
+	background:white
+	height: 1px
+	overflow: hidden
+	opacity:0
+	transition transform .8s
+
+
+.slide-menu__list--up
+	transform translateX(-100%)
+.slide-menu__list--down
+	transform translateX(100%)
+.slide-menu__list--active
+	transform translateX(0)
+	opacity:1
+	overflow: auto
+	height: 100%
+.slide-el
+	@extend .type--lg
+	display: block
+	padding: 20px
+	border-bottom 1px solid $border-color
+	font-weight:500
+	flex(between)
+	color black
+	cp()
+	& > .icon
+		size 20px
+		fill #1c2331
+	.tag__el-text
+		color black
+		font-size: 18px
+	.tag__el-icon
+		f()
+		align-items: center
+		.icon
+			margin-right: 20px
+			size 25px
+
+.slide-el--active
+	color $red
+
+.slide-menu-contact
+	flex(mid)
+	fl()
+	margin-top: 20px
+	.login-enter-mobile-text
+		display: block
+	.login-enter
+		flex(mid)
+		.icon
+			size 20px
+			margin-right: 10px
+
+.slide-menu-phone
+	font-weight:700
+	font-size: 20px
+	margin-bottom: 20px
+
+//slide menu === end
+

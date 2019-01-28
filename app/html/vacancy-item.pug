@@ -1,0 +1,79 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
++header()
+
+.main-cont
+	.bread-row
+		.bread-title Заголовок
+		.bread
+			a(href="#").bread__el Главная
+			.bread__el О нас
+		a(href="#").page-nav
+			.page-nav__icon
+				+icon("arrow-back","icon")
+			.page-nav__text на главную
+
+	//review
+	.title.title--mobile
+		span Управляющий суши-бара
+		//.title__more(data-modal="review").modal-get оставить отзыв
+
+	.vacancy
+		.vacancy-tag
+			.vacancy-tag__el пр. Ямашева, д. 82
+			.vacancy-tag__el ул. Университетская, д. 10
+			.vacancy-tag__el ул. Ямашева, д. 11
+			.vacancy-tag__el ул. Университетская, д. 10
+		.vacancy-wrap
+			.vacancy-content.content
+				h2 Обязанности
+				ul
+					li обеспечение и поддержание эффективной бесперебойной работы;
+					li обеспечение высокого уровня обслуживания гостей;
+					li создание атмосферы гостеприимства в кафе и микроклимата в коллективе;
+					li руководство и организация работы подразделения;
+					li обеспечение выполнения основных финансовых показателей;
+					li решение административно-организационных вопросов, связанных с функционированием суши бара;
+					li обучение и адаптация персонала;
+					li руководство производственно-хозяйственной и финансово-экономической деятельностью суши бара управление персоналом;
+					li работа с гостями – привлечение новых и удержание постоянных гостей;
+					li проведение инвентаризации;
+					li взаимодействие с контролирующими органами;
+					li предоставление отчетности по деятельности высшему руководству.
+				h3 Требования
+				ul
+					li опыт работы от 3 лет в общепите (кафе, рестораны);
+					li опыт работы в качестве руководителя в сфере общественного питания не менее 1 года;
+					li умение работать в команде;
+					li активная жизненная позиция;
+					li уверенный пользователь ПК.
+				h2 Условия
+				ul
+					li трудоустройство по Трудовому кодексу РФ;
+					li график работы 5/2 плавающие выходные;
+					li выплата заработной платы 2 раза в месяц;
+			.vacancy-get
+				h2 Откликнуться на вакансию
+				form(action="#")
+					.input-row
+						input(type="text" placeholder="Имя" class="input")
+					.input-row
+						input(type="text" placeholder="Телефон" class="input")
+					.input-row
+						input(type="text" placeholder="E-mail" class="input")
+					.input-row
+						textarea(name="info", cols="30", rows="10" placeholder="Сопроводительное письмо" class="input")
+					.upload-wrap
+						.upload-img.upload-img--doc
+						label.upload
+							.upload__icon
+								+icon("upload","icon")
+							.upload__text Прикрепить резюме
+							input(type="file").upload-btn
+					input(type="submit" value="Cохранить" class="btn--md btn--mark btn--full")
+
+	+addtext()
+
++footer()
+include ./block_html/_script.pug

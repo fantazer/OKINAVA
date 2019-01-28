@@ -234,9 +234,12 @@
     <div class="head-main-wrap">
         <div class="main-cont">
             <div class="head-main">
-                <div class="head-main-toggle">
-                    <svg class="icon">
+                <div class="head-toggle">
+                    <svg class="icon icon-open">
                         <use xlink:href="#menu"></use>
+                    </svg>
+                    <svg class="icon icon-close">
+                        <use xlink:href="#close"></use>
                     </svg>
                 </div>
                 <a class="head-main-logo" href="/">
@@ -309,6 +312,214 @@
                     </div>
                     <div class="cart-bonus">+150 б.б.</div>
                 </a>
+            </div>
+        </div>
+    </div>
+    <!--мобильное меню-->
+    <div class="slide-menu">
+        <div class="slide-menu-wrap">
+            <!--Подменю главное-->
+            <div class="slide-menu__list slide-menu__list--active slide-menu__list--up" data-menu="main">
+                <div class="slide-el slide-el--sub" data-menu="menu">
+                    <span>Меню</span>
+                    <svg class="icon">
+                        <use xlink:href="#arrow-right"></use>
+                    </svg>
+                </div>
+                <div class="slide-el slide-el--sub" data-menu="town">
+                    <span>Ваш город</span>
+                    <svg class="icon">
+                        <use xlink:href="#arrow-right"></use>
+                    </svg>
+                </div>
+                <a class="slide-el" href="#">Доставка</a>
+                <a class="slide-el" href="#">Акции</a>
+                <a class="slide-el" href="#">Отзывы</a>
+                <a class="slide-el" href="#">Кафе</a>
+                <a class="slide-el" href="#">Вакансии</a>
+                <a class="slide-el" href="#">Контакты</a>
+                <!--toggle class .login--false .login--true-->
+                <div class="slide-menu-contact">
+                    <div class="login login--false">
+                        <div class="login-enter">
+                            <svg class="icon">
+                                <use xlink:href="#profile"></use>
+                            </svg>
+                            <span class="login-enter-mobile-text">Вход в личный кабинет</span>
+                        </div>
+                        <a class="login-auth" href="#">
+                            <div class="login-auth__icon">
+                                <svg class="icon">
+                                    <use xlink:href="#profile"></use>
+                                </svg>
+                                <div class="login-auth__icon-check">
+                                    <svg class="icon">
+                                        <use xlink:href="#checked"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="login-auth__name">Константин</div>
+                            <div class="login-auth__bonus">+140 Б</div>
+                        </a>
+                    </div>
+                    <form class="header-search" action="">
+                        <div class="header-search-wrap">
+                            <div class="header-search-icon">
+                                <svg class="icon">
+                                    <use xlink:href="#serch"></use>
+                                </svg>
+                                <input class="input input-search" type="text" placeholder="Активный поиск" />
+                            </div>
+                        </div>
+                    </form>
+                    <a class="slide-menu-phone" href="tel:8 (843) 233 44 33">8 (843) 233 44 33</a>
+                    <div class="soc-row">
+                        <a class="soc-row__el" href="#">
+                            <svg class="icon">
+                                <use xlink:href="#soc-instagram"></use>
+                            </svg>
+                        </a>
+                        <a class="soc-row__el" href="#">
+                            <svg class="icon">
+                                <use xlink:href="#soc-vk"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--Подменю список блюд-->
+            <div class="slide-menu__list slide-menu__list--down" data-menu="menu">
+                <div class="slide-el slide-el--sub" data-menu="main">
+                    <span>Меню</span>
+                    <svg class="icon">
+                        <use xlink:href="#arrow-left"></use>
+                    </svg>
+                </div>
+                <div class="slide-el slide-el--sub tag__el--sky" data-menu="roll">
+                    <div class="tag__el-icon">
+                        <svg class="icon">
+                            <use xlink:href="#roll"></use>
+                        </svg>
+                        <div class="tag__el-text">роллы</div>
+                    </div>
+                    <svg class="icon">
+                        <use xlink:href="#arrow-right"></use>
+                    </svg>
+                </div>
+                <a class="slide-el tag__el--red tag__el--hidden" href="#">
+                    <div class="tag__el-icon">
+                        <svg class="icon">
+                            <use xlink:href="#sushi"></use>
+                        </svg>
+                        <div class="tag__el-text">суши</div>
+                    </div>
+                </a>
+                <a class="slide-el tag__el--fiolet tag__el--full" href="#">
+                    <div class="tag__el-icon">
+                        <svg class="icon">
+                            <use xlink:href="#snack"></use>
+                        </svg>
+                        <div class="tag__el-text">горячие закуски</div>
+                    </div>
+                </a>
+                <a class="slide-el tag__el--purpur tag__el--full" href="#">
+                    <div class="tag__el-icon">
+                        <svg class="icon">
+                            <use xlink:href="#pizza"></use>
+                        </svg>
+                        <div class="tag__el-text">пицца</div>
+                    </div>
+                </a>
+                <a class="slide-el tag__el--blue tag__el--hidden" href="#">
+                    <div class="tag__el-icon">
+                        <svg class="icon">
+                            <use xlink:href="#set"></use>
+                        </svg>
+                        <div class="tag__el-text">сеты</div>
+                    </div>
+                </a>
+                <a class="slide-el tag__el--sky tag__el--hidden" href="#">
+                    <div class="tag__el-icon">
+                        <svg class="icon">
+                            <use xlink:href="#roll"></use>
+                        </svg>
+                        <div class="tag__el-text">роллы</div>
+                    </div>
+                </a>
+                <a class="slide-el tag__el--green" href="#">
+                    <div class="tag__el-icon">
+                        <svg class="icon">
+                            <use xlink:href="#cake"></use>
+                        </svg>
+                        <div class="tag__el-text">десерты</div>
+                    </div>
+                </a>
+                <a class="slide-el tag__el--grass" href="#">
+                    <div class="tag__el-icon">
+                        <svg class="icon">
+                            <use xlink:href="#wok"></use>
+                        </svg>
+                        <div class="tag__el-text">блюда wok</div>
+                    </div>
+                </a>
+                <a class="slide-el tag__el--yellow" href="#">
+                    <div class="tag__el-icon">
+                        <svg class="icon">
+                            <use xlink:href="#supe"></use>
+                        </svg>
+                        <div class="tag__el-text">супы</div>
+                    </div>
+                </a>
+                <a class="slide-el tag__el--orange" href="#">
+                    <div class="tag__el-icon">
+                        <svg class="icon">
+                            <use xlink:href="#salad"></use>
+                        </svg>
+                        <div class="tag__el-text">салаты</div>
+                    </div>
+                </a>
+                <a class="slide-el tag__el--rose" href="#">
+                    <div class="tag__el-icon">
+                        <svg class="icon">
+                            <use xlink:href="#drink"></use>
+                        </svg>
+                        <div class="tag__el-text">напитки</div>
+                    </div>
+                </a>
+                <a class="slide-el tag__el--gray" href="#">
+                    <div class="tag__el-icon">
+                        <svg class="icon">
+                            <use xlink:href="#sauce"></use>
+                        </svg>
+                        <div class="tag__el-text">соусы</div>
+                    </div>
+                </a>
+            </div>
+            <!--Подменю список роллы-->
+            <div class="slide-menu__list slide-menu__list--down" data-menu="roll">
+                <div class="slide-el slide-el--sub" data-menu="menu">
+                    <span>Виды роллов</span>
+                    <svg class="icon">
+                        <use xlink:href="#arrow-left"></use>
+                    </svg>
+                </div>
+                <a class="slide-el" href="#">жаренные роллы</a>
+                <a class="slide-el" href="#">основные роллы</a>
+                <a class="slide-el" href="#">острые роллы</a>
+                <a class="slide-el" href="#">классические роллы</a>
+            </div>
+            <!--Подменю города-->
+            <div class="slide-menu__list slide-menu__list--down" data-menu="town">
+                <div class="slide-el slide-el--sub" data-menu="main">
+                    <span>Выберите свой город</span>
+                    <svg class="icon">
+                        <use xlink:href="#arrow-left"></use>
+                    </svg>
+                </div>
+                <div class="slide-el">Москва</div>
+                <div class="slide-el slide-el--active">Санкт-Петербург</div>
+                <div class="slide-el">Казань</div>
+                <div class="slide-el">Чебоксары</div>
             </div>
         </div>
     </div>
@@ -713,7 +924,7 @@
                 </div>
             </div>
         </div>
-        <div class="add-text">
+        <div class="add-text content">
             <div class="add-text__col">
                 <div class="add-text__col-title">Впечатляющий ассортимент вкусных блюд</div>
                 <p>Наше меню включает:</p>

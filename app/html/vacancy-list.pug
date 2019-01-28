@@ -1,0 +1,36 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
++header()
+
+.main-cont
+	.bread-row
+		.bread-title Заголовок
+		.bread
+			a(href="#").bread__el Главная
+			.bread__el О нас
+		a(href="#").page-nav
+			.page-nav__icon
+				+icon("arrow-back","icon")
+			.page-nav__text на главную
+
+	.title.title--mobile
+		span Отзывы клиентов
+		//.title__more(data-modal="review").modal-get оставить отзыв
+
+	.vacancy-list
+		- for (var i=0;i<8;i++)
+			.vacancy-list__el
+				.vacancy-list__img(style="background-image:url('img/vacancy.jpg')")
+					.vacancy-list__el-cont
+						.vacancy-list__loc
+							.vacancy-list__loc-title пр. Ямашева, д. 82
+							.vacancy-list__loc-val +2
+				.vacancy-list__info
+					.vacancy-list__title Управляющий бара
+					.vacancy-list__decr Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid consectetur deleniti enim eum fugiat pariatur placeat, voluptatibus. Explicabo, iste, reprehenderit.
+
+	+addtext()
+
++footer()
+include ./block_html/_script.pug

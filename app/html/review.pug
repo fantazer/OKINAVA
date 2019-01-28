@@ -15,13 +15,13 @@ include block_html/_include.pug
 			.page-nav__text на главную
 
 	//review
-	.title.title--list.title--list-review
+	.title.title--list.title--mobile
 		span Отзывы клиентов
 		.title__more(data-modal="review").modal-get оставить отзыв
 	.review-slider__control
 		.review-slider__control-el.review-slider__control-el--left
 			+icon("circle-arrow--left","icon")
-		.review-slider__all  оставить отзыв
+		.review-slider__all.modal-get(data-modal="review") оставить отзыв
 		.review-slider__control-el.review-slider__control-el--right
 			+icon("circle-arrow--right","icon")
 	.review.slider-mobile
