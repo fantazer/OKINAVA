@@ -380,14 +380,12 @@ body
 		padding-right: 30px
 .head-main-wrap
 	+below(767px)
-		padding: 10px 0
-		//margin-bottom: 20px
 		height: 50px
 		border-bottom 1px solid $border-color
 	background: white
 .head-main
 	+below(767px)
-		align-items: flex-end
+		height: 50px
 	f()
 	align-items: center
 .head-nav
@@ -421,17 +419,22 @@ body
 		margin-left:initial
 		f()
 		fl()
-		margin-bottom: -7px
+		size 50px
+		margin-right: -10px
+		border-left 1px solid $border-color
+		border-radius 0
 	flex(mid)
 	margin-left: auto
 	text-decoration: none
 	padding: 5px 20px
-
+	border-radius 50px
 .cart-icon
+	+below(767px)
+		margin-right: 4px
 	margin-right: 10px
 	position: relative
 	.icon
-		size 22px
+		size 26px
 		+below(768px)
 			fill black!important
 		fill $red
@@ -439,7 +442,14 @@ body
 	+above(1201px)
 		display: none
 	+below(768px)
-		color $red
+		color white
+		background: $red
+		size 14px
+		round()
+		flex(mid)
+		font-weight: 400
+		font-size: 10px
+		top: -7px
 	position: absolute
 	right: -5px
 	top -10px
@@ -629,7 +639,6 @@ body
 .cart--full
 	background: $red
 	color white!important
-	border-radius 30px
 	tr(all)
 	&:hover
 		background: lighten($red,5)
@@ -754,7 +763,7 @@ body
 		font-size: 12px
 	@extend .type--lg
 	font-weight: 500
-	margin-top: -3px
+	margin-top: -1px
 	white-space nowrap
 
 tag($color)
@@ -1784,7 +1793,7 @@ tag($color)
 		display: none
 	font-size: 9px
 	font-weight: 700
-
+	display: none
 .tag__el--hidden
 	+below(767px)
 		display: none
@@ -2918,7 +2927,7 @@ tag($color)
 .slide-el
 	@extend .type--lg
 	display: block
-	padding: 20px
+	padding: 20px 20px 20px 10px
 	border-bottom 1px solid $border-color
 	font-weight:500
 	flex(between)

@@ -1300,7 +1300,6 @@ body {
 }
 @media only screen and (max-width: 767px) {
   .head-main-wrap {
-    padding: 10px 0;
     height: 50px;
     border-bottom: 1px solid #e2e2e2;
   }
@@ -1311,7 +1310,7 @@ body {
 }
 @media only screen and (max-width: 767px) {
   .head-main {
-    align-items: flex-end;
+    height: 50px;
   }
 }
 .head-nav {
@@ -1364,6 +1363,7 @@ body {
   margin-left: auto;
   text-decoration: none;
   padding: 5px 20px;
+  border-radius: 50px;
 }
 @media only screen and (max-width: 1200px) {
   .cart {
@@ -1375,16 +1375,25 @@ body {
     margin-left: initial;
     display: flex;
     flex-flow: column;
-    margin-bottom: -7px;
+    width: 50px;
+    height: 50px;
+    margin-right: -10px;
+    border-left: 1px solid #e2e2e2;
+    border-radius: 0;
   }
 }
 .cart-icon {
   margin-right: 10px;
   position: relative;
 }
+@media only screen and (max-width: 767px) {
+  .cart-icon {
+    margin-right: 4px;
+  }
+}
 .cart-icon .icon {
-  width: 22px;
-  height: 22px;
+  width: 26px;
+  height: 26px;
   fill: #ca0000;
 }
 @media only screen and (max-width: 768px) {
@@ -1405,7 +1414,17 @@ body {
 }
 @media only screen and (max-width: 768px) {
   .cart-icon__val {
-    color: #ca0000;
+    color: #fff;
+    background: #ca0000;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 10px;
+    top: -7px;
   }
 }
 .cart-info {
@@ -1613,7 +1632,6 @@ body {
 .cart--full {
   background: #ca0000;
   color: #fff !important;
-  border-radius: 30px;
   transition: all 0.4s;
 }
 .cart--full:hover {
@@ -1778,7 +1796,7 @@ body {
 }
 .tag__el-text {
   font-weight: 500;
-  margin-top: -3px;
+  margin-top: -1px;
   white-space: nowrap;
 }
 @media only screen and (max-width: 640px) {
@@ -3504,6 +3522,7 @@ body {
 .cart-bonus {
   font-size: 9px;
   font-weight: 700;
+  display: none;
 }
 @media only screen and (min-width: 768px) {
   .cart-bonus {
@@ -5077,7 +5096,7 @@ body {
 }
 .slide-el {
   display: block;
-  padding: 20px;
+  padding: 20px 20px 20px 10px;
   border-bottom: 1px solid #e2e2e2;
   font-weight: 500;
   display: flex;
