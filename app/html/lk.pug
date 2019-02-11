@@ -1,131 +1,135 @@
 include block_html/_style.pug
 include block_html/_include.pug
 
-+header()
+.page
+	.page-head
+		+header()
 
-.main-cont
-	.bread-row
-		.bread-title Заголовок
-		.bread
-			a(href="#").bread__el Главная
-			.bread__el Личный кабинет
-		a(href="#").page-nav
-			.page-nav__icon
-				+icon("arrow-back","icon")
-			.page-nav__text на главную
-	.lk
-		.lk-user
-			.lk-user__wrap
-				.lk-title
-					.lk-title__text  мой профиль
-					.user-config
-						.user-config__el.user-config__el--edit.modal-get(data-modal="profile-edit")
-							+icon("edit","icon")
-						.user-config__el.user-config__el--remove
-							+icon("exit","icon")
-				.user
-					.user-row
-						.user__name Имя:
-						.user__val
-							.user__val-info
-								.user__val-text Александр
-								//.user__val-edit Изменить
-					.user-row
-						.user__name Телефон:
-						.user__val +7 923 666 7667
-					.user-row
-						.user__name День рождения:
-						.user__val 30 Сентября
-					.user-row
-						.user__name Email:
-						.user__val
-							.user__val--add.modal-get(data-modal="mail") Добавить
-					.user-row
-						.user__name Бонусные баллы
-						.user__val.user__val--bonus 140 Б
-				//.lk-title-sub Привязанные карты
+	.page-content
+		.main-cont
+			.bread-row
+				.bread-title Заголовок
+				.bread
+					a(href="#").bread__el Главная
+					.bread__el Личный кабинет
+				a(href="#").page-nav
+					.page-nav__icon
+						+icon("arrow-back","icon")
+					.page-nav__text на главную
+			.lk
+				.lk-user
+					.lk-user__wrap
+						.lk-title
+							.lk-title__text  мой профиль
+							.user-config
+								.user-config__el.user-config__el--edit.modal-get(data-modal="profile-edit")
+									+icon("edit","icon")
+								.user-config__el.user-config__el--remove
+									+icon("exit","icon")
+						.user
+							.user-row
+								.user__name Имя:
+								.user__val
+									.user__val-info
+										.user__val-text Александр
+										//.user__val-edit Изменить
+							.user-row
+								.user__name Телефон:
+								.user__val +7 923 666 7667
+							.user-row
+								.user__name День рождения:
+								.user__val 30 Сентября
+							.user-row
+								.user__name Email:
+								.user__val
+									.user__val--add.modal-get(data-modal="mail") Добавить
+							.user-row
+								.user__name Бонусные баллы
+								.user__val.user__val--bonus 140 Б
+						//.lk-title-sub Привязанные карты
 
-				//.user-card
-					a(href="#").user-card__el.user-card__el--active
-						.user-card-remove
-							+icon("close","icon")
-						.user-card-icon
-							+icon("visa","icon")
-						.user-card-numb 7878 988* **** 3445
-					- for (var i=0;i<2;i++)
-					.user-card__el.user-card__el--add
-						.user-card__add
-							+icon("plus","icon")
-						.user-card__add-text Привязать карту
+						//.user-card
+							a(href="#").user-card__el.user-card__el--active
+								.user-card-remove
+									+icon("close","icon")
+								.user-card-icon
+									+icon("visa","icon")
+								.user-card-numb 7878 988* **** 3445
+							- for (var i=0;i<2;i++)
+							.user-card__el.user-card__el--add
+								.user-card__add
+									+icon("plus","icon")
+								.user-card__add-text Привязать карту
 
 
-				.lk-title-sub Адреса
-				.lk-adr
-					.lk-adr__el
-						.lk-adr-conf
-							.lk-adr-conf__el.lk-adr-conf__el--edit.modal-get(data-modal="adress-edit")
-								+icon("edit","icon")
-							.lk-adr-conf__el.lk-adr-conf__el--remove
-								+icon("garbage","icon")
-						.lk-adr-text Дом
-						.lk-adr-adress г.Барнаул, пр.Ленина 62-2
-					.lk-adr__el
-						.lk-adr-conf
-							.lk-adr-conf__el.lk-adr-conf__el--edit.modal-get(data-modal="adress-edit")
-								+icon("edit","icon")
-							.lk-adr-conf__el.lk-adr-conf__el--remove
-								+icon("garbage","icon")
-						.lk-adr-text Работа
-						.lk-adr-adress г.Москва, ул.Победы 62
-					.lk-adr__el.lk-adr__el--add.modal-get(data-modal="adress")
-						.lk-adr__add
-							+icon("plus","icon")
-						.lk-adr__add-text Добавить адрес
+						.lk-title-sub Адреса
+						.lk-adr
+							.lk-adr__el
+								.lk-adr-conf
+									.lk-adr-conf__el.lk-adr-conf__el--edit.modal-get(data-modal="adress-edit")
+										+icon("edit","icon")
+									.lk-adr-conf__el.lk-adr-conf__el--remove
+										+icon("garbage","icon")
+								.lk-adr-text Дом
+								.lk-adr-adress г.Барнаул, пр.Ленина 62-2
+							.lk-adr__el
+								.lk-adr-conf
+									.lk-adr-conf__el.lk-adr-conf__el--edit.modal-get(data-modal="adress-edit")
+										+icon("edit","icon")
+									.lk-adr-conf__el.lk-adr-conf__el--remove
+										+icon("garbage","icon")
+								.lk-adr-text Работа
+								.lk-adr-adress г.Москва, ул.Победы 62
+							.lk-adr__el.lk-adr__el--add.modal-get(data-modal="adress")
+								.lk-adr__add
+									+icon("plus","icon")
+								.lk-adr__add-text Добавить адрес
 
-		.lk-order
-			.lk-order__wrap
-				.history-title История заказов
-				.history
-					- for (var j=0;j<3;j++)
-						.history-card(class=j===0?'history-card--active':'')
+				.lk-order
+					.lk-order__wrap
+						.history-title История заказов
+						.history
+							- for (var j=0;j<3;j++)
+								.history-card(class=j===0?'history-card--active':'')
 
-							.history-card__wrap
-								.history-card__info
-									.history-card__date 28 Сентября, 2017
-									.history-card__numb № 43576
-								.history-card__list
-									- for (var i=0;i<3;i++)
-										a(href="#" style="background-image:url('img/card-image-1.jpg')").history-card__list-el
-											.history-card__list-el-val x2
-									.history-card__list-el.history-card__list-el--last(style="background-image:url('img/card.jpg')")
-										.history-card__list-el-val +2
-								.history-card__price
-									.history-card__price_text Сумма:
-									.history-card__price_val 1100 Р
-							.history-info(class=j===0?'history-info--active':'')
-								.history-info__head
-									//.history-info__head-date 28 Апреля 2017
-									.history-info__head-state Доставлен
-									.history-info__head-numb № 43576
-								- for (var k=0;k<4;k++)
-									.history-info__list
-										.history-info__el
-											a(href="#" style="background-image:url('img/card-image-1.jpg')").history-info__el-img
-											.history-info__el-about
-												.history-info__el-title Гавайская с курицей
-												.history-info__el-text Традиционное, 35 см
-											.history-info__el-count x2
-											.history-info__el-price 680 Р
-								.history-info-footer
-									.history-info-get
-										+icon("repeat","icon")
-										span Повторить заказ
-									.history-info-total
-										.history-info-total__text Сумма:
-										.history-info-total__val 1 184 Р
-					//.histiry-empty Вы еще не сделали ни одного заказа,лучшее время это исправить и заказать что-то вкусное :)
+									.history-card__wrap
+										.history-card__info
+											.history-card__date 28 Сентября, 2017
+											.history-card__numb № 43576
+										.history-card__list
+											- for (var i=0;i<3;i++)
+												a(href="#" style="background-image:url('img/card-image-1.jpg')").history-card__list-el
+													.history-card__list-el-val x2
+											.history-card__list-el.history-card__list-el--last(style="background-image:url('img/card.jpg')")
+												.history-card__list-el-val +2
+										.history-card__price
+											.history-card__price_text Сумма:
+											.history-card__price_val 1100 Р
+									.history-info(class=j===0?'history-info--active':'')
+										.history-info__head
+											//.history-info__head-date 28 Апреля 2017
+											.history-info__head-state Доставлен
+											.history-info__head-numb № 43576
+										- for (var k=0;k<4;k++)
+											.history-info__list
+												.history-info__el
+													a(href="#" style="background-image:url('img/card-image-1.jpg')").history-info__el-img
+													.history-info__el-about
+														.history-info__el-title Гавайская с курицей
+														.history-info__el-text Традиционное, 35 см
+													.history-info__el-count x2
+													.history-info__el-price 680 Р
+										.history-info-footer
+											.history-info-get
+												+icon("repeat","icon")
+												span Повторить заказ
+											.history-info-total
+												.history-info-total__text Сумма:
+												.history-info-total__val 1 184 Р
+							//.histiry-empty Вы еще не сделали ни одного заказа,лучшее время это исправить и заказать что-то вкусное :)
 
-	+addtext()
+			+addtext()
 
-+footer()
+	.page-footer
+		+footer()
 include ./block_html/_script.pug

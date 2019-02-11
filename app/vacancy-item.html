@@ -25,980 +25,988 @@
 </head>
 
 <body>
-    <!--block header-->
-    <div class="head">
-        <div class="main-cont">
-            <div class="head-top">
-                <div class="head-location">
-                    <div class="drop">
-                        <div class="drop__icon">
-                            <svg class="icon">
-                                <use xlink:href="#arrow-down"></use>
+    <div class="page">
+        <div class="page-head">
+            <!--block header-->
+            <div class="head">
+                <div class="main-cont">
+                    <div class="head-top">
+                        <div class="head-location">
+                            <div class="drop">
+                                <div class="drop__icon">
+                                    <svg class="icon">
+                                        <use xlink:href="#arrow-down"></use>
+                                    </svg>
+                                </div>
+                                <div class="drop__current">Санкт-Петербург</div>
+                                <div class="drop-container drop-container--town">
+                                    <div class="drop-container-wrap">
+                                        <a class="drop-container__el" href="#">Москва</a>
+                                        <a class="drop-container__el" href="#">Смоленск</a>
+                                        <a class="drop-container__el" href="#">Казань</a>
+                                        <a class="drop-container__el" href="#">Великий новгород</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="head-top-nav">
+                            <a class="head-top-nav__el" href="#">Доставка</a>
+                            <a class="head-top-nav__el" href="#">Акции</a>
+                            <a class="head-top-nav__el" href="#">Отзывы</a>
+                            <a class="head-top-nav__el" href="#">Кафе</a>
+                            <a class="head-top-nav__el" href="#">Вакансии</a>
+                            <a class="head-top-nav__el" href="#">Контакты</a>
+                        </div>
+                        <div class="head-soc">
+                            <div class="soc-row">
+                                <a class="soc-row__el" href="#">
+                                    <svg class="icon">
+                                        <use xlink:href="#soc-instagram"></use>
+                                    </svg>
+                                </a>
+                                <a class="soc-row__el" href="#">
+                                    <svg class="icon">
+                                        <use xlink:href="#soc-vk"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <!--toggle class .login--false .login--true-->
+                        <div class="login login--true">
+                            <div class="login-drop-toggle login-enter">
+                                <div class="login-enter-mobile">
+                                    <svg class="icon">
+                                        <use xlink:href="#profile"></use>
+                                    </svg>
+                                </div>
+                                <span class="login-enter-mobile-text">Вход в личный кабинет</span>
+                            </div>
+                            <a class="login-auth" href="#">
+                                <div class="login-auth__icon">
+                                    <svg class="icon">
+                                        <use xlink:href="#profile"></use>
+                                    </svg>
+                                    <div class="login-auth__icon-check">
+                                        <svg class="icon">
+                                            <use xlink:href="#checked"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="login-auth__name">Константин</div>
+                                <div class="login-auth__bonus">+140 Б</div>
+                            </a>
+                            <div class="login-drop-wrap">
+                                <div class="login-drop">
+                                    <div class="login-drop__head">
+                                        <div class="login-toggle login-switch login-toggle--active" data-switch="enter">Вход</div>
+                                        <div class="login-toggle login-switch" data-switch="registration">Регистрация</div>
+                                    </div>
+                                    <!--enter form-->
+                                    <div class="login-wrap login-wrap--active" data-cont="enter">
+                                        <form class="login-form" action="#">
+                                            <input class="input" type="text" placeholder="Электр. почта/Телефон" />
+                                            <input class="input" type="text" placeholder="Пароль" />
+                                            <input class="btn--md btn--mark" type="submit" value="Войти" />
+                                        </form>
+                                        <div class="login-remember">
+                                            <div class="check-el">
+                                                <label class="style-label style-label--checkbox">
+                                                    <input class="sytle-input" type="checkbox" />
+                                                    <div class="sytle-input-element">
+                                                        <svg class="icon-check">
+                                                            <use xlink:href="#checked"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="sytle-input-text">Запомнить меня</div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="login-fogot login-switch" data-switch="fogot">Забыли пароль?</div>
+                                        <div class="login-soc">
+                                            <div class="login-soc__text">Войти с помощью соц. сетей</div>
+                                            <div class="login-soc-row">
+                                                <a class="login-soc-el" href="#">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#vk--color"></use>
+                                                    </svg>
+                                                </a>
+                                                <a class="login-soc-el" href="#">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#facebook--color"></use>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--registration form-->
+                                    <div class="login-wrap login-wrap--registration" data-cont="registration">
+                                        <form class="login-form" action="#">
+                                            <input class="input" type="text" placeholder="Имя" />
+                                            <input class="input" type="text" placeholder="Телефон" />
+                                            <input class="input" type="text" placeholder="E-mail" />
+                                            <input class="input" type="password" placeholder="Пароль" />
+                                            <input class="input" type="password" placeholder="Повторить пароль" />
+                                            <div class="login-remember">
+                                                <div class="check-el">
+                                                    <label class="style-label style-label--checkbox">
+                                                        <input class="sytle-input" type="checkbox" />
+                                                        <div class="sytle-input-element">
+                                                            <svg class="icon-check">
+                                                                <use xlink:href="#checked"></use>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="sytle-input-text">Соглашаюсь с условиями обработки персональных данных</div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <input class="btn--md btn--mark" type="submit" value="Войти" />
+                                        </form>
+                                        <div class="login-soc">
+                                            <div class="login-soc__text">Зарегистрироваться с помощью соц. сетей</div>
+                                            <div class="login-soc-row">
+                                                <a class="login-soc-el" href="#">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#vk--color"></use>
+                                                    </svg>
+                                                </a>
+                                                <a class="login-soc-el" href="#">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#facebook--color"></use>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--registration form-->
+                                    <div class="login-wrap login-wrap--registration" data-cont="fogot">
+                                        <form class="login-form" action="#">
+                                            <input class="input" type="text" placeholder="Электр. почта" />
+                                            <div class="login-btn-code login-switch" data-switch="code">Отправить код</div>
+                                        </form>
+                                    </div>
+                                    <div class="login-wrap login-wrap--registration" data-cont="code">
+                                        <div class="login-code-text">Вам на e-mail/телефон отправлен код подтверждения</div>
+                                        <form class="login-form" action="#">
+                                            <input class="input" type="text" placeholder="Введите код" />
+                                            <div class="login-btn-code">Подтвердить</div>
+                                            <div class="login-btn-recode">Выслать повторно</div>
+                                            <div class="login-btn-back login-switch" data-switch="fogot">Назад к восстановлению</div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="head-info">
+                        <a class="logo" href="#">
+                            <img src="img/logo.svg" alt="" />
+                        </a>
+                        <a class="head-phone" href="tel:8 (843) 233 44 33">8 (843) 233 44 33</a>
+                        <div class="work-time">
+                            <div class="drop">
+                                <div class="drop__icon">
+                                    <svg class="icon">
+                                        <use xlink:href="#arrow-down"></use>
+                                    </svg>
+                                </div>
+                                <div class="drop__current">мы работаем с 10 до 24</div>
+                                <div class="drop-container drop-container--town">
+                                    <div class="drop-container-wrap">
+                                        <a class="drop-container__el" href="#">Москва</a>
+                                        <a class="drop-container__el" href="#">Смоленск</a>
+                                        <a class="drop-container__el" href="#">Казань</a>
+                                        <a class="drop-container__el" href="#">Великий новгород</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <form class="header-search" action="">
+                            <div class="header-search-wrap">
+                                <div class="header-search-icon">
+                                    <svg class="icon">
+                                        <use xlink:href="#serch"></use>
+                                    </svg>
+                                    <input class="input input-search" type="text" placeholder="Активный поиск" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="head-main-wrap">
+                <div class="main-cont">
+                    <div class="head-main">
+                        <div class="head-toggle">
+                            <svg class="icon icon-open">
+                                <use xlink:href="#menu"></use>
+                            </svg>
+                            <svg class="icon icon-close">
+                                <use xlink:href="#close"></use>
                             </svg>
                         </div>
-                        <div class="drop__current">Санкт-Петербург</div>
-                        <div class="drop-container drop-container--town">
-                            <div class="drop-container-wrap">
-                                <a class="drop-container__el" href="#">Москва</a>
-                                <a class="drop-container__el" href="#">Смоленск</a>
-                                <a class="drop-container__el" href="#">Казань</a>
-                                <a class="drop-container__el" href="#">Великий новгород</a>
+                        <a class="head-main-logo" href="/">
+                            <img src="img/logo.svg" alt="" />
+                        </a>
+                        <div class="head-nav">
+                            <div class="head-nav__el-wrap">
+                                <a class="head-nav__el" href="#">суши</a>
+                            </div>
+                            <div class="head-nav__el-wrap">
+                                <a class="head-nav__el" href="#">горячие закуски</a>
+                            </div>
+                            <div class="head-nav__el-wrap">
+                                <a class="head-nav__el" href="#">пицца</a>
+                            </div>
+                            <div class="head-nav__el-wrap">
+                                <a class="head-nav__el" href="#">сеты</a>
+                            </div>
+                            <div class="head-nav__el-wrap">
+                                <a class="head-nav__el" href="#">
+                                    <svg class="icon">
+                                        <use xlink:href="#arrow-down"></use>
+                                    </svg>
+                                    <span>роллы</span>
+                                </a>
+                                <div class="head-sub">
+                                    <div class="head-sub-wrap">
+                                        <a class="head-sub__item" href="#">жаренные роллы</a>
+                                        <a class="head-sub__item" href="#">острые роллы</a>
+                                        <a class="head-sub__item" href="#">основные роллы</a>
+                                        <a class="head-sub__item" href="#">запеченные роллы</a>
+                                        <a class="head-sub__item" href="#">классические роллы</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="head-nav__el-wrap">
+                                <a class="head-nav__el" href="#">десерты</a>
+                            </div>
+                            <div class="head-nav__el-wrap">
+                                <a class="head-nav__el" href="#">блюда wok</a>
+                            </div>
+                            <div class="head-nav__el-wrap">
+                                <a class="head-nav__el" href="#">супы</a>
+                            </div>
+                            <div class="head-nav__el-wrap">
+                                <a class="head-nav__el" href="#">салаты</a>
+                            </div>
+                            <div class="head-nav__el-wrap">
+                                <a class="head-nav__el" href="#">напитки</a>
+                            </div>
+                            <div class="head-nav__el-wrap">
+                                <a class="head-nav__el" href="#">соусы</a>
+                            </div>
+                        </div>
+                        <a class="head-main-call" href="tel:8 (843) 233 44 33">
+                            <svg class="icon">
+                                <use xlink:href="#call"></use>
+                            </svg>
+                        </a>
+                        <a class="cart cart--full" href="#">
+                            <div class="cart-icon">
+                                <svg class="icon">
+                                    <use xlink:href="#cart"></use>
+                                </svg>
+                                <div class="cart-icon__val">2</div>
+                            </div>
+                            <div class="cart-info">
+                                <div class="cart-condition">корзина пуста</div>
+                                <div class="cart-size">0 товаров</div>
+                            </div>
+                            <div class="cart-bonus">+150 б.б.</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--мобильное меню-->
+            <div class="slide-menu">
+                <div class="slide-menu-wrap">
+                    <!--Подменю главное-->
+                    <div class="slide-menu__list slide-menu__list--active slide-menu__list--up" data-menu="main">
+                        <div class="slide-el slide-el--sub" data-menu="menu">
+                            <span>Меню</span>
+                            <svg class="icon">
+                                <use xlink:href="#arrow-right"></use>
+                            </svg>
+                        </div>
+                        <div class="slide-el slide-el--sub" data-menu="town">
+                            <span>Ваш город</span>
+                            <svg class="icon">
+                                <use xlink:href="#arrow-right"></use>
+                            </svg>
+                        </div>
+                        <a class="slide-el" href="#">Доставка</a>
+                        <a class="slide-el" href="#">Акции</a>
+                        <a class="slide-el" href="#">Отзывы</a>
+                        <a class="slide-el" href="#">Кафе</a>
+                        <a class="slide-el" href="#">Вакансии</a>
+                        <a class="slide-el" href="#">Контакты</a>
+                        <!--toggle class .login--false .login--true-->
+                        <div class="slide-menu-contact">
+                            <div class="login login--false">
+                                <div class="login-enter">
+                                    <svg class="icon">
+                                        <use xlink:href="#profile"></use>
+                                    </svg>
+                                    <span class="login-enter-mobile-text">Вход в личный кабинет</span>
+                                </div>
+                                <a class="login-auth" href="#">
+                                    <div class="login-auth__icon">
+                                        <svg class="icon">
+                                            <use xlink:href="#profile"></use>
+                                        </svg>
+                                        <div class="login-auth__icon-check">
+                                            <svg class="icon">
+                                                <use xlink:href="#checked"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="login-auth__name">Константин</div>
+                                    <div class="login-auth__bonus">+140 Б</div>
+                                </a>
+                            </div>
+                            <form class="header-search" action="">
+                                <div class="header-search-wrap">
+                                    <div class="header-search-icon">
+                                        <svg class="icon">
+                                            <use xlink:href="#serch"></use>
+                                        </svg>
+                                        <input class="input input-search" type="text" placeholder="Активный поиск" />
+                                    </div>
+                                </div>
+                            </form>
+                            <a class="slide-menu-phone" href="tel:8 (843) 233 44 33">8 (843) 233 44 33</a>
+                            <div class="soc-row">
+                                <a class="soc-row__el" href="#">
+                                    <svg class="icon">
+                                        <use xlink:href="#soc-instagram"></use>
+                                    </svg>
+                                </a>
+                                <a class="soc-row__el" href="#">
+                                    <svg class="icon">
+                                        <use xlink:href="#soc-vk"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Подменю список блюд-->
+                    <div class="slide-menu__list slide-menu__list--down" data-menu="menu">
+                        <div class="slide-el slide-el--sub" data-menu="main">
+                            <span>Меню</span>
+                            <svg class="icon">
+                                <use xlink:href="#arrow-left"></use>
+                            </svg>
+                        </div>
+                        <div class="slide-el slide-el--sub tag__el--sky" data-menu="roll">
+                            <div class="tag__el-icon">
+                                <svg class="icon">
+                                    <use xlink:href="#roll"></use>
+                                </svg>
+                                <div class="tag__el-text">роллы</div>
+                            </div>
+                            <svg class="icon">
+                                <use xlink:href="#arrow-right"></use>
+                            </svg>
+                        </div>
+                        <a class="slide-el tag__el--red tag__el--hidden" href="#">
+                            <div class="tag__el-icon">
+                                <svg class="icon">
+                                    <use xlink:href="#sushi"></use>
+                                </svg>
+                                <div class="tag__el-text">суши</div>
+                            </div>
+                        </a>
+                        <a class="slide-el tag__el--fiolet tag__el--full" href="#">
+                            <div class="tag__el-icon">
+                                <svg class="icon">
+                                    <use xlink:href="#snack"></use>
+                                </svg>
+                                <div class="tag__el-text">горячие закуски</div>
+                            </div>
+                        </a>
+                        <a class="slide-el tag__el--purpur tag__el--full" href="#">
+                            <div class="tag__el-icon">
+                                <svg class="icon">
+                                    <use xlink:href="#pizza"></use>
+                                </svg>
+                                <div class="tag__el-text">пицца</div>
+                            </div>
+                        </a>
+                        <a class="slide-el tag__el--blue tag__el--hidden" href="#">
+                            <div class="tag__el-icon">
+                                <svg class="icon">
+                                    <use xlink:href="#set"></use>
+                                </svg>
+                                <div class="tag__el-text">сеты</div>
+                            </div>
+                        </a>
+                        <a class="slide-el tag__el--sky tag__el--hidden" href="#">
+                            <div class="tag__el-icon">
+                                <svg class="icon">
+                                    <use xlink:href="#roll"></use>
+                                </svg>
+                                <div class="tag__el-text">роллы</div>
+                            </div>
+                        </a>
+                        <a class="slide-el tag__el--green" href="#">
+                            <div class="tag__el-icon">
+                                <svg class="icon">
+                                    <use xlink:href="#cake"></use>
+                                </svg>
+                                <div class="tag__el-text">десерты</div>
+                            </div>
+                        </a>
+                        <a class="slide-el tag__el--grass" href="#">
+                            <div class="tag__el-icon">
+                                <svg class="icon">
+                                    <use xlink:href="#wok"></use>
+                                </svg>
+                                <div class="tag__el-text">блюда wok</div>
+                            </div>
+                        </a>
+                        <a class="slide-el tag__el--yellow" href="#">
+                            <div class="tag__el-icon">
+                                <svg class="icon">
+                                    <use xlink:href="#supe"></use>
+                                </svg>
+                                <div class="tag__el-text">супы</div>
+                            </div>
+                        </a>
+                        <a class="slide-el tag__el--orange" href="#">
+                            <div class="tag__el-icon">
+                                <svg class="icon">
+                                    <use xlink:href="#salad"></use>
+                                </svg>
+                                <div class="tag__el-text">салаты</div>
+                            </div>
+                        </a>
+                        <a class="slide-el tag__el--rose" href="#">
+                            <div class="tag__el-icon">
+                                <svg class="icon">
+                                    <use xlink:href="#drink"></use>
+                                </svg>
+                                <div class="tag__el-text">напитки</div>
+                            </div>
+                        </a>
+                        <a class="slide-el tag__el--gray" href="#">
+                            <div class="tag__el-icon">
+                                <svg class="icon">
+                                    <use xlink:href="#sauce"></use>
+                                </svg>
+                                <div class="tag__el-text">соусы</div>
+                            </div>
+                        </a>
+                    </div>
+                    <!--Подменю список роллы-->
+                    <div class="slide-menu__list slide-menu__list--down" data-menu="roll">
+                        <div class="slide-el slide-el--sub" data-menu="menu">
+                            <span>Виды роллов</span>
+                            <svg class="icon">
+                                <use xlink:href="#arrow-left"></use>
+                            </svg>
+                        </div>
+                        <a class="slide-el" href="#">жаренные роллы</a>
+                        <a class="slide-el" href="#">основные роллы</a>
+                        <a class="slide-el" href="#">острые роллы</a>
+                        <a class="slide-el" href="#">классические роллы</a>
+                    </div>
+                    <!--Подменю города-->
+                    <div class="slide-menu__list slide-menu__list--down" data-menu="town">
+                        <div class="slide-el slide-el--sub" data-menu="main">
+                            <span>Выберите свой город</span>
+                            <svg class="icon">
+                                <use xlink:href="#arrow-left"></use>
+                            </svg>
+                        </div>
+                        <div class="slide-el">Москва</div>
+                        <div class="slide-el slide-el--active">Санкт-Петербург</div>
+                        <div class="slide-el">Казань</div>
+                        <div class="slide-el">Чебоксары</div>
+                    </div>
+                </div>
+            </div>
+            <!--block header end-->
+        </div>
+        <div class="page-content">
+            <div class="main-cont">
+                <div class="bread-row">
+                    <div class="bread-title">Заголовок</div>
+                    <div class="bread">
+                        <a class="bread__el" href="#">Главная</a>
+                        <div class="bread__el">О нас</div>
+                    </div>
+                    <a class="page-nav" href="#">
+                        <div class="page-nav__icon">
+                            <svg class="icon">
+                                <use xlink:href="#arrow-back"></use>
+                            </svg>
+                        </div>
+                        <div class="page-nav__text">на главную</div>
+                    </a>
+                </div>
+                <!--review-->
+                <div class="title title--mobile">
+                    <span>Управляющий суши-бара</span>
+                    <!--.title__more(data-modal="review").modal-get оставить отзыв-->
+                </div>
+                <div class="vacancy">
+                    <div class="vacancy-tag">
+                        <div class="vacancy-tag__el">пр. Ямашева, д. 82</div>
+                        <div class="vacancy-tag__el">ул. Университетская, д. 10</div>
+                        <div class="vacancy-tag__el">ул. Ямашева, д. 11</div>
+                        <div class="vacancy-tag__el">ул. Университетская, д. 10</div>
+                    </div>
+                    <div class="vacancy-wrap">
+                        <div class="vacancy-content content">
+                            <h2>Обязанности</h2>
+                            <ul>
+                                <li>обеспечение и поддержание эффективной бесперебойной работы;</li>
+                                <li>обеспечение высокого уровня обслуживания гостей;</li>
+                                <li>создание атмосферы гостеприимства в кафе и микроклимата в коллективе;</li>
+                                <li>руководство и организация работы подразделения;</li>
+                                <li>обеспечение выполнения основных финансовых показателей;</li>
+                                <li>решение административно-организационных вопросов, связанных с функционированием суши бара;</li>
+                                <li>обучение и адаптация персонала;</li>
+                                <li>руководство производственно-хозяйственной и финансово-экономической деятельностью суши бара управление персоналом;</li>
+                                <li>работа с гостями – привлечение новых и удержание постоянных гостей;</li>
+                                <li>проведение инвентаризации;</li>
+                                <li>взаимодействие с контролирующими органами;</li>
+                                <li>предоставление отчетности по деятельности высшему руководству.</li>
+                            </ul>
+                            <h3>Требования</h3>
+                            <ul>
+                                <li>опыт работы от 3 лет в общепите (кафе, рестораны);</li>
+                                <li>опыт работы в качестве руководителя в сфере общественного питания не менее 1 года;</li>
+                                <li>умение работать в команде;</li>
+                                <li>активная жизненная позиция;</li>
+                                <li>уверенный пользователь ПК.</li>
+                            </ul>
+                            <h2>Условия</h2>
+                            <ul>
+                                <li>трудоустройство по Трудовому кодексу РФ;</li>
+                                <li>график работы 5/2 плавающие выходные;</li>
+                                <li>выплата заработной платы 2 раза в месяц;</li>
+                            </ul>
+                        </div>
+                        <div class="vacancy-get">
+                            <h2>Откликнуться на вакансию</h2>
+                            <form action="#">
+                                <div class="input-row">
+                                    <input class="input" type="text" placeholder="Имя" />
+                                </div>
+                                <div class="input-row">
+                                    <input class="input" type="text" placeholder="Телефон" />
+                                </div>
+                                <div class="input-row">
+                                    <input class="input" type="text" placeholder="E-mail" />
+                                </div>
+                                <div class="input-row">
+                                    <textarea class="input" name="info" cols="30" rows="10" placeholder="Сопроводительное письмо"></textarea>
+                                </div>
+                                <div class="upload-wrap">
+                                    <div class="upload-img upload-img--doc"></div>
+                                    <label class="upload">
+                                        <div class="upload__icon">
+                                            <svg class="icon">
+                                                <use xlink:href="#upload"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="upload__text">Прикрепить резюме</div>
+                                        <input class="upload-btn" type="file" />
+                                    </label>
+                                </div>
+                                <input class="btn--md btn--mark btn--full" type="submit" value="Cохранить" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="add-text content">
+                    <div class="add-text__col">
+                        <div class="add-text__col-title">Впечатляющий ассортимент вкусных блюд</div>
+                        <p>Наше меню включает:</p>
+                        <ul>
+                            <li>классические и оригинальные виды суши с угрем, окунем, икрой тобико, лососем, тунцом, тигровой креветкой, курицей и пр.;</li>
+                            <li>разнообразные классические роллы (рисом внутрь) и урамаки (рисом наружу), в том числе острые, запеченные, горячие;</li>
+                            <li>аппетитные сеты для романтического ужина или вечеринки в большой компании.</li>
+                        </ul>
+                        <p>Помимо блюд японской кухни мы с радостью приготовим для вас экзотические воки с разными начинками, ароматную пиццу, горячие и холодные супы, свежие и сытные салаты, нежные десерты.</p>
+                        <p>Чтобы заказать суши и другие кушанья, зайдите в соответствующий раздел нашего меню. Каждый товар сопровождается фотографией, указанием состава ингредиентов, веса порции и стоимости. Кликните по плашке «Добавить в корзину» возле
+                            понравившихся суши. Скорректируйте количество порций и введите контактные данные. Наш менеджер свяжется с вами для подтверждения покупки.</p>
+                    </div>
+                    <div class="add-text__col add-text__col--more">
+                        <div class="add-text__col-title">Преимущества заказа суши в «Окинаве»</div>
+                        <ul>
+                            <li>Повара начинают готовить блюда только после вашего звонка.</li>
+                            <li>Мы используем только отборные, свежие продукты.</li>
+                            <li>Готовим суши по фирменной рецептуре.</li>
+                            <li>Предлагаем приемлемую стоимость щедрых порций свежих блюд.</li>
+                            <li>Регулярно проводим акции.</li>
+                            <li>Гарантируем доставку с соблюдением всех технологий транспортировки, чтобы вы всегда получали свежую и теплую еду.</li>
+                            <li>Располагаем собственным автопарком из 25 машин, что позволяет максимально оперативно развозить заказы по всему городу.</li>
+                            <li>Покупки на сумму от 600 рублей доставляем за свой счет.</li>
+                            <li>Возможен самовывоз из удобного для вас кафе нашей сети.</li>
+                        </ul>
+                        <p>Мы первыми в Казани открыли службу доставки суши на дом или в офис и остаемся лидерами в этой сфере.</p>
+                        <p>
+                            <strong>Всегда рады вашим заказам!</strong>
+                        </p>
+                    </div>
+                    <div class="slide-trigger slide-trigger--add-text">
+                        <span class="slide-trigger--true">развернуть</span>
+                        <span class="slide-trigger--false">свернуть</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-footer">
+            <div class="main-cont">
+                <div class="footer">
+                    <div class="footer-top">
+                        <div class="footer-top__el footer-top__el--payment">
+                            <span>Принимаем к оплате</span>
+                            <img src="img/payment.svg" alt="" />
+                        </div>
+                        <div class="footer-top__el">Бесплатная доставка от 600 рублей</div>
+                        <div class="footer-top__el">Время доставки до 45 минут</div>
+                        <div class="footer-top__el footer-top__el--location">
+                            <svg class="icon">
+                                <use xlink:href="#location"></use>
+                            </svg>
+                            <a href="#">Зона доставки</a>
+                        </div>
+                    </div>
+                    <div class="footer-main">
+                        <div class="footer-info">
+                            <div class="footer-copyright">© 2018 «Окинава»</div>
+                            <a class="footer-info__link" href="#">
+                                <span>Политика конфединциальности</span>
+                            </a>
+                            <a class="footer-info__link" href="#">
+                                <span>Публичная оферта</span>
+                            </a>
+                        </div>
+                        <div class="footer-list">
+                            <div class="footer-menu">
+                                <a class="footer-menu__el" href="#">Доставка</a>
+                                <a class="footer-menu__el" href="#">Акции</a>
+                                <a class="footer-menu__el" href="#">Отзывы</a>
+                                <a class="footer-menu__el" href="#">Кафе</a>
+                                <a class="footer-menu__el" href="#">Вакансии</a>
+                                <a class="footer-menu__el" href="#">Контакты</a>
+                            </div>
+                            <p>Реклама и сотрудничество:
+                                <a href="mailto:marketolog@okinavakazan.ru">marketolog@okinavakazan.ru</a>
+                            </p>
+                            <p>Для коммерческих предложений:
+                                <a href="mailto:commerce@okinavakazan.ru">commerce@okinavakazan.ru</a>
+                            </p>
+                        </div>
+                        <div class="footer-adress">
+                            <div class="footer-contact">
+                                <a class="footer-phone" href="tel:8 (843) 233 44 33">8 (843) 233 44 33</a>
+                                <div class="soc-row">
+                                    <a class="soc-row__el" href="#">
+                                        <svg class="icon">
+                                            <use xlink:href="#soc-instagram"></use>
+                                        </svg>
+                                    </a>
+                                    <a class="soc-row__el" href="#">
+                                        <svg class="icon">
+                                            <use xlink:href="#soc-vk"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="create">
+                                <span>Сайт создан в</span>
+                                <img src="img/jq.png" alt="" />
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="head-top-nav">
-                    <a class="head-top-nav__el" href="#">Доставка</a>
-                    <a class="head-top-nav__el" href="#">Акции</a>
-                    <a class="head-top-nav__el" href="#">Отзывы</a>
-                    <a class="head-top-nav__el" href="#">Кафе</a>
-                    <a class="head-top-nav__el" href="#">Вакансии</a>
-                    <a class="head-top-nav__el" href="#">Контакты</a>
-                </div>
-                <div class="head-soc">
-                    <div class="soc-row">
-                        <a class="soc-row__el" href="#">
-                            <svg class="icon">
-                                <use xlink:href="#soc-instagram"></use>
-                            </svg>
-                        </a>
-                        <a class="soc-row__el" href="#">
-                            <svg class="icon">
-                                <use xlink:href="#soc-vk"></use>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <!--toggle class .login--false .login--true-->
-                <div class="login login--true">
-                    <div class="login-drop-toggle login-enter">
-                        <div class="login-enter-mobile">
-                            <svg class="icon">
-                                <use xlink:href="#profile"></use>
-                            </svg>
-                        </div>
-                        <span class="login-enter-mobile-text">Вход в личный кабинет</span>
-                    </div>
-                    <a class="login-auth" href="#">
-                        <div class="login-auth__icon">
-                            <svg class="icon">
-                                <use xlink:href="#profile"></use>
-                            </svg>
-                            <div class="login-auth__icon-check">
+            </div>
+            <div class="footer-mobile">
+                <a class="footer-mobile__logo" href="#">
+                    <img src="img/logo-main-small.svg" alt="" />
+                </a>
+                <a class="footer-mobile__phone" href="tel:8 (843) 233 44 33">8 (843) 233 44 33</a>
+                <a class="footer-mobile__jq" href="#">
+                    <img src="img/logo-jq-small.svg" alt="" />
+                </a>
+            </div>
+            <!--block footer-->
+            <div class="modal-layer">
+                <div class="modal-filter"></div>
+                <div class="modal-wrap">
+                    <!--review-->
+                    <div class="modal" data-modal="review">
+                        <div class="modal-content">
+                            <div class="modal-close">
                                 <svg class="icon">
-                                    <use xlink:href="#checked"></use>
+                                    <use xlink:href="#close"></use>
                                 </svg>
                             </div>
-                        </div>
-                        <div class="login-auth__name">Константин</div>
-                        <div class="login-auth__bonus">+140 Б</div>
-                    </a>
-                    <div class="login-drop-wrap">
-                        <div class="login-drop">
-                            <div class="login-drop__head">
-                                <div class="login-toggle login-switch login-toggle--active" data-switch="enter">Вход</div>
-                                <div class="login-toggle login-switch" data-switch="registration">Регистрация</div>
+                            <div class="modal-title">Добавление отзыва</div>
+                            <div class="get-rating">
+                                <div class="get-rating-text">Ваша оценка</div>
+                                <div class="star-row star-row--red">
+                                    <div class="star-row__el">
+                                        <svg class="icon">
+                                            <use xlink:href="#star"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="star-row__el">
+                                        <svg class="icon">
+                                            <use xlink:href="#star"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="star-row__el">
+                                        <svg class="icon">
+                                            <use xlink:href="#star"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="star-row__el">
+                                        <svg class="icon">
+                                            <use xlink:href="#star"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="star-row__el">
+                                        <svg class="icon">
+                                            <use xlink:href="#star"></use>
+                                        </svg>
+                                    </div>
+                                </div>
                             </div>
-                            <!--enter form-->
-                            <div class="login-wrap login-wrap--active" data-cont="enter">
-                                <form class="login-form" action="#">
-                                    <input class="input" type="text" placeholder="Электр. почта/Телефон" />
-                                    <input class="input" type="text" placeholder="Пароль" />
-                                    <input class="btn--md btn--mark" type="submit" value="Войти" />
-                                </form>
-                                <div class="login-remember">
+                            <form action="javascript:void(null);">
+                                <div class="input-row">
+                                    <input class="input" type="text" name="name" placeholder="Ваше имя" />
+                                </div>
+                                <div class="input-row">
+                                    <input class="input" type="text" name="phone" placeholder="Телефон или e-mail" />
+                                </div>
+                                <div class="input-row">
+                                    <textarea class="input" name="info" cols="30" rows="5" placeholder="Сообщение"></textarea>
+                                </div>
+                                <div class="agree-row">
                                     <div class="check-el">
                                         <label class="style-label style-label--checkbox">
-                                            <input class="sytle-input" type="checkbox" />
+                                            <input class="sytle-input" type="checkbox" name="agree" />
                                             <div class="sytle-input-element">
                                                 <svg class="icon-check">
                                                     <use xlink:href="#checked"></use>
                                                 </svg>
                                             </div>
-                                            <div class="sytle-input-text">Запомнить меня</div>
+                                            <div class="sytle-input-text"></div>
                                         </label>
                                     </div>
-                                </div>
-                                <div class="login-fogot login-switch" data-switch="fogot">Забыли пароль?</div>
-                                <div class="login-soc">
-                                    <div class="login-soc__text">Войти с помощью соц. сетей</div>
-                                    <div class="login-soc-row">
-                                        <a class="login-soc-el" href="#">
-                                            <svg class="icon">
-                                                <use xlink:href="#vk--color"></use>
-                                            </svg>
-                                        </a>
-                                        <a class="login-soc-el" href="#">
-                                            <svg class="icon">
-                                                <use xlink:href="#facebook--color"></use>
-                                            </svg>
-                                        </a>
+                                    <div class="agree-row__text">Согласен с
+                                        <a href="#">условиями обработки персональных данных</a>
                                     </div>
                                 </div>
-                            </div>
-                            <!--registration form-->
-                            <div class="login-wrap login-wrap--registration" data-cont="registration">
-                                <form class="login-form" action="#">
-                                    <input class="input" type="text" placeholder="Имя" />
-                                    <input class="input" type="text" placeholder="Телефон" />
-                                    <input class="input" type="text" placeholder="E-mail" />
-                                    <input class="input" type="password" placeholder="Пароль" />
-                                    <input class="input" type="password" placeholder="Повторить пароль" />
-                                    <div class="login-remember">
-                                        <div class="check-el">
-                                            <label class="style-label style-label--checkbox">
-                                                <input class="sytle-input" type="checkbox" />
-                                                <div class="sytle-input-element">
-                                                    <svg class="icon-check">
-                                                        <use xlink:href="#checked"></use>
-                                                    </svg>
-                                                </div>
-                                                <div class="sytle-input-text">Соглашаюсь с условиями обработки персональных данных</div>
-                                            </label>
+                                <div class="upload-wrap">
+                                    <div class="upload-img"></div>
+                                    <label class="upload">
+                                        <div class="upload__icon">
+                                            <svg class="icon">
+                                                <use xlink:href="#upload"></use>
+                                            </svg>
                                         </div>
+                                        <div class="upload__text">Прикрепить фото</div>
+                                        <input class="upload-btn" type="file" />
+                                    </label>
+                                </div>
+                                <input class="modal-send modal-get" type="submit" value="Отправить заявку" data-modal="truemessage" />
+                            </form>
+                        </div>
+                    </div>
+                    <!--review === end-->
+                    <div class="modal" data-modal="order">
+                        <div class="modal-content">
+                            <div class="modal-close">
+                                <svg class="icon">
+                                    <use xlink:href="#close"></use>
+                                </svg>
+                            </div>
+                            <div class="modal-title">Оставьте заявку</div>
+                            <div class="modal-text">Обращаетесь к нам впервые?
+                                <br>Оформите обращение с помощью этой формы, мы перезвоним Вам и проконсультируем по любому Вашему вопросу совершенно бесплатно!</div>
+                            <form class="validate-form" action="javascript:void(null);">
+                                <div class="input-row">
+                                    <input class="input" type="text" name="name" placeholder="Ваше имя" />
+                                </div>
+                                <div class="input-row">
+                                    <input class="input" type="text" name="phone" placeholder="Ваш телефон" />
+                                </div>
+                                <div class="input-row">
+                                    <textarea class="input" name="info" cols="30" rows="5" placeholder="Сообщение"></textarea>
+                                </div>
+                                <div class="agree-row">
+                                    <div class="check-el">
+                                        <label class="style-label style-label--checkbox">
+                                            <input class="sytle-input" type="checkbox" name="agree" />
+                                            <div class="sytle-input-element">
+                                                <svg class="icon-check">
+                                                    <use xlink:href="#checked"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="sytle-input-text"></div>
+                                        </label>
                                     </div>
-                                    <input class="btn--md btn--mark" type="submit" value="Войти" />
-                                </form>
-                                <div class="login-soc">
-                                    <div class="login-soc__text">Зарегистрироваться с помощью соц. сетей</div>
-                                    <div class="login-soc-row">
-                                        <a class="login-soc-el" href="#">
-                                            <svg class="icon">
-                                                <use xlink:href="#vk--color"></use>
-                                            </svg>
-                                        </a>
-                                        <a class="login-soc-el" href="#">
-                                            <svg class="icon">
-                                                <use xlink:href="#facebook--color"></use>
-                                            </svg>
-                                        </a>
+                                    <div class="agree-row__text">Согласен с
+                                        <a href="#">условиями обработки персональных данных</a>
                                     </div>
                                 </div>
-                            </div>
-                            <!--registration form-->
-                            <div class="login-wrap login-wrap--registration" data-cont="fogot">
-                                <form class="login-form" action="#">
-                                    <input class="input" type="text" placeholder="Электр. почта" />
-                                    <div class="login-btn-code login-switch" data-switch="code">Отправить код</div>
-                                </form>
-                            </div>
-                            <div class="login-wrap login-wrap--registration" data-cont="code">
-                                <div class="login-code-text">Вам на e-mail/телефон отправлен код подтверждения</div>
-                                <form class="login-form" action="#">
-                                    <input class="input" type="text" placeholder="Введите код" />
-                                    <div class="login-btn-code">Подтвердить</div>
-                                    <div class="login-btn-recode">Выслать повторно</div>
-                                    <div class="login-btn-back login-switch" data-switch="fogot">Назад к восстановлению</div>
-                                </form>
-                            </div>
+                                <input class="modal-send" type="submit" value="Отправить заявку" />
+                            </form>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="head-info">
-                <a class="logo" href="#">
-                    <img src="img/logo.svg" alt="" />
-                </a>
-                <a class="head-phone" href="tel:8 (843) 233 44 33">8 (843) 233 44 33</a>
-                <div class="work-time">
-                    <div class="drop">
-                        <div class="drop__icon">
-                            <svg class="icon">
-                                <use xlink:href="#arrow-down"></use>
-                            </svg>
-                        </div>
-                        <div class="drop__current">мы работаем с 10 до 24</div>
-                        <div class="drop-container drop-container--town">
-                            <div class="drop-container-wrap">
-                                <a class="drop-container__el" href="#">Москва</a>
-                                <a class="drop-container__el" href="#">Смоленск</a>
-                                <a class="drop-container__el" href="#">Казань</a>
-                                <a class="drop-container__el" href="#">Великий новгород</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <form class="header-search" action="">
-                    <div class="header-search-wrap">
-                        <div class="header-search-icon">
-                            <svg class="icon">
-                                <use xlink:href="#serch"></use>
-                            </svg>
-                            <input class="input input-search" type="text" placeholder="Активный поиск" />
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-    <div class="head-main-wrap">
-        <div class="main-cont">
-            <div class="head-main">
-                <div class="head-toggle">
-                    <svg class="icon icon-open">
-                        <use xlink:href="#menu"></use>
-                    </svg>
-                    <svg class="icon icon-close">
-                        <use xlink:href="#close"></use>
-                    </svg>
-                </div>
-                <a class="head-main-logo" href="/">
-                    <img src="img/logo.svg" alt="" />
-                </a>
-                <div class="head-nav">
-                    <div class="head-nav__el-wrap">
-                        <a class="head-nav__el" href="#">суши</a>
-                    </div>
-                    <div class="head-nav__el-wrap">
-                        <a class="head-nav__el" href="#">горячие закуски</a>
-                    </div>
-                    <div class="head-nav__el-wrap">
-                        <a class="head-nav__el" href="#">пицца</a>
-                    </div>
-                    <div class="head-nav__el-wrap">
-                        <a class="head-nav__el" href="#">сеты</a>
-                    </div>
-                    <div class="head-nav__el-wrap">
-                        <a class="head-nav__el" href="#">
-                            <svg class="icon">
-                                <use xlink:href="#arrow-down"></use>
-                            </svg>
-                            <span>роллы</span>
-                        </a>
-                        <div class="head-sub">
-                            <div class="head-sub-wrap">
-                                <a class="head-sub__item" href="#">жаренные роллы</a>
-                                <a class="head-sub__item" href="#">острые роллы</a>
-                                <a class="head-sub__item" href="#">основные роллы</a>
-                                <a class="head-sub__item" href="#">запеченные роллы</a>
-                                <a class="head-sub__item" href="#">классические роллы</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="head-nav__el-wrap">
-                        <a class="head-nav__el" href="#">десерты</a>
-                    </div>
-                    <div class="head-nav__el-wrap">
-                        <a class="head-nav__el" href="#">блюда wok</a>
-                    </div>
-                    <div class="head-nav__el-wrap">
-                        <a class="head-nav__el" href="#">супы</a>
-                    </div>
-                    <div class="head-nav__el-wrap">
-                        <a class="head-nav__el" href="#">салаты</a>
-                    </div>
-                    <div class="head-nav__el-wrap">
-                        <a class="head-nav__el" href="#">напитки</a>
-                    </div>
-                    <div class="head-nav__el-wrap">
-                        <a class="head-nav__el" href="#">соусы</a>
-                    </div>
-                </div>
-                <a class="head-main-call" href="tel:8 (843) 233 44 33">
-                    <svg class="icon">
-                        <use xlink:href="#call"></use>
-                    </svg>
-                </a>
-                <a class="cart cart--full" href="#">
-                    <div class="cart-icon">
-                        <svg class="icon">
-                            <use xlink:href="#cart"></use>
-                        </svg>
-                        <div class="cart-icon__val">2</div>
-                    </div>
-                    <div class="cart-info">
-                        <div class="cart-condition">корзина пуста</div>
-                        <div class="cart-size">0 товаров</div>
-                    </div>
-                    <div class="cart-bonus">+150 б.б.</div>
-                </a>
-            </div>
-        </div>
-    </div>
-    <!--мобильное меню-->
-    <div class="slide-menu">
-        <div class="slide-menu-wrap">
-            <!--Подменю главное-->
-            <div class="slide-menu__list slide-menu__list--active slide-menu__list--up" data-menu="main">
-                <div class="slide-el slide-el--sub" data-menu="menu">
-                    <span>Меню</span>
-                    <svg class="icon">
-                        <use xlink:href="#arrow-right"></use>
-                    </svg>
-                </div>
-                <div class="slide-el slide-el--sub" data-menu="town">
-                    <span>Ваш город</span>
-                    <svg class="icon">
-                        <use xlink:href="#arrow-right"></use>
-                    </svg>
-                </div>
-                <a class="slide-el" href="#">Доставка</a>
-                <a class="slide-el" href="#">Акции</a>
-                <a class="slide-el" href="#">Отзывы</a>
-                <a class="slide-el" href="#">Кафе</a>
-                <a class="slide-el" href="#">Вакансии</a>
-                <a class="slide-el" href="#">Контакты</a>
-                <!--toggle class .login--false .login--true-->
-                <div class="slide-menu-contact">
-                    <div class="login login--false">
-                        <div class="login-enter">
-                            <svg class="icon">
-                                <use xlink:href="#profile"></use>
-                            </svg>
-                            <span class="login-enter-mobile-text">Вход в личный кабинет</span>
-                        </div>
-                        <a class="login-auth" href="#">
-                            <div class="login-auth__icon">
+                    <!--success message-->
+                    <div class="modal" data-modal="truemessage">
+                        <div class="modal-content modal-content--true">
+                            <div class="modal-close">
                                 <svg class="icon">
-                                    <use xlink:href="#profile"></use>
+                                    <use xlink:href="#close"></use>
                                 </svg>
-                                <div class="login-auth__icon-check">
-                                    <svg class="icon">
-                                        <use xlink:href="#checked"></use>
-                                    </svg>
+                            </div>
+                            <div class="modal-title">Отлично!</div>
+                            <div class="modal-text">Спасибо за Ваш отзыв, мы ценим внимание каждого клиента</div>
+                            <svg class="icon icon-true">
+                                <use xlink:href="#success--color"></use>
+                            </svg>
+                            <div class="modal-btn-close hide-modal">Продолжить</div>
+                        </div>
+                    </div>
+                    <div class="modal" data-modal="adress">
+                        <div class="modal-content">
+                            <div class="modal-close">
+                                <svg class="icon">
+                                    <use xlink:href="#close"></use>
+                                </svg>
+                            </div>
+                            <div class="modal-title">Добавить адрес</div>
+                            <form action="#">
+                                <div class="select-city"></div>
+                                <div class="input-row">
+                                    <input class="input" type="text" name="name" placeholder="Улица" />
                                 </div>
-                            </div>
-                            <div class="login-auth__name">Константин</div>
-                            <div class="login-auth__bonus">+140 Б</div>
-                        </a>
-                    </div>
-                    <form class="header-search" action="">
-                        <div class="header-search-wrap">
-                            <div class="header-search-icon">
-                                <svg class="icon">
-                                    <use xlink:href="#serch"></use>
-                                </svg>
-                                <input class="input input-search" type="text" placeholder="Активный поиск" />
-                            </div>
-                        </div>
-                    </form>
-                    <a class="slide-menu-phone" href="tel:8 (843) 233 44 33">8 (843) 233 44 33</a>
-                    <div class="soc-row">
-                        <a class="soc-row__el" href="#">
-                            <svg class="icon">
-                                <use xlink:href="#soc-instagram"></use>
-                            </svg>
-                        </a>
-                        <a class="soc-row__el" href="#">
-                            <svg class="icon">
-                                <use xlink:href="#soc-vk"></use>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!--Подменю список блюд-->
-            <div class="slide-menu__list slide-menu__list--down" data-menu="menu">
-                <div class="slide-el slide-el--sub" data-menu="main">
-                    <span>Меню</span>
-                    <svg class="icon">
-                        <use xlink:href="#arrow-left"></use>
-                    </svg>
-                </div>
-                <div class="slide-el slide-el--sub tag__el--sky" data-menu="roll">
-                    <div class="tag__el-icon">
-                        <svg class="icon">
-                            <use xlink:href="#roll"></use>
-                        </svg>
-                        <div class="tag__el-text">роллы</div>
-                    </div>
-                    <svg class="icon">
-                        <use xlink:href="#arrow-right"></use>
-                    </svg>
-                </div>
-                <a class="slide-el tag__el--red tag__el--hidden" href="#">
-                    <div class="tag__el-icon">
-                        <svg class="icon">
-                            <use xlink:href="#sushi"></use>
-                        </svg>
-                        <div class="tag__el-text">суши</div>
-                    </div>
-                </a>
-                <a class="slide-el tag__el--fiolet tag__el--full" href="#">
-                    <div class="tag__el-icon">
-                        <svg class="icon">
-                            <use xlink:href="#snack"></use>
-                        </svg>
-                        <div class="tag__el-text">горячие закуски</div>
-                    </div>
-                </a>
-                <a class="slide-el tag__el--purpur tag__el--full" href="#">
-                    <div class="tag__el-icon">
-                        <svg class="icon">
-                            <use xlink:href="#pizza"></use>
-                        </svg>
-                        <div class="tag__el-text">пицца</div>
-                    </div>
-                </a>
-                <a class="slide-el tag__el--blue tag__el--hidden" href="#">
-                    <div class="tag__el-icon">
-                        <svg class="icon">
-                            <use xlink:href="#set"></use>
-                        </svg>
-                        <div class="tag__el-text">сеты</div>
-                    </div>
-                </a>
-                <a class="slide-el tag__el--sky tag__el--hidden" href="#">
-                    <div class="tag__el-icon">
-                        <svg class="icon">
-                            <use xlink:href="#roll"></use>
-                        </svg>
-                        <div class="tag__el-text">роллы</div>
-                    </div>
-                </a>
-                <a class="slide-el tag__el--green" href="#">
-                    <div class="tag__el-icon">
-                        <svg class="icon">
-                            <use xlink:href="#cake"></use>
-                        </svg>
-                        <div class="tag__el-text">десерты</div>
-                    </div>
-                </a>
-                <a class="slide-el tag__el--grass" href="#">
-                    <div class="tag__el-icon">
-                        <svg class="icon">
-                            <use xlink:href="#wok"></use>
-                        </svg>
-                        <div class="tag__el-text">блюда wok</div>
-                    </div>
-                </a>
-                <a class="slide-el tag__el--yellow" href="#">
-                    <div class="tag__el-icon">
-                        <svg class="icon">
-                            <use xlink:href="#supe"></use>
-                        </svg>
-                        <div class="tag__el-text">супы</div>
-                    </div>
-                </a>
-                <a class="slide-el tag__el--orange" href="#">
-                    <div class="tag__el-icon">
-                        <svg class="icon">
-                            <use xlink:href="#salad"></use>
-                        </svg>
-                        <div class="tag__el-text">салаты</div>
-                    </div>
-                </a>
-                <a class="slide-el tag__el--rose" href="#">
-                    <div class="tag__el-icon">
-                        <svg class="icon">
-                            <use xlink:href="#drink"></use>
-                        </svg>
-                        <div class="tag__el-text">напитки</div>
-                    </div>
-                </a>
-                <a class="slide-el tag__el--gray" href="#">
-                    <div class="tag__el-icon">
-                        <svg class="icon">
-                            <use xlink:href="#sauce"></use>
-                        </svg>
-                        <div class="tag__el-text">соусы</div>
-                    </div>
-                </a>
-            </div>
-            <!--Подменю список роллы-->
-            <div class="slide-menu__list slide-menu__list--down" data-menu="roll">
-                <div class="slide-el slide-el--sub" data-menu="menu">
-                    <span>Виды роллов</span>
-                    <svg class="icon">
-                        <use xlink:href="#arrow-left"></use>
-                    </svg>
-                </div>
-                <a class="slide-el" href="#">жаренные роллы</a>
-                <a class="slide-el" href="#">основные роллы</a>
-                <a class="slide-el" href="#">острые роллы</a>
-                <a class="slide-el" href="#">классические роллы</a>
-            </div>
-            <!--Подменю города-->
-            <div class="slide-menu__list slide-menu__list--down" data-menu="town">
-                <div class="slide-el slide-el--sub" data-menu="main">
-                    <span>Выберите свой город</span>
-                    <svg class="icon">
-                        <use xlink:href="#arrow-left"></use>
-                    </svg>
-                </div>
-                <div class="slide-el">Москва</div>
-                <div class="slide-el slide-el--active">Санкт-Петербург</div>
-                <div class="slide-el">Казань</div>
-                <div class="slide-el">Чебоксары</div>
-            </div>
-        </div>
-    </div>
-    <!--block header end-->
-    <div class="main-cont">
-        <div class="bread-row">
-            <div class="bread-title">Заголовок</div>
-            <div class="bread">
-                <a class="bread__el" href="#">Главная</a>
-                <div class="bread__el">О нас</div>
-            </div>
-            <a class="page-nav" href="#">
-                <div class="page-nav__icon">
-                    <svg class="icon">
-                        <use xlink:href="#arrow-back"></use>
-                    </svg>
-                </div>
-                <div class="page-nav__text">на главную</div>
-            </a>
-        </div>
-        <!--review-->
-        <div class="title title--mobile">
-            <span>Управляющий суши-бара</span>
-            <!--.title__more(data-modal="review").modal-get оставить отзыв-->
-        </div>
-        <div class="vacancy">
-            <div class="vacancy-tag">
-                <div class="vacancy-tag__el">пр. Ямашева, д. 82</div>
-                <div class="vacancy-tag__el">ул. Университетская, д. 10</div>
-                <div class="vacancy-tag__el">ул. Ямашева, д. 11</div>
-                <div class="vacancy-tag__el">ул. Университетская, д. 10</div>
-            </div>
-            <div class="vacancy-wrap">
-                <div class="vacancy-content content">
-                    <h2>Обязанности</h2>
-                    <ul>
-                        <li>обеспечение и поддержание эффективной бесперебойной работы;</li>
-                        <li>обеспечение высокого уровня обслуживания гостей;</li>
-                        <li>создание атмосферы гостеприимства в кафе и микроклимата в коллективе;</li>
-                        <li>руководство и организация работы подразделения;</li>
-                        <li>обеспечение выполнения основных финансовых показателей;</li>
-                        <li>решение административно-организационных вопросов, связанных с функционированием суши бара;</li>
-                        <li>обучение и адаптация персонала;</li>
-                        <li>руководство производственно-хозяйственной и финансово-экономической деятельностью суши бара управление персоналом;</li>
-                        <li>работа с гостями – привлечение новых и удержание постоянных гостей;</li>
-                        <li>проведение инвентаризации;</li>
-                        <li>взаимодействие с контролирующими органами;</li>
-                        <li>предоставление отчетности по деятельности высшему руководству.</li>
-                    </ul>
-                    <h3>Требования</h3>
-                    <ul>
-                        <li>опыт работы от 3 лет в общепите (кафе, рестораны);</li>
-                        <li>опыт работы в качестве руководителя в сфере общественного питания не менее 1 года;</li>
-                        <li>умение работать в команде;</li>
-                        <li>активная жизненная позиция;</li>
-                        <li>уверенный пользователь ПК.</li>
-                    </ul>
-                    <h2>Условия</h2>
-                    <ul>
-                        <li>трудоустройство по Трудовому кодексу РФ;</li>
-                        <li>график работы 5/2 плавающие выходные;</li>
-                        <li>выплата заработной платы 2 раза в месяц;</li>
-                    </ul>
-                </div>
-                <div class="vacancy-get">
-                    <h2>Откликнуться на вакансию</h2>
-                    <form action="#">
-                        <div class="input-row">
-                            <input class="input" type="text" placeholder="Имя" />
-                        </div>
-                        <div class="input-row">
-                            <input class="input" type="text" placeholder="Телефон" />
-                        </div>
-                        <div class="input-row">
-                            <input class="input" type="text" placeholder="E-mail" />
-                        </div>
-                        <div class="input-row">
-                            <textarea class="input" name="info" cols="30" rows="10" placeholder="Сопроводительное письмо"></textarea>
-                        </div>
-                        <div class="upload-wrap">
-                            <div class="upload-img upload-img--doc"></div>
-                            <label class="upload">
-                                <div class="upload__icon">
-                                    <svg class="icon">
-                                        <use xlink:href="#upload"></use>
-                                    </svg>
-                                </div>
-                                <div class="upload__text">Прикрепить резюме</div>
-                                <input class="upload-btn" type="file" />
-                            </label>
-                        </div>
-                        <input class="btn--md btn--mark btn--full" type="submit" value="Cохранить" />
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="add-text content">
-            <div class="add-text__col">
-                <div class="add-text__col-title">Впечатляющий ассортимент вкусных блюд</div>
-                <p>Наше меню включает:</p>
-                <ul>
-                    <li>классические и оригинальные виды суши с угрем, окунем, икрой тобико, лососем, тунцом, тигровой креветкой, курицей и пр.;</li>
-                    <li>разнообразные классические роллы (рисом внутрь) и урамаки (рисом наружу), в том числе острые, запеченные, горячие;</li>
-                    <li>аппетитные сеты для романтического ужина или вечеринки в большой компании.</li>
-                </ul>
-                <p>Помимо блюд японской кухни мы с радостью приготовим для вас экзотические воки с разными начинками, ароматную пиццу, горячие и холодные супы, свежие и сытные салаты, нежные десерты.</p>
-                <p>Чтобы заказать суши и другие кушанья, зайдите в соответствующий раздел нашего меню. Каждый товар сопровождается фотографией, указанием состава ингредиентов, веса порции и стоимости. Кликните по плашке «Добавить в корзину» возле понравившихся
-                    суши. Скорректируйте количество порций и введите контактные данные. Наш менеджер свяжется с вами для подтверждения покупки.</p>
-            </div>
-            <div class="add-text__col add-text__col--more">
-                <div class="add-text__col-title">Преимущества заказа суши в «Окинаве»</div>
-                <ul>
-                    <li>Повара начинают готовить блюда только после вашего звонка.</li>
-                    <li>Мы используем только отборные, свежие продукты.</li>
-                    <li>Готовим суши по фирменной рецептуре.</li>
-                    <li>Предлагаем приемлемую стоимость щедрых порций свежих блюд.</li>
-                    <li>Регулярно проводим акции.</li>
-                    <li>Гарантируем доставку с соблюдением всех технологий транспортировки, чтобы вы всегда получали свежую и теплую еду.</li>
-                    <li>Располагаем собственным автопарком из 25 машин, что позволяет максимально оперативно развозить заказы по всему городу.</li>
-                    <li>Покупки на сумму от 600 рублей доставляем за свой счет.</li>
-                    <li>Возможен самовывоз из удобного для вас кафе нашей сети.</li>
-                </ul>
-                <p>Мы первыми в Казани открыли службу доставки суши на дом или в офис и остаемся лидерами в этой сфере.</p>
-                <p>
-                    <strong>Всегда рады вашим заказам!</strong>
-                </p>
-            </div>
-            <div class="slide-trigger slide-trigger--add-text">
-                <span class="slide-trigger--true">развернуть</span>
-                <span class="slide-trigger--false">свернуть</span>
-            </div>
-        </div>
-    </div>
-    <div class="main-cont">
-        <div class="footer">
-            <div class="footer-top">
-                <div class="footer-top__el footer-top__el--payment">
-                    <span>Принимаем к оплате</span>
-                    <img src="img/payment.svg" alt="" />
-                </div>
-                <div class="footer-top__el">Бесплатная доставка от 600 рублей</div>
-                <div class="footer-top__el">Время доставки до 45 минут</div>
-                <div class="footer-top__el footer-top__el--location">
-                    <svg class="icon">
-                        <use xlink:href="#location"></use>
-                    </svg>
-                    <a href="#">Зона доставки</a>
-                </div>
-            </div>
-            <div class="footer-main">
-                <div class="footer-info">
-                    <div class="footer-copyright">© 2018 «Окинава»</div>
-                    <a class="footer-info__link" href="#">
-                        <span>Политика конфединциальности</span>
-                    </a>
-                    <a class="footer-info__link" href="#">
-                        <span>Публичная оферта</span>
-                    </a>
-                </div>
-                <div class="footer-list">
-                    <div class="footer-menu">
-                        <a class="footer-menu__el" href="#">Доставка</a>
-                        <a class="footer-menu__el" href="#">Акции</a>
-                        <a class="footer-menu__el" href="#">Отзывы</a>
-                        <a class="footer-menu__el" href="#">Кафе</a>
-                        <a class="footer-menu__el" href="#">Вакансии</a>
-                        <a class="footer-menu__el" href="#">Контакты</a>
-                    </div>
-                    <p>Реклама и сотрудничество:
-                        <a href="mailto:marketolog@okinavakazan.ru">marketolog@okinavakazan.ru</a>
-                    </p>
-                    <p>Для коммерческих предложений:
-                        <a href="mailto:commerce@okinavakazan.ru">commerce@okinavakazan.ru</a>
-                    </p>
-                </div>
-                <div class="footer-adress">
-                    <div class="footer-contact">
-                        <a class="footer-phone" href="tel:8 (843) 233 44 33">8 (843) 233 44 33</a>
-                        <div class="soc-row">
-                            <a class="soc-row__el" href="#">
-                                <svg class="icon">
-                                    <use xlink:href="#soc-instagram"></use>
-                                </svg>
-                            </a>
-                            <a class="soc-row__el" href="#">
-                                <svg class="icon">
-                                    <use xlink:href="#soc-vk"></use>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="create">
-                        <span>Сайт создан в</span>
-                        <img src="img/jq.png" alt="" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="footer-mobile">
-        <a class="footer-mobile__logo" href="#">
-            <img src="img/logo-main-small.svg" alt="" />
-        </a>
-        <a class="footer-mobile__phone" href="tel:8 (843) 233 44 33">8 (843) 233 44 33</a>
-        <a class="footer-mobile__jq" href="#">
-            <img src="img/logo-jq-small.svg" alt="" />
-        </a>
-    </div>
-    <!--block footer-->
-    <div class="modal-layer">
-        <div class="modal-filter"></div>
-        <div class="modal-wrap">
-            <!--review-->
-            <div class="modal" data-modal="review">
-                <div class="modal-content">
-                    <div class="modal-close">
-                        <svg class="icon">
-                            <use xlink:href="#close"></use>
-                        </svg>
-                    </div>
-                    <div class="modal-title">Добавление отзыва</div>
-                    <div class="get-rating">
-                        <div class="get-rating-text">Ваша оценка</div>
-                        <div class="star-row star-row--red">
-                            <div class="star-row__el">
-                                <svg class="icon">
-                                    <use xlink:href="#star"></use>
-                                </svg>
-                            </div>
-                            <div class="star-row__el">
-                                <svg class="icon">
-                                    <use xlink:href="#star"></use>
-                                </svg>
-                            </div>
-                            <div class="star-row__el">
-                                <svg class="icon">
-                                    <use xlink:href="#star"></use>
-                                </svg>
-                            </div>
-                            <div class="star-row__el">
-                                <svg class="icon">
-                                    <use xlink:href="#star"></use>
-                                </svg>
-                            </div>
-                            <div class="star-row__el">
-                                <svg class="icon">
-                                    <use xlink:href="#star"></use>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                    <form action="javascript:void(null);">
-                        <div class="input-row">
-                            <input class="input" type="text" name="name" placeholder="Ваше имя" />
-                        </div>
-                        <div class="input-row">
-                            <input class="input" type="text" name="phone" placeholder="Телефон или e-mail" />
-                        </div>
-                        <div class="input-row">
-                            <textarea class="input" name="info" cols="30" rows="5" placeholder="Сообщение"></textarea>
-                        </div>
-                        <div class="agree-row">
-                            <div class="check-el">
-                                <label class="style-label style-label--checkbox">
-                                    <input class="sytle-input" type="checkbox" name="agree" />
-                                    <div class="sytle-input-element">
-                                        <svg class="icon-check">
-                                            <use xlink:href="#checked"></use>
-                                        </svg>
+                                <div class="input-row-half">
+                                    <div class="input-wrap">
+                                        <input class="input" type="text" name="name" placeholder="Дом" />
                                     </div>
-                                    <div class="sytle-input-text"></div>
-                                </label>
-                            </div>
-                            <div class="agree-row__text">Согласен с
-                                <a href="#">условиями обработки персональных данных</a>
-                            </div>
-                        </div>
-                        <div class="upload-wrap">
-                            <div class="upload-img"></div>
-                            <label class="upload">
-                                <div class="upload__icon">
-                                    <svg class="icon">
-                                        <use xlink:href="#upload"></use>
-                                    </svg>
-                                </div>
-                                <div class="upload__text">Прикрепить фото</div>
-                                <input class="upload-btn" type="file" />
-                            </label>
-                        </div>
-                        <input class="modal-send modal-get" type="submit" value="Отправить заявку" data-modal="truemessage" />
-                    </form>
-                </div>
-            </div>
-            <!--review === end-->
-            <div class="modal" data-modal="order">
-                <div class="modal-content">
-                    <div class="modal-close">
-                        <svg class="icon">
-                            <use xlink:href="#close"></use>
-                        </svg>
-                    </div>
-                    <div class="modal-title">Оставьте заявку</div>
-                    <div class="modal-text">Обращаетесь к нам впервые?
-                        <br>Оформите обращение с помощью этой формы, мы перезвоним Вам и проконсультируем по любому Вашему вопросу совершенно бесплатно!</div>
-                    <form class="validate-form" action="javascript:void(null);">
-                        <div class="input-row">
-                            <input class="input" type="text" name="name" placeholder="Ваше имя" />
-                        </div>
-                        <div class="input-row">
-                            <input class="input" type="text" name="phone" placeholder="Ваш телефон" />
-                        </div>
-                        <div class="input-row">
-                            <textarea class="input" name="info" cols="30" rows="5" placeholder="Сообщение"></textarea>
-                        </div>
-                        <div class="agree-row">
-                            <div class="check-el">
-                                <label class="style-label style-label--checkbox">
-                                    <input class="sytle-input" type="checkbox" name="agree" />
-                                    <div class="sytle-input-element">
-                                        <svg class="icon-check">
-                                            <use xlink:href="#checked"></use>
-                                        </svg>
+                                    <div class="input-wrap">
+                                        <input class="input" type="text" name="name" placeholder="Квартира" />
                                     </div>
-                                    <div class="sytle-input-text"></div>
-                                </label>
-                            </div>
-                            <div class="agree-row__text">Согласен с
-                                <a href="#">условиями обработки персональных данных</a>
-                            </div>
+                                </div>
+                                <div class="input-row-half">
+                                    <div class="input-wrap">
+                                        <input class="input" type="text" name="name" placeholder="Подъезд" />
+                                    </div>
+                                    <div class="input-wrap">
+                                        <input class="input" type="text" name="name" placeholder="Этаж" />
+                                    </div>
+                                </div>
+                                <div class="input-row">
+                                    <input class="input" type="text" name="name" placeholder="Подпись (например: работа)" />
+                                </div>
+                                <input class="modal-send" type="submit" value="Cохранить" />
+                            </form>
                         </div>
-                        <input class="modal-send" type="submit" value="Отправить заявку" />
-                    </form>
-                </div>
-            </div>
-            <!--success message-->
-            <div class="modal" data-modal="truemessage">
-                <div class="modal-content modal-content--true">
-                    <div class="modal-close">
-                        <svg class="icon">
-                            <use xlink:href="#close"></use>
-                        </svg>
                     </div>
-                    <div class="modal-title">Отлично!</div>
-                    <div class="modal-text">Спасибо за Ваш отзыв, мы ценим внимание каждого клиента</div>
-                    <svg class="icon icon-true">
-                        <use xlink:href="#success--color"></use>
-                    </svg>
-                    <div class="modal-btn-close hide-modal">Продолжить</div>
-                </div>
-            </div>
-            <div class="modal" data-modal="adress">
-                <div class="modal-content">
-                    <div class="modal-close">
-                        <svg class="icon">
-                            <use xlink:href="#close"></use>
-                        </svg>
+                    <!--modal profile-edit-->
+                    <div class="modal" data-modal="profile-edit">
+                        <div class="modal-content">
+                            <div class="modal-close">
+                                <svg class="icon">
+                                    <use xlink:href="#close"></use>
+                                </svg>
+                            </div>
+                            <div class="modal-title">Изменить профиль</div>
+                            <form action="#">
+                                <div class="select-city"></div>
+                                <div class="input-row">
+                                    <div class="input-row__title">Имя</div>
+                                    <input class="input" type="text" name="name" value="Александр" />
+                                </div>
+                                <div class="input-row">
+                                    <div class="input-row__title">Телефон:</div>
+                                    <input class="input" type="text" name="name" value="+7 923 666 7667" />
+                                </div>
+                                <div class="input-row">
+                                    <div class="input-row__title">День рождения:</div>
+                                    <input class="input" type="text" name="name" value="30.20.1982" />
+                                </div>
+                                <input class="modal-send" type="submit" value="Cохранить" />
+                            </form>
+                        </div>
                     </div>
-                    <div class="modal-title">Добавить адрес</div>
-                    <form action="#">
-                        <div class="select-city"></div>
-                        <div class="input-row">
-                            <input class="input" type="text" name="name" placeholder="Улица" />
-                        </div>
-                        <div class="input-row-half">
-                            <div class="input-wrap">
-                                <input class="input" type="text" name="name" placeholder="Дом" />
+                    <!--modal profile-edit === end-->
+                    <!--modal adres-edit-->
+                    <div class="modal" data-modal="adress-edit">
+                        <div class="modal-content">
+                            <div class="modal-close">
+                                <svg class="icon">
+                                    <use xlink:href="#close"></use>
+                                </svg>
                             </div>
-                            <div class="input-wrap">
-                                <input class="input" type="text" name="name" placeholder="Квартира" />
-                            </div>
+                            <div class="modal-title">Изменить адрес</div>
+                            <form action="#">
+                                <div class="select-city"></div>
+                                <div class="input-row">
+                                    <div class="input-row__title">Улица</div>
+                                    <input class="input" type="text" name="name" value="Ленина" />
+                                </div>
+                                <div class="input-row-half">
+                                    <div class="input-wrap">
+                                        <div class="input-row__title">Улица</div>
+                                        <input class="input" type="text" name="name" value="14" />
+                                    </div>
+                                    <div class="input-wrap">
+                                        <div class="input-row__title">Квартира</div>
+                                        <input class="input" type="text" name="name" value="35" />
+                                    </div>
+                                </div>
+                                <div class="input-row-half">
+                                    <div class="input-wrap">
+                                        <div class="input-row__title">Подъезд</div>
+                                        <input class="input" type="text" name="name" value="2" />
+                                    </div>
+                                    <div class="input-wrap">
+                                        <div class="input-row__title">Этаж</div>
+                                        <input class="input" type="text" name="name" value="17" />
+                                    </div>
+                                </div>
+                                <div class="input-row">
+                                    <div class="input-row__title">Подпись (например: работа)</div>
+                                    <input class="input" type="text" name="name" placeholder="Подпись (например: работа)" value="Дом" />
+                                </div>
+                                <input class="modal-send" type="submit" value="Cохранить" />
+                            </form>
                         </div>
-                        <div class="input-row-half">
-                            <div class="input-wrap">
-                                <input class="input" type="text" name="name" placeholder="Подъезд" />
-                            </div>
-                            <div class="input-wrap">
-                                <input class="input" type="text" name="name" placeholder="Этаж" />
-                            </div>
-                        </div>
-                        <div class="input-row">
-                            <input class="input" type="text" name="name" placeholder="Подпись (например: работа)" />
-                        </div>
-                        <input class="modal-send" type="submit" value="Cохранить" />
-                    </form>
-                </div>
-            </div>
-            <!--modal profile-edit-->
-            <div class="modal" data-modal="profile-edit">
-                <div class="modal-content">
-                    <div class="modal-close">
-                        <svg class="icon">
-                            <use xlink:href="#close"></use>
-                        </svg>
                     </div>
-                    <div class="modal-title">Изменить профиль</div>
-                    <form action="#">
-                        <div class="select-city"></div>
-                        <div class="input-row">
-                            <div class="input-row__title">Имя</div>
-                            <input class="input" type="text" name="name" value="Александр" />
+                    <!--modal adres-edit === end-->
+                    <!--modal-mail-->
+                    <div class="modal" data-modal="mail">
+                        <div class="modal-content modal-content--mail">
+                            <div class="modal-close">
+                                <svg class="icon">
+                                    <use xlink:href="#close"></use>
+                                </svg>
+                            </div>
+                            <div class="modal-title">Добавить e-mail</div>
+                            <form action="#">
+                                <div class="input-row input-row--add-mail">
+                                    <input class="input" type="text" name="name" placeholder="Ваша почта" />
+                                </div>
+                                <input class="modal-send" type="submit" value="Cохранить" />
+                            </form>
                         </div>
-                        <div class="input-row">
-                            <div class="input-row__title">Телефон:</div>
-                            <input class="input" type="text" name="name" value="+7 923 666 7667" />
-                        </div>
-                        <div class="input-row">
-                            <div class="input-row__title">День рождения:</div>
-                            <input class="input" type="text" name="name" value="30.20.1982" />
-                        </div>
-                        <input class="modal-send" type="submit" value="Cохранить" />
-                    </form>
-                </div>
-            </div>
-            <!--modal profile-edit === end-->
-            <!--modal adres-edit-->
-            <div class="modal" data-modal="adress-edit">
-                <div class="modal-content">
-                    <div class="modal-close">
-                        <svg class="icon">
-                            <use xlink:href="#close"></use>
-                        </svg>
                     </div>
-                    <div class="modal-title">Изменить адрес</div>
-                    <form action="#">
-                        <div class="select-city"></div>
-                        <div class="input-row">
-                            <div class="input-row__title">Улица</div>
-                            <input class="input" type="text" name="name" value="Ленина" />
-                        </div>
-                        <div class="input-row-half">
-                            <div class="input-wrap">
-                                <div class="input-row__title">Улица</div>
-                                <input class="input" type="text" name="name" value="14" />
-                            </div>
-                            <div class="input-wrap">
-                                <div class="input-row__title">Квартира</div>
-                                <input class="input" type="text" name="name" value="35" />
-                            </div>
-                        </div>
-                        <div class="input-row-half">
-                            <div class="input-wrap">
-                                <div class="input-row__title">Подъезд</div>
-                                <input class="input" type="text" name="name" value="2" />
-                            </div>
-                            <div class="input-wrap">
-                                <div class="input-row__title">Этаж</div>
-                                <input class="input" type="text" name="name" value="17" />
-                            </div>
-                        </div>
-                        <div class="input-row">
-                            <div class="input-row__title">Подпись (например: работа)</div>
-                            <input class="input" type="text" name="name" placeholder="Подпись (например: работа)" value="Дом" />
-                        </div>
-                        <input class="modal-send" type="submit" value="Cохранить" />
-                    </form>
+                    <!--modal-mail === end-->
                 </div>
             </div>
-            <!--modal adres-edit === end-->
-            <!--modal-mail-->
-            <div class="modal" data-modal="mail">
-                <div class="modal-content modal-content--mail">
-                    <div class="modal-close">
-                        <svg class="icon">
-                            <use xlink:href="#close"></use>
-                        </svg>
-                    </div>
-                    <div class="modal-title">Добавить e-mail</div>
-                    <form action="#">
-                        <div class="input-row input-row--add-mail">
-                            <input class="input" type="text" name="name" placeholder="Ваша почта" />
-                        </div>
-                        <input class="modal-send" type="submit" value="Cохранить" />
-                    </form>
-                </div>
-            </div>
-            <!--modal-mail === end-->
+            <!--block footer end-->
         </div>
     </div>
-    <!--block footer end-->
     <!--build:js js/combined.js-->
     <script src="bower/jquery/dist/jquery.js"></script>
     <script src="bower/slick-carousel/slick/slick.js"></script>

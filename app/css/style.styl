@@ -17,6 +17,12 @@ body
 	line-height 1.2
 	letter-spacing 0.01em
 
+.page
+	f()
+	fl()
+	min-height 100vh
+.page-content
+	flex-grow 1
 .main-cont
 	center(1250px,10px)
 
@@ -52,7 +58,8 @@ body
 			position: absolute
 			left: -10px
 			top 5px
-
+	p
+		line-height: 1.6
 //modal
 .modal-layer
 	width: 100%
@@ -819,6 +826,12 @@ tag($color)
 	margin-bottom: 25px
 	line-height: 1.6
 
+.title--sm
+	@extend .type--xl
+	font-weight: 700
+	margin-bottom: 25px
+	line-height: 1.6
+
 .title__more
 	+below(767px)
 		margin-left: 0
@@ -1225,21 +1238,16 @@ tag($color)
 .add-text
 	+below(640px)
 		display: block
-		margin-bottom: 30px
 		display: none
 	f()
 	justify-content: space-between
-	margin-bottom: 65px
 
 .add-text__col
 	+below(640px)
 		width: 100%
-
 	width: 48%
 	p
 		line-height: 1.4
-
-
 
 .add-text__col--more
 	+below(640px)
@@ -1251,6 +1259,10 @@ tag($color)
 	font-weight: 700
 	margin-bottom: 25px
 
+.page-footer
+	+below(768px)
+		margin-top: 30px
+	margin-top: 100px
 .footer
 	+below(640px)
 		display: none
@@ -2968,3 +2980,109 @@ tag($color)
 
 //slide menu === end
 
+
+.discount-list
+	+below(850px)
+		grid-template-columns repeat(2, 1fr)
+		margin-bottom: 40px
+	+below(640px)
+		grid-template-columns 1fr
+	display: grid
+	grid-gap 30px
+	grid-template-columns repeat(3, 1fr)
+	margin-bottom: 100px
+.discount-list__el
+	overflow: hidden
+	border-radius 10px
+	bsh-hover()
+	cp()
+.discount-list__img
+	padding: 30% 10%
+	bg-full()
+	position: relative
+.discount-list__info
+	+below(640px)
+		padding: 20px
+	padding: 30px 25px 60px 25px
+.discount-list__title
+	@extend .type--lg
+	font-weight: 700
+	margin-top: auto
+	line-height: 1.4
+	margin-bottom: 20px
+	up()
+.discount-list__decr
+	line-height: 1.6
+	@extend .type--md
+
+.discount-list__time
+	opacity: .6
+	margin-bottom: 20px
+
+.discount-item
+	+below(640px)
+		margin-bottom: 30px
+	margin-bottom: 100px
+.discount-item__img
+	+below(768px)
+		border-radius 0px
+		margin-left: -10px
+		width calc(100% + 20px)
+		padding: 20% 10%
+		margin-bottom: 20px
+	+below(640px)
+		padding: 20% 10%
+	bg-full()
+	padding: 15% 10%
+	border-radius 20px
+	margin-bottom: 30px
+.discount-item-wrap
+	+below(640px)
+		fw()
+	f()
+	justify-content: space-between
+.discount-item-info
+	+below(640px)
+		width: 100%
+		margin-bottom: 20px
+	width: 65%
+	line-height: 1.6
+.discount-item-title
+	+below(640px)
+		margin-bottom: 20px
+	@extend .type--xxl
+	font-weight 700
+	margin-bottom: 30px
+.discount-soc
+	+below(640px)
+		width: 100%
+	width: 25%
+//.soc-wrap
+.soc-wrap-text
+	margin-bottom: 20px
+
+.add-list
+	+below(1200px)
+		grid-template-columns repeat(4, 1fr)
+	+below(1024px)
+		grid-template-columns repeat(3, 1fr)
+
+	display: grid
+	grid-gap 30px
+	grid-template-columns repeat(5, 1fr)
+
+.add-list-wrap
+	+below(640px)
+		display: none
+
+.item--small
+	.item__img
+		height: 220px!important
+	.item__title-wrap
+		margin-bottom: 30px
+	.item__title
+		@extend .type--md
+
+.bread-row--simple
+	+below(768px)
+		display: none
