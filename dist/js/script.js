@@ -1,4 +1,7 @@
-$(document).ready(function () {
+$(document).ready(function (){
+
+
+
 	//login drop head
 	$('.login-toggle').click(function(){
 		$('.login-toggle').removeClass('login-toggle--active');
@@ -18,7 +21,6 @@ $(document).ready(function () {
 	$(document).click(function(){
 		$('.login-enter').removeClass('login-enter--active');
 		$('.login-drop').slideUp();
-		console.log(11);
 	});
 
 	$('.login-switch').click(function(){
@@ -129,7 +131,7 @@ $(document).ready(function () {
 		$(this).next('.elements-icr-block').removeClass('hidden');
 		$(this).closest('.item').addClass('item--add');
 	});
-	$('.incr__minus').click(function () {
+	$('.incr__minus').click(function (e) {
 		var $input = $(this).parent().find('.incr__val span');
 		var count = parseInt($input.html()) - 1;
 		count = count < 1 ? 0 : count;
@@ -139,8 +141,22 @@ $(document).ready(function () {
 			$(this).closest('.elements-icr-block').addClass('hidden');
 			$(this).closest('.item__content').find('.icr-btn').removeClass('hidden');
 			$(this).closest('.item').removeClass('item--add');
+			//basket show empty state
+			$(this).closest('.basket-el').slideUp(function(){
+				$(this).remove();
+				if($('.basket-el').length < 1){
+					$('.basket-empty').removeClass('basket-empty--hidden');
+					$('.snacks').remove();
+				}
+			});
+			//basket show empte state === end
+			//ingr toggle
+			$(this).closest('.add-ingr__el').removeClass('add-ingr__el--active');
+			//ingr toggle === end
 			count = 1;
+			console.log('minus');
 			$input.html(count);
+			e.stopPropagation();
 		}
 	});
 
@@ -439,4 +455,44 @@ $(document).ready(function () {
 		})
 	});
 	//mobile menu===end
+
+
+	//remove tag
+	$('.ingr').click(function(){
+		$(this).remove();
+	});
+	//remove tag===end
+
+	//remove snacks
+	$('.snacks-row__remove').click(function(){
+		$(this).closest('.snacks-row').slideUp(function(){
+			$(this).remove();
+		});
+	});
+	//remove snacks === end
+
+	//remove cart el
+	$('.basket-el__remove').click(function(){
+		$(this).closest('.basket-el').slideUp(function(){
+			$(this).remove();
+			if($('.basket-el').length < 1){
+				$('.basket-empty').removeClass('basket-empty--hidden');
+				$('.snacks').remove();
+			}
+		});
+	});
+	//remove cart el ===end
+
+	//modal ingr toggle
+	$('.add-ingr__el').click(function(){
+		if(!$(this).hasClass('add-ingr__el--active')){
+			$(this).addClass('add-ingr__el--active');
+		}
+		console.log('move');
+	});
+
+	$('.add-ingr-clear').click(function(){
+		$('.add-ingr__el').removeClass('add-ingr__el--active');
+	});
+	//modal ingr toggle ===end
 });

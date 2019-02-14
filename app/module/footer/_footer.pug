@@ -55,7 +55,7 @@ mixin footer()
 			.modal(data-modal="review")
 				.modal-content
 					.modal-close
-						+icon("close","icon")
+						+icon("close-fat","icon")
 					.modal-title Добавление отзыва
 					.get-rating
 						.get-rating-text Ваша оценка
@@ -87,12 +87,11 @@ mixin footer()
 								.upload__text Прикрепить фото
 								input(type="file").upload-btn
 						input(type="submit" value="Отправить заявку" data-modal="truemessage").modal-send.modal-get
-
 			//review === end
 			.modal(data-modal="order")
 				.modal-content
 					.modal-close
-						+icon("close","icon")
+						+icon("close-fat","icon")
 					.modal-title Оставьте заявку
 					.modal-text Обращаетесь к нам впервые? <br> Оформите обращение с помощью этой формы, мы перезвоним Вам и проконсультируем по любому Вашему вопросу совершенно бесплатно!
 					form.validate-form( action="javascript:void(null);")
@@ -116,7 +115,7 @@ mixin footer()
 			.modal(data-modal="truemessage")
 				.modal-content.modal-content--true
 					.modal-close
-						+icon("close","icon")
+						+icon("close-fat","icon")
 					.modal-title Отлично!
 					.modal-text Спасибо за Ваш отзыв, мы ценим внимание каждого клиента
 					+icon("success--color","icon icon-true")
@@ -125,7 +124,7 @@ mixin footer()
 			.modal(data-modal="adress")
 				.modal-content
 					.modal-close
-						+icon("close","icon")
+						+icon("close-fat","icon")
 					.modal-title Добавить адрес
 					form( action="#")
 						.select-city
@@ -149,7 +148,7 @@ mixin footer()
 			.modal(data-modal="profile-edit")
 				.modal-content
 					.modal-close
-						+icon("close","icon")
+						+icon("close-fat","icon")
 					.modal-title Изменить профиль
 					form( action="#")
 						.select-city
@@ -169,7 +168,7 @@ mixin footer()
 			.modal(data-modal="adress-edit")
 				.modal-content
 					.modal-close
-						+icon("close","icon")
+						+icon("close-fat","icon")
 					.modal-title Изменить адрес
 					form( action="#")
 						.select-city
@@ -200,7 +199,7 @@ mixin footer()
 			.modal(data-modal="mail")
 				.modal-content.modal-content--mail
 					.modal-close
-						+icon("close","icon")
+						+icon("close-fat","icon")
 					.modal-title Добавить e-mail
 					form( action="#")
 						.input-row.input-row--add-mail
@@ -208,4 +207,36 @@ mixin footer()
 						input(type="submit" value="Cохранить").modal-send
 			//modal-mail === end
 
+			//ingr
+			.modal.modal--lg(data-modal="ingr")
+				.modal-content
+					.modal-close
+						+icon("close-fat","icon")
+					.modal-title Добавь любой ингредиент на свой вкус
+					- for (var i=0;i<4;i++)
+						.add-ingr-row
+							.add-ingr__head
+								.add-ingr__title Соусы
+								.add-ingr__text можно выбрать только 1 соус
+							.add-ingr__list
+								- for (var j=0;j<5;j++)
+									.add-ingr__el
+										.incr__minus.incr__nav
+											+icon("minus","icon")
+										.incr__val
+											span 1
+											.incr__val-count шт.
+										.add-ingr__el-img(style="background-image:url('img/snack.jpg')")
+										.add-ingr__el-name Тартар
+										.add-ingr__el-weight 50г
+										.add-ingr__el-price 30р
+										.incr__plus.incr__nav
+											+icon("plus","icon")
+					.add-ingr-footer
+						.add-ingr-cost
+							.add-ingr-cost__text Сумма:
+							.add-ingr-cost__val 1598р
+							.add-ingr-item  у вас 2 ингридиента
+						.add-ingr-clear Cбросить выбор
+						.add-ingr-get Cохранить
 	//block footer end

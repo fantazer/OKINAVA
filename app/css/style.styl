@@ -105,10 +105,13 @@ body
 	.order__row
 		margin-bottom: 20px
 		border-bottom 0
+.modal--lg
+	max-width 1250px
+	width: 100%
 .modal-content
 	+below(640px)
 		height: 100%
-		padding: 20px 10px
+		padding: 50px 10px 30px 10px
 		overflow-y scroll
 		width: 100%!important
 		br(0)
@@ -133,7 +136,7 @@ body
 	right: 20px
 	cp()
 	.icon
-		size 12px
+		size 20px
 		fill black
 		opacity:.3
 
@@ -972,6 +975,7 @@ tag($color)
 	border-top 1px solid $border-color
 	border-bottom 1px solid $border-color
 	border-radius 38px
+	user-select none
 .incr__nav
 	flex(mid)
 	tr(background )
@@ -3086,3 +3090,462 @@ tag($color)
 .bread-row--simple
 	+below(768px)
 		display: none
+
+.basket-wrap
+	+below(768px)
+		fw()
+		margin-bottom: 30px
+	f()
+	justify-content: space-between
+	align-items: flex-start
+	margin-bottom: 100px
+.basket-list
+	+below(768px)
+		width: 100%
+	width: 68%
+.basket-el
+	+below(640px)
+		fw()
+		position: relative
+		padding-bottom: 40px
+		border-bottom 1px solid $border-color
+	margin-bottom: 20px
+	flex(between)
+.basket-el__img
+	+below(640px)
+		size(70px)
+	size(80px)
+	br(10px)
+	bg-full()
+	margin-right: 20px
+	align-self flex-start
+.basket-el__info
+	+below(640px)
+		width calc(100% - 90px)
+		margin-bottom: 20px
+	width: 50%
+.basket-el__title
+	+below(640px)
+		max-width calc(100% - 35px)
+	@extend .type--md
+	font-weight 700
+	margin-bottom: 15px
+	display: inline-block
+	span
+		link()
+.ingr-list
+	f()
+	align-items: center
+	fw()
+
+.ingr
+	flex(mid)
+	padding: 5px 14px
+	border 1px solid $border-color
+	border-radius 20px
+	font-size: 10px
+	font-weight:700
+	opacity:.6
+	margin-right: 5px
+	margin-bottom: 8px
+	height: 25px
+	tr(all)
+	cp()
+	&:hover
+		border-color $red
+		color $red
+		.icon
+			fill $red
+			transform rotate(180deg)
+	span
+		display: inline-block
+		margin-right: 5px
+	.icon
+		tr(all)
+		size 6px
+		transform rotate(0deg)
+.basket-ingr-add
+	flex(mid)
+	round()
+	size 20px
+	background:$red
+	margin-bottom: 8px
+	cp()
+	tr(all)
+	transform scale(1)
+	&:hover
+		background:darken($red,5)
+		transform scale(1.4)
+	.icon
+		fill white
+		size 10px
+
+.basket-el__incr
+	+below(768px)
+		margin-left: 20px
+	+below(640px)
+		margin-left: 90px
+	width: 120px
+//.elements-icr-block
+.basket-el__price
+	+below(640px)
+		font-size: 18px
+		width: auto
+	width: 15%
+	text-align: center
+	@extend .type--lg
+	font-weight 700
+.basket-el__remove
+	+below(640px)
+		top 0
+		right 0
+		position: absolute
+	.icon
+		+below(640px)
+			size 18px
+		size 25px
+		fill #c2c2c2
+		tr(all)
+		cp()
+		&:hover
+			fill $red
+.basket-info
+	+below(1024px)
+		width: 30%
+	+below(768px)
+		width: 100%
+		border 1px solid $border-color
+		padding: 25px
+		br(20px)
+		margin-left: auto
+		margin-right: auto
+		max-width 480px
+	width: 25%
+	padding:0 0 40px 25px
+	margin-left: 25px
+	border-left 1px solid $border-color
+
+//.basket-info
+.basket-cost
+	flex(mid)
+	fl()
+.basket-title
+	color #aaadb2
+	@extend .type--lg
+	font-weight 500
+	margin-bottom: 15px
+.basket-price
+	+below(768px)
+		font-size: 28px
+	color #1b2230
+	@extend .type--xxl
+	font-weight 700
+	margin-bottom: 15px
+.basket-sale
+	@extend .type--lg
+	font-weight 500
+	f()
+	margin-bottom: 30px
+.basket-sale__text
+	color #aaadb2
+	margin-right: 5px
+.basket-sale__val
+	color $red
+
+.basket-promo
+	flex(mid)
+.basket-promo__input
+	width: 80%
+	position: relative
+	margin-bottom: 30px
+	.input
+		@extend .type--lg
+		font-weight 700
+		color black
+		width: 100%
+		padding-right: 35px
+		text-align: center
+		&:focus
+			border-color black
+	.icon
+		size 20px
+		position: absolute
+		top calc(50% - 10px)
+		right: 15px
+		display: none
+.basket-promo__input--true
+	.icon-true
+		display: block
+		fill #06a318
+.basket-promo__input--false
+	.icon-false
+		top calc(50% - 7px)
+		display: block
+		fill $red
+		size 14px
+.basket-descr
+	margin-bottom: 15px
+.basket-enter
+	margin-bottom: 15px
+	line-height: 1.6
+.basket-auth
+	link($red)
+	cp()
+	margin-right: 5px
+.basket-code
+	margin-bottom: 40px
+	.input
+		width: 100%
+.basket-deliver
+	+below(768px)
+		text-align: center
+		display: block
+	display: inline-block
+	span
+		link($red)
+.basket-get
+	@extend .btn--md
+	@extend .btn--mark
+	width: 100%
+	margin-top: 30px
+
+.basket-empty
+	width: 100%
+	flex(mid)
+	fl()
+	margin-bottom: 30px
+.basket-empty--hidden
+	display: none
+.basket-empty__icon
+	.icon
+		size 80px
+		margin-bottom: 20px
+.basket-empty__title
+	@extend .type--lg
+	font-weight 700
+	color black
+	margin-bottom: 10px
+.basket-empty__text
+	margin-bottom: 30px
+.basket-empty__get
+	@extend .btn--md
+	@extend .btn--mark
+
+.snacks
+	+below(768px)
+		flex(mid)
+	+below(640px)
+		border 0
+		margin: 20px 0 0 auto
+		padding-top: 0
+	f()
+	fl()
+	padding: 20px 0
+	border-top 1px solid $border-color
+	align-items: flex-end
+	margin: 60px 0 0 auto
+.snacks-text
+	+below(480px)
+		text-align: left
+	@extend .type--md
+	line-height: 1.6
+	margin-bottom: 20px
+	text-align: center
+.snacks-row
+	+below(640px)
+		width: 100%
+		position: relative
+	f()
+	align-items: center
+	margin-bottom: 15px
+.snacks-row__img
+	bg-full()
+	size 40px
+	round()
+	border 1px solid $border-color
+	margin-right: 10px
+.snacks-row__name
+	+below(480px)
+		width: calc(100% - 120px)
+		margin: 0 0 0 20px
+		font-size: 12px
+		max-width calc(100% - 140px)
+	@extend .type--md
+	font-weight:500
+	span
+		link()
+	margin: 0 30px
+
+.snacks-row__number
+	font-weight:500
+	@extend .type--md
+.snacks-row__remove
+	+below(480px)
+		position: absolute
+		background: $red
+		size 20px
+		flex(mid)
+		round()
+		top -5px
+		left 20px
+	.icon
+		+below(768px)
+			fill white
+			size 10px
+		&:hover
+			fill $red
+		size 25px
+		fill #c2c2c2
+		tr(all)
+		cp()
+.snacks-row__text
+	+below(640px)
+		display: none
+	font-weight: 500
+	margin-right: 40px
+
+.add-ingr-row
+	margin-bottom: 10px
+.add-ingr__head
+	+below(640px)
+		fw()
+	f()
+	align-items: center
+	margin-bottom: 20px
+.add-ingr__title
+	font-size 24px
+	font-weight 700
+	color $black
+	margin-right: 10px
+.add-ingr__text
+	color #aaadb2
+	font-family Gotham
+	@extend .type--md
+.add-ingr__list
+	f()
+	fw()
+	align-items: center
+.add-ingr__el
+	+below(480px)
+		width: 100%
+		margin-right: 0
+		fl()
+		padding: 15px 0
+		height: auto
+	flex(between)
+	br(20px)
+	cp()
+	tr(all)
+	height: 40px
+	border 1px solid $border-color
+	margin-right: 20px
+	margin-bottom: 20px
+	overflow: hidden
+	user-select: none
+	&:hover
+		bsh()
+	.incr__nav
+		display: none
+	.incr__val
+		display: none
+.add-ingr__el--active
+	border 1px solid $red
+	.add-ingr__el-img
+		display: none
+	.incr__nav
+		display: flex
+		border-color $red
+		size 40px
+		&:hover
+			.icon
+				fill white
+		.icon
+			fill $red
+	.incr__val
+		+below(480px)
+			margin-left: 0
+		display: flex
+		margin-left: 15px
+		width: 35px
+	.incr__minus
+		+below(480px)
+			margin-bottom: 10px
+		margin-left: -1px
+	.incr__plus
+		+below(480px)
+			margin-top: 10px
+		margin-right: -1px
+.incr__val-count
+	margin-left: 5px
+.add-ingr__el-img
+	round()
+	bg-full()
+	size 40px
+	border 1px solid $border-color
+.add-ingr__el-name
+	+below(480px)
+		margin: 10px 0
+	@extend .type--md
+	color $black
+	margin: 0 0 0 15px
+.add-ingr__el-weight
+	+below(480px)
+		margin: 0
+		margin-bottom: 10px
+	@extend .type--md
+	color $gray
+	margin: 0 0 0 15px
+.add-ingr__el-price
+
+	color #1b2230
+	@extend .type--md
+	font-weight 700
+	margin: 0 15px
+
+.add-ingr-footer
+	+below(768px)
+		fl()
+		flex(mid)
+	flex(between)
+.add-ingr-cost
+	+below(768px)
+		margin-bottom: 20px
+	+below(480px)
+		fl()
+		flex(mid)
+	f()
+	align-items: center
+.add-ingr-cost__text
+	+below(480px)
+		margin-right: 0
+		margin-bottom: 10px
+	@extend .type--md
+	margin-right: 10px
+.add-ingr-cost__val
+	+below(480px)
+		margin-right: 0
+		margin-bottom: 10px
+	font-size 24px
+	font-weight 700
+	color $black
+	margin-right: 15px
+.add-ingr-item
+	@extend .type--md
+.add-ingr-clear
+	+below(768px)
+		margin-left:initial
+		margin-right: 0
+		margin-bottom: 20px
+	+below(480px)
+		width: 100%
+	@extend .btn--md
+	@extend .btn--light
+	margin-left: auto
+	margin-right: 15px
+	width: 200px
+.add-ingr-get
+	+below(480px)
+		width: 100%
+	@extend .btn--md
+	@extend .btn--mark
+	width: 200px
