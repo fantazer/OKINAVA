@@ -338,7 +338,8 @@ h4,
 .add-ingr__el-price,
 .add-ingr-cost__text,
 .add-ingr-item,
-.cafe-list__el-title {
+.cafe-list__el-title,
+.cafe-item__adv-text {
   font-size: 15px;
 }
 @media only screen and (max-width: 768px) {
@@ -371,7 +372,8 @@ h4,
   .add-ingr__el-price,
   .add-ingr-cost__text,
   .add-ingr-item,
-  .cafe-list__el-title {
+  .cafe-list__el-title,
+  .cafe-item__adv-text {
     font-size: 15px;
   }
 }
@@ -457,7 +459,8 @@ h1,
 .position-title,
 .lk-title__text,
 .discount-item-title,
-.basket-price {
+.basket-price,
+.cafe-item__title {
   font-size: 36px;
 }
 @media only screen and (max-width: 768px) {
@@ -467,7 +470,8 @@ h1,
   .position-title,
   .lk-title__text,
   .discount-item-title,
-  .basket-price {
+  .basket-price,
+  .cafe-item__title {
     font-size: 18px;
   }
 }
@@ -539,7 +543,8 @@ a:visiter {
 .basket-get,
 .basket-empty__get,
 .add-ingr-clear,
-.add-ingr-get {
+.add-ingr-get,
+.cafe-item-get {
   -webkit-border-radius: 20px;
           border-radius: 20px;
   -webkit-transition: all 0.4s;
@@ -576,7 +581,8 @@ a:visiter {
 .basket-get:hover,
 .basket-empty__get:hover,
 .add-ingr-clear:hover,
-.add-ingr-get:hover {
+.add-ingr-get:hover,
+.cafe-item-get:hover {
   cursor: pointer;
 }
 .btn--sm,
@@ -600,7 +606,8 @@ a:visiter {
 .basket-get,
 .basket-empty__get,
 .add-ingr-clear,
-.add-ingr-get {
+.add-ingr-get,
+.cafe-item-get {
   padding: 13px 25px;
 }
 .btn--lg {
@@ -622,7 +629,8 @@ a:visiter {
 .history-info-get,
 .basket-get,
 .basket-empty__get,
-.add-ingr-get {
+.add-ingr-get,
+.cafe-item-get {
   color: #fff;
   background: #ca0000;
 }
@@ -635,7 +643,8 @@ a:visiter {
 .history-info-get .nav-icon,
 .basket-get .nav-icon,
 .basket-empty__get .nav-icon,
-.add-ingr-get .nav-icon {
+.add-ingr-get .nav-icon,
+.cafe-item-get .nav-icon {
   fill: #fff;
 }
 .btn--mark:hover,
@@ -647,7 +656,8 @@ a:visiter {
 .history-info-get:hover,
 .basket-get:hover,
 .basket-empty__get:hover,
-.add-ingr-get:hover {
+.add-ingr-get:hover,
+.cafe-item-get:hover {
   background-color: #b10000;
   color: #fff !important;
 }
@@ -660,7 +670,8 @@ a:visiter {
 .history-info-get:active,
 .basket-get:active,
 .basket-empty__get:active,
-.add-ingr-get:active {
+.add-ingr-get:active,
+.cafe-item-get:active {
   background-color: #b10000;
   color: #fff !important;
 }
@@ -673,7 +684,8 @@ a:visiter {
 .history-info-get input[type="submit"],
 .basket-get input[type="submit"],
 .basket-empty__get input[type="submit"],
-.add-ingr-get input[type="submit"] {
+.add-ingr-get input[type="submit"],
+.cafe-item-get input[type="submit"] {
   border: 0;
 }
 .btn--mark .nav-icon,
@@ -685,7 +697,8 @@ a:visiter {
 .history-info-get .nav-icon,
 .basket-get .nav-icon,
 .basket-empty__get .nav-icon,
-.add-ingr-get .nav-icon {
+.add-ingr-get .nav-icon,
+.cafe-item-get .nav-icon {
   fill: #fff;
 }
 .btn--green,
@@ -1046,6 +1059,9 @@ body {
           transform: translateY(0);
   height: initial;
 }
+.content {
+  line-height: 1.6;
+}
 .content ul {
   list-style: none;
   padding-left: 10px;
@@ -1053,6 +1069,7 @@ body {
 .content li {
   margin-bottom: 10px;
   position: relative;
+  line-height: 1.6;
 }
 .content li:before {
   content: '';
@@ -1063,10 +1080,25 @@ body {
   background: #ca0000;
   position: absolute;
   left: -10px;
-  top: 5px;
+  top: 0.65em;
 }
 .content p {
   line-height: 1.6;
+}
+.content a {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ca0000), to(#ca0000));
+  background-image: linear-gradient(to bottom, #ca0000 0%, #ca0000 100%);
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  text-decoration: none;
+  padding-bottom: 4px;
+  -webkit-transition: all 0.4s;
+          transition: all 0.4s;
+  line-height: 1.6;
+}
+.content a:hover {
+  background-size: 0% 1px;
 }
 .modal-layer {
   width: 100%;
@@ -1155,8 +1187,8 @@ body {
 }
 .modal-close {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 15px;
+  right: 15px;
 }
 @media only screen and (max-width: 768px) {
   .modal-close {
@@ -1168,10 +1200,18 @@ body {
   cursor: pointer;
 }
 .modal-close .icon {
-  width: 20px;
-  height: 20px;
+  -webkit-transition: all 0.4s;
+          transition: all 0.4s;
+  width: 14px;
+  height: 14px;
   fill: #1b2230;
   opacity: 0.3;
+}
+.modal-close .icon:hover {
+  -webkit-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+          transform: rotate(270deg);
+  opacity: 1;
 }
 .modal-open {
   overflow: hidden;
@@ -7818,6 +7858,104 @@ select.select-beauty {
 .cafe-list__el-adr {
   color: #aaadb2;
   margin-bottom: 5px;
+}
+.cafe-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 100px;
+}
+@media only screen and (max-width: 640px) {
+  .cafe-item {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+}
+.cafe-item__img-wrap {
+  width: 50%;
+}
+@media only screen and (max-width: 640px) {
+  .cafe-item__img-wrap {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+.cafe-item__img-el {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-border-radius: 20px;
+          border-radius: 20px;
+  padding: 40% 10%;
+}
+.cafe-item__cont {
+  width: 45%;
+}
+@media only screen and (max-width: 640px) {
+  .cafe-item__cont {
+    width: 100%;
+  }
+}
+.cafe-item__title {
+  line-height: 1.6;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+@media only screen and (max-width: 1024px) {
+  .cafe-item__title {
+    font-size: 28px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .cafe-item__title {
+    font-size: 24px;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .cafe-item__title {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+}
+.cafe-item__time {
+  color: #aaadb2;
+  margin-bottom: 20px;
+}
+.cafe-item__time span {
+  display: inline-block;
+  margin-right: 20px;
+}
+.cafe-item__text {
+  margin-bottom: 40px;
+}
+.cafe-item__adv {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10px;
+}
+.cafe-item__adv-icon .icon {
+  fill: #ca0000;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.cafe-item-get {
+  margin-top: 30px;
+  padding: 15px 50px;
+}
+@media only screen and (max-width: 640px) {
+  .cafe-item-get {
+    width: 100%;
+  }
 }
 @-webkit-keyframes shake {
   from, 11.1%, to {

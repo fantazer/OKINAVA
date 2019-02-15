@@ -4,14 +4,12 @@ include block_html/_include.pug
 .page
 	.page-head
 		+header()
-
 	.page-content
 		.main-cont
 			.bread-row.bread-row--simple
 				.bread
 					a(href="#").bread__el Главная
 					.bread__el Акции
-
 			.discount-item
 				.discount-item__img(style="background-image:url('img/sale-banner.jpg')")
 				.discount-item-wrap
@@ -27,13 +25,11 @@ include block_html/_include.pug
 									+icon("soc-instagram","icon")
 								a(href="#").soc-row__el
 									+icon("soc-vk","icon")
-
 			.add-list-wrap
 				.title--sm Рекомендуем также попробовать
 				.add-list
 					- for (var i=0;i<5;i++)
 						+item-small()
-
 	.page-footer
 		+footer()
 include ./block_html/_script.pug

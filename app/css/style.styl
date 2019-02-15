@@ -44,12 +44,14 @@ body
 	height: initial
 
 .content
+	line-height: 1.6
 	ul
 		list-style none
 		padding-left: 10px
 	li
 		margin-bottom: 10px
 		position: relative
+		line-height: 1.6
 		&:before
 			content ''
 			size 4px
@@ -57,9 +59,11 @@ body
 			background: $red
 			position: absolute
 			left: -10px
-			top 5px
+			top .65em
 	p
 		line-height: 1.6
+	a
+		link($red)
 //modal
 .modal-layer
 	width: 100%
@@ -132,11 +136,15 @@ body
 		top 12px
 		right 12px
 	position: absolute
-	top: 20px
-	right: 20px
+	top: 15px
+	right: 15px
 	cp()
 	.icon
-		size 20px
+		&:hover
+			transform rotate(270deg)
+			opacity: 1
+		tr(all)
+		size 14px
 		fill black
 		opacity:.3
 
@@ -3700,3 +3708,65 @@ select.select-beauty
 .cafe-list__el-adr
 	color #aaadb2
 	margin-bottom: 5px
+
+.cafe-item
+	+below(640px)
+		fw()
+		margin-bottom: 40px
+	f()
+	justify-content: space-between
+	margin-bottom: 100px
+
+.cafe-item__img-wrap
+	+below(640px)
+		width: 100%
+		margin-bottom: 10px
+	width: 50%
+.cafe-item__img-el
+	bg-full()
+	br(20px)
+	padding: 40% 10%
+
+.cafe-item__cont
+	+below(640px)
+		width: 100%
+	width: 45%
+.cafe-item__title
+	+below(1024px)
+		font-size: 28px
+	+below(768px)
+		font-size: 24px
+	+below(640px)
+		margin-bottom: 10px
+		font-size: 20px
+	@extend .type--xxl
+	line-height: 1.6
+	font-weight: 700
+	margin-bottom: 30px
+.cafe-item__time
+	color #aaadb2
+	margin-bottom: 20px
+	span
+		display: inline-block
+		margin-right: 20px
+.cafe-item__text
+	margin-bottom: 40px
+.cafe-item__adv
+	f()
+	margin-bottom: 10px
+.cafe-item__adv-icon
+	.icon
+		fill $red
+		size 20px
+		margin-right: 10px
+//.icon
+.cafe-item__adv-text
+	@extend .type--md
+
+.cafe-item-get
+	+below(640px)
+		width: 100%
+	@extend .btn--md
+	@extend .btn--mark
+	margin-top: 30px
+	padding: 15px 50px

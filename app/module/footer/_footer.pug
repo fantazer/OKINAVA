@@ -239,4 +239,42 @@ mixin footer()
 							.add-ingr-item  у вас 2 ингридиента
 						.add-ingr-clear Cбросить выбор
 						.add-ingr-get Cохранить
+			//ingr === end
+
+			//modal getcafe
+			.modal(data-modal="getcafe")
+				.modal-content
+					.modal-close
+						+icon("close-fat","icon")
+					.modal-title Забронировать столик
+					form(action="#")
+						.input-row
+							select.select-beauty
+								option ул. Университетская, д. 10
+								option ул. Университетская, д. 11
+								option ул. Университетская, д. 12
+						.input-row
+							input(type="text" placeholder="Имя" class="input")
+						.input-row
+							input(type="text" placeholder="Телефон" class="input")
+						.input-row
+							input(type="text" placeholder="Дата бронирования" class="input")
+						.input-row-half
+							.input-wrap
+								select.select-beauty
+									option 10:00
+									option 10:30
+									option 11:00
+									option 10:00
+									option 10:30
+									option 11:00
+							.input-wrap
+								select.select-beauty
+									option 1 чел
+									option 2 чел
+									option 3 чел
+						.input-row
+							textarea(name="info", cols="30", rows="10" placeholder="Сопроводительное письмо" class="input")
+						input(type="submit" value="Отправить" class="btn--md btn--mark btn--full modal-send")
+			//modal getcafe === end
 	//block footer end

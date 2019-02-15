@@ -125,6 +125,15 @@ $(document).ready(function (){
 	});
 	//slider custom control===end
 
+	//restaurant slider
+	$('.cafe-item__img').slick({
+		slidesToShow: 1,
+		arrows: false,
+		speed: 500,
+		dots:true
+	});
+	//restaurant slider===end
+
 	//increment field
 	$('.icr-btn').click(function(){
 		$(this).addClass('hidden');
@@ -273,9 +282,9 @@ $(document).ready(function (){
 		"isModalShow": false, //state show modal
 		"scrollPos": 0
 	};
-	$('.modal-content').click(function (event) {
+	/*$('.modal-content').click(function (event) {
 		event.stopPropagation();
-	});
+	});*/
 
 	var openModal = function () {
 		if (!$('.modal-layer').hasClass('modal-layer-show')) {
@@ -322,7 +331,7 @@ $(document).ready(function (){
 		initModal(currentModal);
 	});
 
-	$('.modal-layer , .modal-close , .hide-modal').click(function () {
+	$('.modal-close , .hide-modal').click(function () {
 		closeModal();
 	});
 	//modals===end

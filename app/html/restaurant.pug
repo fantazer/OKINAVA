@@ -1,0 +1,45 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	.page-head
+		+header()
+	.page-content
+		.main-cont
+			.bread-row
+				.bread
+					a(href="#").bread__el Главная
+					.bread__el Кафе
+
+		.main-cont
+			.cafe-item
+				.cafe-item__img-wrap
+					.cafe-item__img
+						- for (var i=0;i<4;i++)
+							.cafe-item__img-el(style="background-image:url('img/cafe.jpg')")
+				.cafe-item__cont
+					.cafe-item__title ул. Универитетская, д. 10
+					.cafe-item__time
+						span Пн-Пт: 10-22
+						span Сб-Вс: 10-24
+					.cafe-item__text.content
+						p Благодаря высоким потолкам и большим окнам в ресторане всегда много воздуха и света. Разработкой интерьера занимался талантливый московский дизайнер Андрей Цыганков. Спокойные тона разбавляются мягкими диванами лазурного цвета и зеленью живых растений. В качестве материала было использовано натуральное дерево, что делает интерьер
+					.cafe-item__adv
+						.cafe-item__adv-icon
+							+icon("wifi","icon")
+						.cafe-item__adv-text Бесплатный Wi-Fi
+					.cafe-item__adv
+						.cafe-item__adv-icon
+							+icon("parking","icon")
+						.cafe-item__adv-text Большая парковка на 30 мест
+					.cafe-item__adv
+						.cafe-item__adv-icon
+							+icon("dinner","icon")
+						.cafe-item__adv-text Банкетный зал на 80 человек
+
+					.cafe-item-get.modal-get(data-modal="getcafe") Забронировать столик
+
+			+addtext()
+	.page-footer
+		+footer()
+include ./block_html/_script.pug
