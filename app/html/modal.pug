@@ -1,0 +1,37 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	.page-head
+		+header()
+	.page-content
+		.main-cont
+			h1.title Модальные окна
+			p Чтобы вызвать нужное окно добавь на элемент класс .modal-get и data-modal="имя окна"
+			br
+			br
+			.btn--md.btn--mark.modal-get(data-modal="review") Добавить отзыв | data-modal="review"
+			br
+			br
+			.btn--md.btn--mark.modal-get(data-modal="order") Оставьте заявку | data-modal="order"
+			br
+			br
+			.btn--md.btn--mark.modal-get(data-modal="truemessage") Успешное действие | data-modal="truemessage"
+			br
+			br
+			.btn--md.btn--mark.modal-get(data-modal="adress") Добавить адрес | data-modal="adress"
+			br
+			br
+			.btn--md.btn--mark.modal-get(data-modal="profile-edit") Изменить профиль | data-modal="profile-edit"
+			br
+			br
+			.btn--md.btn--mark.modal-get(data-modal="adress-edit") Изменить адрес | data-modal="adress-edit"
+			br
+			br
+			.btn--md.btn--mark.modal-get(data-modal="mail") Добавить e-mail | data-modal="mail"
+			br
+			br
+			.btn--md.btn--mark.modal-get(data-modal="ingr") Добавь ингредиент | data-modal="ingr"
+	.page-footer
+		+footer()
+include ./block_html/_script.pug

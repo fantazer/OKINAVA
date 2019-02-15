@@ -495,4 +495,26 @@ $(document).ready(function (){
 		$('.add-ingr__el').removeClass('add-ingr__el--active');
 	});
 	//modal ingr toggle ===end
+
+	$('.select-beauty').niceSelect();
+
+
+	//toggle tab restaurant
+	$('.cafe-tab__el').click(function(){
+		$('.cafe-tab__el').removeClass('cafe-tab__el--active');
+		$(this).addClass('cafe-tab__el--active');
+		var current = $(this).index();
+		console.log(current);
+		$('.cafe-tab-info').each(function(){
+			if($(this).index()===current + 1){
+				console.log($(this).index());
+				$(this).addClass('cafe-tab-info--active');
+			}else{
+				$(this).removeClass('cafe-tab-info--active');
+			}
+		})
+	});
+	//toggle tab restaurant === end
+
+
 });

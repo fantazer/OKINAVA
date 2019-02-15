@@ -2066,7 +2066,8 @@ tag($color)
 	.input
 		width: 100%
 		margin-bottom: 20px
-
+	.nice-select
+		width: 100%
 .get-rating
 	f()
 	align-items: center
@@ -2756,6 +2757,9 @@ tag($color)
 .input-wrap
 	.input
 		width: 100%
+	.nice-select
+		width: 100%
+		margin-bottom: 0
 
 .vacancy-list
 	+below(1024px)
@@ -3549,3 +3553,150 @@ tag($color)
 	@extend .btn--md
 	@extend .btn--mark
 	width: 200px
+
+
+.cafe-wrap
+	+below(768px)
+		margin-bottom: 40px
+	f()
+	fw()
+	justify-content: space-between
+	margin-bottom: 100px
+
+.cafe-content
+	+below(1024px)
+		width: 60%
+	+below(640px)
+		width: 100%
+	width: 70%
+	ul
+		margin-bottom: 40px
+.cafe-get
+	+below(1024px)
+		width: 35%
+	+below(640px)
+		width: 100%
+		margin-bottom: 30px
+
+	width: 25%
+
+.nice-select
+	br(20px)
+	margin-bottom: 20px
+	display: block
+	color #000000
+	font-size 14px
+	font-weight 700
+	line-height:auto
+	.list
+		width: calc(100% )
+		left 0px
+		border-radius 0 0 20px 20px
+		border 0px solid $border-color
+		border-top 0
+		margin-top: 0
+		max-height 200px
+		overflow-y: auto
+		li
+			white-space: nowrap
+			overflow: hidden
+			text-overflow: ellipsis
+
+  .current
+		white-space nowrap
+		overflow hidden
+		text-overflow ellipsis
+		display inline-block
+		max-width 80%
+.nice-select.open
+	border-radius 20px 20px 0 0
+select.select-beauty
+	display none!important
+
+.element-select
+	padding: 20px 0
+
+.nice-select:active, .nice-select.open, .nice-select:focus
+	border 1px solid $border-color
+
+.cafe-tab
+	+below(640px)
+		width: 100%
+	flex(mid)
+	border 1px solid $border-color
+	br(25px)
+	width: 70%
+	margin-left: auto
+	margin-right: auto
+	overflow: hidden
+	margin-bottom: 30px
+.cafe-tab__el
+	cp()
+	tr(all)
+	@extend .type--lg
+	padding: 15px
+	text-align: center
+	width: 50%
+	font-weight 500
+.cafe-tab__el--active
+	background: black
+	color white
+	br(25px)
+.cafe-tab-info
+	@extend .hidden-block
+.cafe-tab-info--active
+	@extend .visible-block
+.cafe-map
+	padding: 40% 10%
+	background: $gray
+	position: relative
+	width: 100%
+	br(20px)
+	overflow: hidden
+.cafe-map__el
+	position: absolute
+	top 0
+	left 0
+	width: 100%
+	height: 100%
+	z-index 2
+.cafe-list
+	+below(1024px)
+		grid-template-columns repeat(2, 1fr)
+	+below(768px)
+		grid-gap 15px
+	+below(480px)
+		grid-template-columns 1fr
+	display: grid
+	grid-gap 30px
+	grid-template-columns repeat(3, 1fr)
+.cafe-list__el-wrap
+	br(20px)
+	overflow: hidden
+	display: block
+	tr(all)
+	&:hover
+		bsh-hover()
+.cafe-list__el-img
+	+below(480px)
+		display: none
+	padding: 40% 10%
+	bg-full()
+.cafe-list__el-content
+	+below(480px)
+		border-top 1px solid $border-color
+		br(20px)
+	tr(all)
+	padding: 20px
+	border 1px solid $border-color
+	border-top 0
+	border-radius 0 0 20px 20px
+.cafe-list__el-title
+	@extend .type--md
+	margin-bottom: 20px
+	display: inline-block
+	span
+		link()
+.cafe-list__el-adr
+	color #aaadb2
+	margin-bottom: 5px

@@ -13,14 +13,7 @@
     <!--SEO-->
     <title>Document</title>
     <meta name="description" itemprop="description" content="" />
-    <!--build:css css/vendor.css-->
-    <link rel="stylesheet" href="bower/normalize.css/normalize.css" />
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
-    <link rel="stylesheet" href="bower/slick-carousel/slick/slick.css" />
-    <link rel="stylesheet" href="bower/slick-carousel/slick/slick-theme.css" />
-    <link rel="stylesheet" href="bower/fancybox/dist/jquery.fancybox.css" />
-    <link rel="stylesheet" href="bower/jquery-nice-select/css/nice-select.css" />
-    <!--endbuild-->
+    <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/style-edit.css" />
 </head>
@@ -534,7 +527,7 @@
                     <div class="bread-title">Заголовок</div>
                     <div class="bread">
                         <a class="bread__el" href="#">Главная</a>
-                        <div class="bread__el">О нас</div>
+                        <div class="bread__el">Кафе</div>
                     </div>
                     <a class="page-nav" href="#">
                         <div class="page-nav__icon">
@@ -545,73 +538,217 @@
                         <div class="page-nav__text">на главную</div>
                     </a>
                 </div>
-                <div class="title title--mobile">Аппетитные суши и роллы с доставкой на дом</div>
-                <div class="about-text">Сеть кафе «Окинава» предлагает доступно заказать самые лучшие роллы и суши в Казани. Благодаря нам Вы можете наслаждаться невероятным вкусом свежеприготовленных блюд, не выходя из дома и Вам не придется тратить своё время на кухне. Профессиональные
-                    повара готовят только из качественных продуктов, а служба доставки оперативно доставит вкусную еду на дом или в офис в кротчайшие сроки. "Окинава" это вкусно, быстро и доступно.</div>
-                <div class="title">Наша компания в цифрах</div>
-                <div class="company">
-                    <div class="company-row">
-                        <div class="company-val">8</div>
-                        <div class="company-text">уютных кафе по Казани, с кухней, работающей на доставку общей площадью 1400 кв.м</div>
-                        <div class="company-get">
-                            <a class="company-get__el" href="#">Посмотреть кафе</a>
-                        </div>
-                    </div>
-                    <div class="company-row">
-                        <div class="company-val">130</div>
-                        <div class="company-text">Автомобилей в нашем автопарке, которые ежедневно максимально быстро доставляют Вам еду</div>
-                    </div>
-                    <div class="company-row">
-                        <div class="company-val">250</div>
-                        <div class="company-text">Профессиональных сотрудника нашей компании, которые ежедневно делают все, чтобы Вы могли вкусно кушать в наших заведениях.</div>
-                    </div>
-                    <div class="company-row">
-                        <div class="company-val">900 000</div>
-                        <div class="company-text">Свыше 900 000 довольных клиентов в год, обслуживают наши кафе и служба доставки</div>
-                    </div>
-                    <div class="company-row">
-                        <div class="company-val">1 000</div>
-                        <div class="company-text">В год мы производим свыше 1000 килограмм одних только ролл!</div>
-                        <div class="company-get">
-                            <a class="company-get__el" href="#">В каталог блюд</a>
-                        </div>
-                    </div>
+                <div class="title title--mobile">
+                    <span>Кафе</span>
                 </div>
             </div>
-            <div class="add-text content">
-                <div class="add-text__col">
-                    <div class="add-text__col-title">Впечатляющий ассортимент вкусных блюд</div>
-                    <p>Наше меню включает:</p>
-                    <ul>
-                        <li>классические и оригинальные виды суши с угрем, окунем, икрой тобико, лососем, тунцом, тигровой креветкой, курицей и пр.;</li>
-                        <li>разнообразные классические роллы (рисом внутрь) и урамаки (рисом наружу), в том числе острые, запеченные, горячие;</li>
-                        <li>аппетитные сеты для романтического ужина или вечеринки в большой компании.</li>
-                    </ul>
-                    <p>Помимо блюд японской кухни мы с радостью приготовим для вас экзотические воки с разными начинками, ароматную пиццу, горячие и холодные супы, свежие и сытные салаты, нежные десерты.</p>
-                    <p>Чтобы заказать суши и другие кушанья, зайдите в соответствующий раздел нашего меню. Каждый товар сопровождается фотографией, указанием состава ингредиентов, веса порции и стоимости. Кликните по плашке «Добавить в корзину» возле понравившихся
-                        суши. Скорректируйте количество порций и введите контактные данные. Наш менеджер свяжется с вами для подтверждения покупки.</p>
+            <div class="main-cont">
+                <div class="cafe-wrap">
+                    <div class="cafe-get">
+                        <h2>Забронировать столик</h2>
+                        <form action="#">
+                            <div class="input-row">
+                                <select class="select-beauty">
+                                    <option>ул. Университетская, д. 10</option>
+                                    <option>ул. Университетская, д. 11</option>
+                                    <option>ул. Университетская, д. 12</option>
+                                </select>
+                            </div>
+                            <div class="input-row">
+                                <input class="input" type="text" placeholder="Имя" />
+                            </div>
+                            <div class="input-row">
+                                <input class="input" type="text" placeholder="Телефон" />
+                            </div>
+                            <div class="input-row">
+                                <input class="input" type="text" placeholder="Дата бронирования" />
+                            </div>
+                            <div class="input-row-half">
+                                <div class="input-wrap">
+                                    <select class="select-beauty">
+                                        <option>10:00</option>
+                                        <option>10:30</option>
+                                        <option>11:00</option>
+                                        <option>10:00</option>
+                                        <option>10:30</option>
+                                        <option>11:00</option>
+                                    </select>
+                                </div>
+                                <div class="input-wrap">
+                                    <select class="select-beauty">
+                                        <option>1 чел</option>
+                                        <option>2 чел</option>
+                                        <option>3 чел</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="input-row">
+                                <textarea class="input" name="info" cols="30" rows="10" placeholder="Сопроводительное письмо"></textarea>
+                            </div>
+                            <input class="btn--md btn--mark btn--full" type="submit" value="Отправить" />
+                        </form>
+                    </div>
+                    <div class="cafe-content">
+                        <div class="cafe-tab">
+                            <div class="cafe-tab__el cafe-tab__el--active">на карте</div>
+                            <div class="cafe-tab__el">списком</div>
+                        </div>
+                        <div class="cafe-tab-info cafe-tab-info--active">
+                            <div class="cafe-map">
+                                <div class="cafe-map__el">
+                                    <script type="text/javascript" charset="utf-8" async="async" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3AwkF1GhSDg4kZ3hDsyV_PPciU2OtbJsK4&amp;amp;width=100%&amp;amp;height=100%&amp;amp;lang=ru_RU&amp;amp;scroll=false"></script>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cafe-tab-info">
+                            <div class="cafe-list">
+                                <a class="cafe-list__el" href="#">
+                                    <div class="cafe-list__el-wrap">
+                                        <div class="cafe-list__el-img" style="background-image:url('img/cafe.jpg')"></div>
+                                        <div class="cafe-list__el-content">
+                                            <div class="cafe-list__el-title">
+                                                <span>ул. Университетская, д. 10</span>
+                                            </div>
+                                            <div class="cafe-list__el-adr">Пн-Пт: 10-22</div>
+                                            <div class="cafe-list__el-adr">Сб-Вс: 10-24</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="cafe-list__el" href="#">
+                                    <div class="cafe-list__el-wrap">
+                                        <div class="cafe-list__el-img" style="background-image:url('img/cafe.jpg')"></div>
+                                        <div class="cafe-list__el-content">
+                                            <div class="cafe-list__el-title">
+                                                <span>ул. Университетская, д. 10</span>
+                                            </div>
+                                            <div class="cafe-list__el-adr">Пн-Пт: 10-22</div>
+                                            <div class="cafe-list__el-adr">Сб-Вс: 10-24</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="cafe-list__el" href="#">
+                                    <div class="cafe-list__el-wrap">
+                                        <div class="cafe-list__el-img" style="background-image:url('img/cafe.jpg')"></div>
+                                        <div class="cafe-list__el-content">
+                                            <div class="cafe-list__el-title">
+                                                <span>ул. Университетская, д. 10</span>
+                                            </div>
+                                            <div class="cafe-list__el-adr">Пн-Пт: 10-22</div>
+                                            <div class="cafe-list__el-adr">Сб-Вс: 10-24</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="cafe-list__el" href="#">
+                                    <div class="cafe-list__el-wrap">
+                                        <div class="cafe-list__el-img" style="background-image:url('img/cafe.jpg')"></div>
+                                        <div class="cafe-list__el-content">
+                                            <div class="cafe-list__el-title">
+                                                <span>ул. Университетская, д. 10</span>
+                                            </div>
+                                            <div class="cafe-list__el-adr">Пн-Пт: 10-22</div>
+                                            <div class="cafe-list__el-adr">Сб-Вс: 10-24</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="cafe-list__el" href="#">
+                                    <div class="cafe-list__el-wrap">
+                                        <div class="cafe-list__el-img" style="background-image:url('img/cafe.jpg')"></div>
+                                        <div class="cafe-list__el-content">
+                                            <div class="cafe-list__el-title">
+                                                <span>ул. Университетская, д. 10</span>
+                                            </div>
+                                            <div class="cafe-list__el-adr">Пн-Пт: 10-22</div>
+                                            <div class="cafe-list__el-adr">Сб-Вс: 10-24</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="cafe-list__el" href="#">
+                                    <div class="cafe-list__el-wrap">
+                                        <div class="cafe-list__el-img" style="background-image:url('img/cafe.jpg')"></div>
+                                        <div class="cafe-list__el-content">
+                                            <div class="cafe-list__el-title">
+                                                <span>ул. Университетская, д. 10</span>
+                                            </div>
+                                            <div class="cafe-list__el-adr">Пн-Пт: 10-22</div>
+                                            <div class="cafe-list__el-adr">Сб-Вс: 10-24</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="cafe-list__el" href="#">
+                                    <div class="cafe-list__el-wrap">
+                                        <div class="cafe-list__el-img" style="background-image:url('img/cafe.jpg')"></div>
+                                        <div class="cafe-list__el-content">
+                                            <div class="cafe-list__el-title">
+                                                <span>ул. Университетская, д. 10</span>
+                                            </div>
+                                            <div class="cafe-list__el-adr">Пн-Пт: 10-22</div>
+                                            <div class="cafe-list__el-adr">Сб-Вс: 10-24</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="cafe-list__el" href="#">
+                                    <div class="cafe-list__el-wrap">
+                                        <div class="cafe-list__el-img" style="background-image:url('img/cafe.jpg')"></div>
+                                        <div class="cafe-list__el-content">
+                                            <div class="cafe-list__el-title">
+                                                <span>ул. Университетская, д. 10</span>
+                                            </div>
+                                            <div class="cafe-list__el-adr">Пн-Пт: 10-22</div>
+                                            <div class="cafe-list__el-adr">Сб-Вс: 10-24</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="cafe-list__el" href="#">
+                                    <div class="cafe-list__el-wrap">
+                                        <div class="cafe-list__el-img" style="background-image:url('img/cafe.jpg')"></div>
+                                        <div class="cafe-list__el-content">
+                                            <div class="cafe-list__el-title">
+                                                <span>ул. Университетская, д. 10</span>
+                                            </div>
+                                            <div class="cafe-list__el-adr">Пн-Пт: 10-22</div>
+                                            <div class="cafe-list__el-adr">Сб-Вс: 10-24</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="add-text__col add-text__col--more">
-                    <div class="add-text__col-title">Преимущества заказа суши в «Окинаве»</div>
-                    <ul>
-                        <li>Повара начинают готовить блюда только после вашего звонка.</li>
-                        <li>Мы используем только отборные, свежие продукты.</li>
-                        <li>Готовим суши по фирменной рецептуре.</li>
-                        <li>Предлагаем приемлемую стоимость щедрых порций свежих блюд.</li>
-                        <li>Регулярно проводим акции.</li>
-                        <li>Гарантируем доставку с соблюдением всех технологий транспортировки, чтобы вы всегда получали свежую и теплую еду.</li>
-                        <li>Располагаем собственным автопарком из 25 машин, что позволяет максимально оперативно развозить заказы по всему городу.</li>
-                        <li>Покупки на сумму от 600 рублей доставляем за свой счет.</li>
-                        <li>Возможен самовывоз из удобного для вас кафе нашей сети.</li>
-                    </ul>
-                    <p>Мы первыми в Казани открыли службу доставки суши на дом или в офис и остаемся лидерами в этой сфере.</p>
-                    <p>
-                        <strong>Всегда рады вашим заказам!</strong>
-                    </p>
-                </div>
-                <div class="slide-trigger slide-trigger--add-text">
-                    <span class="slide-trigger--true">развернуть</span>
-                    <span class="slide-trigger--false">свернуть</span>
+                <div class="add-text content">
+                    <div class="add-text__col">
+                        <div class="add-text__col-title">Впечатляющий ассортимент вкусных блюд</div>
+                        <p>Наше меню включает:</p>
+                        <ul>
+                            <li>классические и оригинальные виды суши с угрем, окунем, икрой тобико, лососем, тунцом, тигровой креветкой, курицей и пр.;</li>
+                            <li>разнообразные классические роллы (рисом внутрь) и урамаки (рисом наружу), в том числе острые, запеченные, горячие;</li>
+                            <li>аппетитные сеты для романтического ужина или вечеринки в большой компании.</li>
+                        </ul>
+                        <p>Помимо блюд японской кухни мы с радостью приготовим для вас экзотические воки с разными начинками, ароматную пиццу, горячие и холодные супы, свежие и сытные салаты, нежные десерты.</p>
+                        <p>Чтобы заказать суши и другие кушанья, зайдите в соответствующий раздел нашего меню. Каждый товар сопровождается фотографией, указанием состава ингредиентов, веса порции и стоимости. Кликните по плашке «Добавить в корзину» возле
+                            понравившихся суши. Скорректируйте количество порций и введите контактные данные. Наш менеджер свяжется с вами для подтверждения покупки.</p>
+                    </div>
+                    <div class="add-text__col add-text__col--more">
+                        <div class="add-text__col-title">Преимущества заказа суши в «Окинаве»</div>
+                        <ul>
+                            <li>Повара начинают готовить блюда только после вашего звонка.</li>
+                            <li>Мы используем только отборные, свежие продукты.</li>
+                            <li>Готовим суши по фирменной рецептуре.</li>
+                            <li>Предлагаем приемлемую стоимость щедрых порций свежих блюд.</li>
+                            <li>Регулярно проводим акции.</li>
+                            <li>Гарантируем доставку с соблюдением всех технологий транспортировки, чтобы вы всегда получали свежую и теплую еду.</li>
+                            <li>Располагаем собственным автопарком из 25 машин, что позволяет максимально оперативно развозить заказы по всему городу.</li>
+                            <li>Покупки на сумму от 600 рублей доставляем за свой счет.</li>
+                            <li>Возможен самовывоз из удобного для вас кафе нашей сети.</li>
+                        </ul>
+                        <p>Мы первыми в Казани открыли службу доставки суши на дом или в офис и остаемся лидерами в этой сфере.</p>
+                        <p>
+                            <strong>Всегда рады вашим заказам!</strong>
+                        </p>
+                    </div>
+                    <div class="slide-trigger slide-trigger--add-text">
+                        <span class="slide-trigger--true">развернуть</span>
+                        <span class="slide-trigger--false">свернуть</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1416,13 +1553,7 @@
             <!--block footer end-->
         </div>
     </div>
-    <!--build:js js/combined.js-->
-    <script src="bower/jquery/dist/jquery.js"></script>
-    <script src="bower/slick-carousel/slick/slick.js"></script>
-    <script src="bower/fancybox/dist/jquery.fancybox.js"></script>
-    <script src="bower/jquery-nice-select/js/jquery.nice-select.min.js"></script>
-    <script src="js/add-on.js"></script>
-    <!-- endbuild-->
+    <script src="js/combined.js"></script>
     <script src="js/script.js"></script>
     <script src="js/script-edit.js"></script>
 </body>

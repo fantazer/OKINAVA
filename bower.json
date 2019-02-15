@@ -18,6 +18,7 @@
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
-    "fancybox": "^3.5.6"
+    "fancybox": "^3.5.6",
+    "jquery-nice-select": "^1.1.0"
   }
 }
