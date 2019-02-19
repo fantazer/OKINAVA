@@ -562,6 +562,17 @@ $(document).ready(function (){
  		postfix: " баллов",
  		prefix: "Списать "
  	});
+
+	$(".catalog-range").ionRangeSlider({
+        type: "double",
+        grid: false,
+        min: 0,
+        max: 1000,
+        from: 200,
+        to: 800,
+        postfix: " руб"
+    });
+
 	//range-slider===end
 
 	//check agree
@@ -574,4 +585,23 @@ $(document).ready(function (){
 	});
 	//check agree===end
 
+	//catalog item toggle
+	$('.catalog-tool-item').click(function(){
+		$(this).toggleClass('catalog-tool-item--active');
+	});
+
+	$('.catalog-tool__clear').click(function(){
+		$('.catalog-tool-item').removeClass('catalog-tool-item--active');
+	});
+
+	$('.catalog-sort__el').click(function(){
+		$('.catalog-sort__el').removeClass('catalog-sort__el--active');
+		$(this).addClass('catalog-sort__el--active');
+	});
+
+	$('.catalog-filter').click(function(){
+		$('.catalog-tool').slideToggle();
+		$(this).toggleClass('catalog-filter--active');
+	});
+	//catalog item toggle===end
 });

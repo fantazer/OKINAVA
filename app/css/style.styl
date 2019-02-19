@@ -390,7 +390,9 @@ body
 	width: 40%
 	.input
 		width: 100%
-//.header-search-wrap
+.header-search-wrap
+	.input
+		br(25px)
 .header-search-icon
 	position: relative
 	.icon
@@ -889,7 +891,7 @@ tag($color)
 	fl()
 	transition box-shadow .9s
 	position: relative
-	br(10px)
+	br(20px)
 	&:hover
 		+above(641px)
 			bsh-hover()
@@ -4075,3 +4077,151 @@ select.select-beauty
 		+below(640px)
 			width: 48%
 		width: 23%
+
+.catalog
+	+below(768px)
+		fw()
+	f()
+	justify-content: space-between
+	align-items: flex-start
+	margin-bottom: 40px
+.catalog-tool
+	+below(768px)
+		width: 100%
+		margin-bottom: 30px
+		display: none
+	width: 300px
+	background: white
+	padding: 30px 20px 50px 20px
+	bsh()
+	br(20px)
+.catalog-tool__row
+	margin-bottom: 30px
+	.check-el
+		margin-bottom: 10px
+.catalog-tool__title
+	font-size: 20px
+	font-weight: 700
+	margin-bottom: 20px
+.catalog-tool-tag
+	f()
+	fw()
+.catalog-tool-tag__el
+	f()
+	cp()
+	br(25px)
+	tr(all)
+	padding: 10px 15px
+	border 1px solid $border-color
+	margin-right: 10px
+	margin-bottom: 10px
+	&:hover
+		bsh-hover()
+	.icon
+		size 16px
+		margin-right: 8px
+.catalog-tool-ingr
+	+below(768px)
+		grid-template-columns repeat(auto-fill, 120px)
+	+below(480px)
+		grid-template-columns 1fr 1fr
+	display: grid
+	grid-gap 10px
+	grid-template-columns 1fr 1fr
+.catalog-tool-ingr__el
+	br(25px)
+	cp()
+	tr(all)
+	border 1px solid $border-color
+	overflow: hidden
+	&:hover
+		bsh-hover()
+.catalog-tool-ingr__img
+	bg-full()
+	padding: 30% 10%
+.catalog-tool-ingr__name
+	padding: 5px
+	border-top 1px solid $border-color
+	text-align: center
+	font-weight:500
+
+.catalog-wrap
+	+below(1100px)
+		grid-template-columns repeat(2, 1fr)
+	+below(768px)
+		width: 100%
+	+below(640px)
+		grid-template-columns 1fr
+	width calc(100% - 320px)
+	display: grid
+	grid-gap 20px
+	grid-template-columns repeat(3, 1fr)
+
+.catalog-tool__get
+	@extend .btn--md
+	@extend .btn--mark
+	margin-bottom: 20px
+	width: 100%
+.catalog-tool__clear
+	@extend .btn--md
+	@extend .btn--light
+	width: 100%
+
+.catalog-tool-item--active
+	border 1px solid $red
+
+.catalog-sort
+	+below(768px)
+		margin-top: 0
+	f()
+	margin-bottom: 25px
+	align-items: center
+	justify-content: flex-end
+	margin-top: -20px
+	.nice-select
+		+below(768px)
+			width: 100%
+		margin-bottom: 0
+		width: 250px
+.catalog-sort__name
+	+below(768px)
+		display: none
+	@extend .type--md
+	margin-right: 20px
+.catalog-sort__el
+	@extend .type--md
+	tr(all)
+	cp()
+	margin-left: 20px
+	opacity: .6
+	&:hover
+		opacity: 1
+		color $red
+.catalog-sort__el--active
+	opacity: 1
+	color $red
+catalog-sort__name
+.catalog-filter
+	+above(769px)
+		display: none
+	flex(mid)
+	br(20px)
+	background: white
+	padding: 10px 20px
+	border 1px solid $border-color
+	margin-bottom: 20px
+	cp()
+	.icon
+		size 16px
+		fill black
+		margin-right: 10px
+	span
+		up()
+		font-weight: 500
+
+.catalog-filter--active
+	background: $red
+	color white
+	border-color $red
+	.icon
+		fill white
