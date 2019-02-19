@@ -23,123 +23,83 @@
         <div class="page-head">
             <!--block header-->
             <div class="head">
-                <div class="main-cont">
-                    <div class="head-top">
-                        <div class="head-location">
-                            <div class="drop">
-                                <div class="drop__icon">
-                                    <svg class="icon">
-                                        <use xlink:href="#arrow-down"></use>
-                                    </svg>
-                                </div>
-                                <div class="drop__current">Санкт-Петербург</div>
-                                <div class="drop-container drop-container--town">
-                                    <div class="drop-container-wrap">
-                                        <a class="drop-container__el" href="#">Москва</a>
-                                        <a class="drop-container__el" href="#">Смоленск</a>
-                                        <a class="drop-container__el" href="#">Казань</a>
-                                        <a class="drop-container__el" href="#">Великий новгород</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="head-top-nav">
-                            <a class="head-top-nav__el" href="#">Доставка</a>
-                            <a class="head-top-nav__el" href="#">Акции</a>
-                            <a class="head-top-nav__el" href="#">Отзывы</a>
-                            <a class="head-top-nav__el" href="#">Кафе</a>
-                            <a class="head-top-nav__el" href="#">Вакансии</a>
-                            <a class="head-top-nav__el" href="#">Контакты</a>
-                        </div>
-                        <div class="head-soc">
-                            <div class="soc-row">
-                                <a class="soc-row__el" href="#">
-                                    <svg class="icon">
-                                        <use xlink:href="#soc-instagram"></use>
-                                    </svg>
-                                </a>
-                                <a class="soc-row__el" href="#">
-                                    <svg class="icon">
-                                        <use xlink:href="#soc-vk"></use>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                        <!--toggle class .login--false .login--true-->
-                        <div class="login login--true">
-                            <div class="login-drop-toggle login-enter">
-                                <div class="login-enter-mobile">
-                                    <svg class="icon">
-                                        <use xlink:href="#profile"></use>
-                                    </svg>
-                                </div>
-                                <span class="login-enter-mobile-text">Вход в личный кабинет</span>
-                            </div>
-                            <a class="login-auth" href="#">
-                                <div class="login-auth__icon">
-                                    <svg class="icon">
-                                        <use xlink:href="#profile"></use>
-                                    </svg>
-                                    <div class="login-auth__icon-check">
+                <div class="head-top-wrap">
+                    <div class="main-cont">
+                        <div class="head-top">
+                            <div class="head-location">
+                                <div class="drop">
+                                    <div class="drop__icon">
                                         <svg class="icon">
-                                            <use xlink:href="#checked"></use>
+                                            <use xlink:href="#arrow-down"></use>
                                         </svg>
                                     </div>
+                                    <div class="drop__current">Санкт-Петербург</div>
+                                    <div class="drop-container drop-container--town">
+                                        <div class="drop-container-wrap">
+                                            <a class="drop-container__el" href="#">Москва</a>
+                                            <a class="drop-container__el" href="#">Смоленск</a>
+                                            <a class="drop-container__el" href="#">Казань</a>
+                                            <a class="drop-container__el" href="#">Великий новгород</a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="login-auth__name">Константин</div>
-                                <div class="login-auth__bonus">+140 Б</div>
-                            </a>
-                            <div class="login-drop-wrap">
-                                <div class="login-drop">
-                                    <div class="login-drop__head">
-                                        <div class="login-toggle login-switch login-toggle--active" data-switch="enter">Вход</div>
-                                        <div class="login-toggle login-switch" data-switch="registration">Регистрация</div>
+                            </div>
+                            <div class="head-top-nav">
+                                <a class="head-top-nav__el" href="#">Доставка</a>
+                                <a class="head-top-nav__el" href="#">Акции</a>
+                                <a class="head-top-nav__el" href="#">Отзывы</a>
+                                <a class="head-top-nav__el" href="#">Кафе</a>
+                                <a class="head-top-nav__el" href="#">Вакансии</a>
+                                <a class="head-top-nav__el" href="#">Контакты</a>
+                            </div>
+                            <div class="head-soc">
+                                <div class="soc-row">
+                                    <a class="soc-row__el" href="#">
+                                        <svg class="icon">
+                                            <use xlink:href="#soc-instagram"></use>
+                                        </svg>
+                                    </a>
+                                    <a class="soc-row__el" href="#">
+                                        <svg class="icon">
+                                            <use xlink:href="#soc-vk"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--toggle class .login--false .login--true-->
+                            <div class="login login--true">
+                                <div class="login-drop-toggle login-enter">
+                                    <div class="login-enter-mobile">
+                                        <svg class="icon">
+                                            <use xlink:href="#user-round"></use>
+                                        </svg>
                                     </div>
-                                    <!--enter form-->
-                                    <div class="login-wrap login-wrap--active" data-cont="enter">
-                                        <form class="login-form" action="#">
-                                            <input class="input" type="text" placeholder="Электр. почта/Телефон" />
-                                            <input class="input" type="text" placeholder="Пароль" />
-                                            <input class="btn--md btn--mark" type="submit" value="Войти" />
-                                        </form>
-                                        <div class="login-remember">
-                                            <div class="check-el">
-                                                <label class="style-label style-label--checkbox">
-                                                    <input class="sytle-input" type="checkbox" />
-                                                    <div class="sytle-input-element">
-                                                        <svg class="icon-check">
-                                                            <use xlink:href="#checked"></use>
-                                                        </svg>
-                                                    </div>
-                                                    <div class="sytle-input-text">Запомнить меня</div>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="login-fogot login-switch" data-switch="fogot">Забыли пароль?</div>
-                                        <div class="login-soc">
-                                            <div class="login-soc__text">Войти с помощью соц. сетей</div>
-                                            <div class="login-soc-row">
-                                                <a class="login-soc-el" href="#">
-                                                    <svg class="icon">
-                                                        <use xlink:href="#vk--color"></use>
-                                                    </svg>
-                                                </a>
-                                                <a class="login-soc-el" href="#">
-                                                    <svg class="icon">
-                                                        <use xlink:href="#facebook--color"></use>
-                                                    </svg>
-                                                </a>
-                                            </div>
-                                        </div>
+                                    <span class="login-enter-mobile-text">Вход в личный кабинет</span>
+                                </div>
+                                <a class="login-auth" href="#">
+                                    <div class="login-auth__icon">
+                                        <svg class="icon">
+                                            <use xlink:href="#user-round"></use>
+                                        </svg>
+                                        <!--.login-auth__icon-check+icon("checked","icon")
+									-->
                                     </div>
-                                    <!--registration form-->
-                                    <div class="login-wrap login-wrap--registration" data-cont="registration">
-                                        <form class="login-form" action="#">
-                                            <input class="input" type="text" placeholder="Имя" />
-                                            <input class="input" type="text" placeholder="Телефон" />
-                                            <input class="input" type="text" placeholder="E-mail" />
-                                            <input class="input" type="password" placeholder="Пароль" />
-                                            <input class="input" type="password" placeholder="Повторить пароль" />
+                                    <div class="login-auth__name">Константин</div>
+                                    <div class="login-auth__bonus">+140 Б</div>
+                                </a>
+                                <div class="login-drop-wrap">
+                                    <div class="login-drop">
+                                        <div class="login-drop__head">
+                                            <div class="login-toggle login-switch login-toggle--active" data-switch="enter">Вход</div>
+                                            <div class="login-toggle login-switch" data-switch="registration">Регистрация</div>
+                                        </div>
+                                        <!--enter form-->
+                                        <div class="login-wrap login-wrap--active" data-cont="enter">
+                                            <form class="login-form" action="#">
+                                                <input class="input" type="text" placeholder="Электр. почта/Телефон" />
+                                                <input class="input" type="text" placeholder="Пароль" />
+                                                <input class="btn--md btn--mark" type="submit" value="Войти" />
+                                            </form>
                                             <div class="login-remember">
                                                 <div class="check-el">
                                                     <label class="style-label style-label--checkbox">
@@ -149,71 +109,106 @@
                                                                 <use xlink:href="#checked"></use>
                                                             </svg>
                                                         </div>
-                                                        <div class="sytle-input-text">Соглашаюсь с условиями обработки персональных данных</div>
+                                                        <div class="sytle-input-text">Запомнить меня</div>
                                                     </label>
                                                 </div>
                                             </div>
-                                            <input class="btn--md btn--mark" type="submit" value="Войти" />
-                                        </form>
-                                        <div class="login-soc">
-                                            <div class="login-soc__text">Зарегистрироваться с помощью соц. сетей</div>
-                                            <div class="login-soc-row">
-                                                <a class="login-soc-el" href="#">
-                                                    <svg class="icon">
-                                                        <use xlink:href="#vk--color"></use>
-                                                    </svg>
-                                                </a>
-                                                <a class="login-soc-el" href="#">
-                                                    <svg class="icon">
-                                                        <use xlink:href="#facebook--color"></use>
-                                                    </svg>
-                                                </a>
+                                            <div class="login-fogot login-switch" data-switch="fogot">Забыли пароль?</div>
+                                            <div class="login-soc">
+                                                <div class="login-soc__text">Войти с помощью соц. сетей</div>
+                                                <div class="login-soc-row">
+                                                    <a class="login-soc-el" href="#">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#vk--color"></use>
+                                                        </svg>
+                                                    </a>
+                                                    <a class="login-soc-el" href="#">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#facebook--color"></use>
+                                                        </svg>
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!--registration form-->
-                                    <div class="login-wrap login-wrap--registration" data-cont="fogot">
-                                        <form class="login-form" action="#">
-                                            <input class="input" type="text" placeholder="Электр. почта" />
-                                            <div class="login-btn-code login-switch" data-switch="code">Отправить код</div>
-                                        </form>
-                                    </div>
-                                    <div class="login-wrap login-wrap--registration" data-cont="code">
-                                        <div class="login-code-text">Вам на e-mail/телефон отправлен код подтверждения</div>
-                                        <form class="login-form" action="#">
-                                            <input class="input" type="text" placeholder="Введите код" />
-                                            <div class="login-btn-code">Подтвердить</div>
-                                            <div class="login-btn-recode">Выслать повторно</div>
-                                            <div class="login-btn-back login-switch" data-switch="fogot">Назад к восстановлению</div>
-                                        </form>
+                                        <!--registration form-->
+                                        <div class="login-wrap login-wrap--registration" data-cont="registration">
+                                            <form class="login-form" action="#">
+                                                <input class="input" type="text" placeholder="Имя" />
+                                                <input class="input" type="text" placeholder="Телефон" />
+                                                <input class="input" type="text" placeholder="E-mail" />
+                                                <input class="input" type="password" placeholder="Пароль" />
+                                                <input class="input" type="password" placeholder="Повторить пароль" />
+                                                <div class="login-remember">
+                                                    <div class="check-el">
+                                                        <label class="style-label style-label--checkbox">
+                                                            <input class="sytle-input" type="checkbox" />
+                                                            <div class="sytle-input-element">
+                                                                <svg class="icon-check">
+                                                                    <use xlink:href="#checked"></use>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="sytle-input-text">Соглашаюсь с условиями обработки персональных данных</div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <input class="btn--md btn--mark" type="submit" value="Войти" />
+                                            </form>
+                                            <div class="login-soc">
+                                                <div class="login-soc__text">Зарегистрироваться с помощью соц. сетей</div>
+                                                <div class="login-soc-row">
+                                                    <a class="login-soc-el" href="#">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#vk--color"></use>
+                                                        </svg>
+                                                    </a>
+                                                    <a class="login-soc-el" href="#">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#facebook--color"></use>
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--registration form-->
+                                        <div class="login-wrap login-wrap--registration" data-cont="fogot">
+                                            <form class="login-form" action="#">
+                                                <input class="input" type="text" placeholder="Электр. почта" />
+                                                <div class="login-btn-code login-switch" data-switch="code">Отправить код</div>
+                                            </form>
+                                        </div>
+                                        <div class="login-wrap login-wrap--registration" data-cont="code">
+                                            <div class="login-code-text">Вам на e-mail/телефон отправлен код подтверждения</div>
+                                            <form class="login-form" action="#">
+                                                <input class="input" type="text" placeholder="Введите код" />
+                                                <div class="login-btn-code">Подтвердить</div>
+                                                <div class="login-btn-recode">Выслать повторно</div>
+                                                <div class="login-btn-back login-switch" data-switch="fogot">Назад к восстановлению</div>
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="main-cont">
                     <div class="head-info">
                         <a class="logo" href="#">
                             <img src="img/logo.svg" alt="" />
                         </a>
-                        <a class="head-phone" href="tel:8 (843) 233 44 33">8 (843) 233 44 33</a>
-                        <div class="work-time">
-                            <div class="drop">
-                                <div class="drop__icon">
-                                    <svg class="icon">
-                                        <use xlink:href="#arrow-down"></use>
-                                    </svg>
-                                </div>
-                                <div class="drop__current">мы работаем с 10 до 24</div>
-                                <div class="drop-container drop-container--town">
-                                    <div class="drop-container-wrap">
-                                        <a class="drop-container__el" href="#">Москва</a>
-                                        <a class="drop-container__el" href="#">Смоленск</a>
-                                        <a class="drop-container__el" href="#">Казань</a>
-                                        <a class="drop-container__el" href="#">Великий новгород</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <!--.work-time
+					.drop
+						.drop__icon
+							+icon("arrow-down","icon")
+						.drop__current мы работаем с 10 до 24
+						.drop-container.drop-container--town
+							.drop-container-wrap
+								a(href="#").drop-container__el Москва
+								a(href="#").drop-container__el Смоленск
+								a(href="#").drop-container__el Казань
+								a(href="#").drop-container__el Великий новгород
+					
+					-->
                         <form class="header-search" action="">
                             <div class="header-search-wrap">
                                 <div class="header-search-icon">
@@ -224,6 +219,7 @@
                                 </div>
                             </div>
                         </form>
+                        <a class="head-phone" href="tel:8 (843) 233 44 33">8 (843) 233 44 33</a>
                     </div>
                 </div>
             </div>
@@ -303,8 +299,8 @@
                                 <div class="cart-icon__val">2</div>
                             </div>
                             <div class="cart-info">
-                                <div class="cart-condition">корзина пуста</div>
-                                <div class="cart-size">0 товаров</div>
+                                <div class="cart-condition">1250 р</div>
+                                <div class="cart-size">2 товара</div>
                             </div>
                             <div class="cart-bonus">+150 б.б.</div>
                         </a>
@@ -341,7 +337,7 @@
                                     <svg class="icon">
                                         <use xlink:href="#profile"></use>
                                     </svg>
-                                    <span class="login-enter-mobile-text">Вход в личный кабинет</span>
+                                    <span class="login-enter-mobile-text">Вход в кабинет</span>
                                 </div>
                                 <a class="login-auth" href="#">
                                     <div class="login-auth__icon">
@@ -538,6 +534,8 @@
                         <div class="page-nav__text">на главную</div>
                     </a>
                 </div>
+            </div>
+            <div class="main-cont">
                 <div class="title title--mobile">Аппетитные суши и роллы с доставкой на дом</div>
                 <div class="about-text">Сеть кафе «Окинава» предлагает доступно заказать самые лучшие роллы и суши в Казани. Благодаря нам Вы можете наслаждаться невероятным вкусом свежеприготовленных блюд, не выходя из дома и Вам не придется тратить своё время на кухне. Профессиональные
                     повара готовят только из качественных продуктов, а служба доставки оперативно доставит вкусную еду на дом или в офис в кротчайшие сроки. "Окинава" это вкусно, быстро и доступно.</div>
@@ -570,41 +568,41 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="add-text content">
-                <div class="add-text__col">
-                    <div class="add-text__col-title">Впечатляющий ассортимент вкусных блюд</div>
-                    <p>Наше меню включает:</p>
-                    <ul>
-                        <li>классические и оригинальные виды суши с угрем, окунем, икрой тобико, лососем, тунцом, тигровой креветкой, курицей и пр.;</li>
-                        <li>разнообразные классические роллы (рисом внутрь) и урамаки (рисом наружу), в том числе острые, запеченные, горячие;</li>
-                        <li>аппетитные сеты для романтического ужина или вечеринки в большой компании.</li>
-                    </ul>
-                    <p>Помимо блюд японской кухни мы с радостью приготовим для вас экзотические воки с разными начинками, ароматную пиццу, горячие и холодные супы, свежие и сытные салаты, нежные десерты.</p>
-                    <p>Чтобы заказать суши и другие кушанья, зайдите в соответствующий раздел нашего меню. Каждый товар сопровождается фотографией, указанием состава ингредиентов, веса порции и стоимости. Кликните по плашке «Добавить в корзину» возле понравившихся
-                        суши. Скорректируйте количество порций и введите контактные данные. Наш менеджер свяжется с вами для подтверждения покупки.</p>
-                </div>
-                <div class="add-text__col add-text__col--more">
-                    <div class="add-text__col-title">Преимущества заказа суши в «Окинаве»</div>
-                    <ul>
-                        <li>Повара начинают готовить блюда только после вашего звонка.</li>
-                        <li>Мы используем только отборные, свежие продукты.</li>
-                        <li>Готовим суши по фирменной рецептуре.</li>
-                        <li>Предлагаем приемлемую стоимость щедрых порций свежих блюд.</li>
-                        <li>Регулярно проводим акции.</li>
-                        <li>Гарантируем доставку с соблюдением всех технологий транспортировки, чтобы вы всегда получали свежую и теплую еду.</li>
-                        <li>Располагаем собственным автопарком из 25 машин, что позволяет максимально оперативно развозить заказы по всему городу.</li>
-                        <li>Покупки на сумму от 600 рублей доставляем за свой счет.</li>
-                        <li>Возможен самовывоз из удобного для вас кафе нашей сети.</li>
-                    </ul>
-                    <p>Мы первыми в Казани открыли службу доставки суши на дом или в офис и остаемся лидерами в этой сфере.</p>
-                    <p>
-                        <strong>Всегда рады вашим заказам!</strong>
-                    </p>
-                </div>
-                <div class="slide-trigger slide-trigger--add-text">
-                    <span class="slide-trigger--true">развернуть</span>
-                    <span class="slide-trigger--false">свернуть</span>
+                <div class="add-text content">
+                    <div class="add-text__col">
+                        <div class="add-text__col-title">Впечатляющий ассортимент вкусных блюд</div>
+                        <p>Наше меню включает:</p>
+                        <ul>
+                            <li>классические и оригинальные виды суши с угрем, окунем, икрой тобико, лососем, тунцом, тигровой креветкой, курицей и пр.;</li>
+                            <li>разнообразные классические роллы (рисом внутрь) и урамаки (рисом наружу), в том числе острые, запеченные, горячие;</li>
+                            <li>аппетитные сеты для романтического ужина или вечеринки в большой компании.</li>
+                        </ul>
+                        <p>Помимо блюд японской кухни мы с радостью приготовим для вас экзотические воки с разными начинками, ароматную пиццу, горячие и холодные супы, свежие и сытные салаты, нежные десерты.</p>
+                        <p>Чтобы заказать суши и другие кушанья, зайдите в соответствующий раздел нашего меню. Каждый товар сопровождается фотографией, указанием состава ингредиентов, веса порции и стоимости. Кликните по плашке «Добавить в корзину» возле
+                            понравившихся суши. Скорректируйте количество порций и введите контактные данные. Наш менеджер свяжется с вами для подтверждения покупки.</p>
+                    </div>
+                    <div class="add-text__col add-text__col--more">
+                        <div class="add-text__col-title">Преимущества заказа суши в «Окинаве»</div>
+                        <ul>
+                            <li>Повара начинают готовить блюда только после вашего звонка.</li>
+                            <li>Мы используем только отборные, свежие продукты.</li>
+                            <li>Готовим суши по фирменной рецептуре.</li>
+                            <li>Предлагаем приемлемую стоимость щедрых порций свежих блюд.</li>
+                            <li>Регулярно проводим акции.</li>
+                            <li>Гарантируем доставку с соблюдением всех технологий транспортировки, чтобы вы всегда получали свежую и теплую еду.</li>
+                            <li>Располагаем собственным автопарком из 25 машин, что позволяет максимально оперативно развозить заказы по всему городу.</li>
+                            <li>Покупки на сумму от 600 рублей доставляем за свой счет.</li>
+                            <li>Возможен самовывоз из удобного для вас кафе нашей сети.</li>
+                        </ul>
+                        <p>Мы первыми в Казани открыли службу доставки суши на дом или в офис и остаемся лидерами в этой сфере.</p>
+                        <p>
+                            <strong>Всегда рады вашим заказам!</strong>
+                        </p>
+                    </div>
+                    <div class="slide-trigger slide-trigger--add-text">
+                        <span class="slide-trigger--true">развернуть</span>
+                        <span class="slide-trigger--false">свернуть</span>
+                    </div>
                 </div>
             </div>
         </div>

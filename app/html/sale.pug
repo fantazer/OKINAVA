@@ -6,10 +6,17 @@ include block_html/_include.pug
 		+header()
 	.page-content
 		.main-cont
-			.bread-row.bread-row--simple
+			.bread-row
+				.bread-title Заголовок
 				.bread
 					a(href="#").bread__el Главная
-					.bread__el Акции
+					.bread__el Корзина
+				a(href="#").page-nav
+					.page-nav__icon
+						+icon("arrow-back","icon")
+					.page-nav__text на главную
+			.title.title--mobile
+				span Корзина
 			.discount-item
 				.discount-item__img(style="background-image:url('img/sale-banner.jpg')")
 				.discount-item-wrap

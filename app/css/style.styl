@@ -13,7 +13,7 @@
 body
 	@extend .type--main
 	font-family $v-font
-	color $main-text-color
+	color #3c2420
 	line-height 1.2
 	letter-spacing 0.01em
 
@@ -22,7 +22,9 @@ body
 	fl()
 	min-height 100vh
 .page-content
+	background: #F8F8F8
 	flex-grow 1
+	padding-bottom: 40px
 .main-cont
 	center(1250px,10px)
 
@@ -240,12 +242,12 @@ body
 //modal===end
 
 .head
-	+below(767px)
+	+below(768px)
 		display: none
 //.main-cont
 .head-top
 	flex(between)
-	padding: 15px 0
+	padding: 3px 0
 .drop__current
 	border-bottom 1px dashed $border-color
 	padding-bottom: 3px
@@ -318,13 +320,19 @@ body
 	+below(960px)
 		font-size: 10px
 	padding-bottom: 2px
-	tr(color)
-	link()
+	tr(all)
 	text-decoration: none
+	font-weight:500
+	opacity:.4
+	font-size: 12px
 	&:hover
+		opacity:1
 		color $red
 		text-decoration: none
 
+.head-top-wrap
+	margin-bottom: 20px
+	background: #f8f8f8
 .drop-container--town
 	width: 175px
 	.drop-container__el
@@ -360,19 +368,18 @@ body
 	&:hover
 		color $red
 .head-info
-	f()
-	align-items: flex-end
-//.logo
+	flex(between)
+.logo
+	width: 15%
 .head-phone
 	+below(1200px)
 		font-size: 24px
-	font-size 30px
+	font-size 24px
 	font-weight 700
 	letter-spacing 0.18px
 	text-decoration: none
 	margin-left: 6%
 	display: block
-	margin-right: 10px
 .work-time
 	+below(960px)
 		display: none
@@ -380,8 +387,7 @@ body
 .header-search
 	+below(960px)
 		width: 28%
-	margin-left: auto
-	width: 22%
+	width: 40%
 	.input
 		width: 100%
 //.header-search-wrap
@@ -397,21 +403,25 @@ body
 	.input-search
 		padding-right: 30px
 .head-main-wrap
-	+below(767px)
+	+below(768px)
 		height: 50px
 		border-bottom 1px solid $border-color
+		margin-top: 0
 	background: white
+	border-top 1px solid #f6f4f4
+	margin-top: 20px
 .head-main
-	+below(767px)
+	+below(768px)
 		height: 50px
 	f()
 	align-items: center
+	height: 60px
 .head-nav
 	+below(1200px)
 		width calc(100% - 100px)
 	+below(960px)
 		width calc(100% - 40px)
-	+below(767px)
+	+below(768px)
 		display: none
 	flex(between)
 	width: 82%
@@ -426,18 +436,19 @@ body
 	text-decoration: none
 	tr(all)
 	flex(mid)
+	up()
+	font-size: 13px
 	.icon
 		size
 	&:hover
 		color $red
 .cart
 	+below(1200px)
-		padding: 0
+		padding: 10px
 	+below(767px)
 		margin-left:initial
 		f()
 		fl()
-		size 50px
 		margin-right: -10px
 		border-left 1px solid $border-color
 		border-radius 0
@@ -445,33 +456,30 @@ body
 	margin-left: auto
 	text-decoration: none
 	padding: 5px 20px
-	border-radius 50px
+	height: 100%
+	border-left 1px solid #ededed
+	border-right 1px solid #ededed
 .cart-icon
+	+below(1200px)
+		flex(mid)
+		fl()
+		margin-right: 0
 	+below(767px)
 		margin-right: 4px
 	margin-right: 10px
 	position: relative
 	.icon
 		size 26px
-		+below(768px)
-			fill black!important
 		fill $red
 .cart-icon__val
 	+above(1201px)
 		display: none
 	+below(768px)
-		color white
-		background: $red
-		size 14px
-		round()
 		flex(mid)
-		font-weight: 400
+		font-weight: 500
 		font-size: 10px
-		top: -7px
-	position: absolute
-	right: -5px
-	top -10px
 	font-weight:700
+	margin-top: 5px
 
 .cart-info
 	+below(1200px)
@@ -540,7 +548,9 @@ body
 	background: white
 	z-index 15
 	top 100%
+	border-radius 10px
 .login-drop
+	border-radius 10px
 	display: none
 	position: relative
 	top 100%
@@ -655,13 +665,15 @@ body
 	line-height: 1.4
 
 .cart--full
-	background: $red
-	color white!important
+	background: white
 	tr(all)
 	&:hover
-		background: lighten($red,5)
+		background: $red
+		color white
+		.icon
+			fill white
 	.icon
-		fill white
+		fill $red
 	.cart-condition
 		font-weight:700
 	+below(1200px)
@@ -675,6 +687,7 @@ body
 .slider__el
 	bg-full()
 	padding: 12.5% 10%
+
 
 //for custom navigation
 .slider-control
@@ -746,10 +759,9 @@ body
 	@extend .btn--mark
 
 .main-slider
-	margin-bottom: 30px
 	overflow: hidden
 	+below(767px)
-		margin-left: -10px
+		margin-left: -20px
 		width calc(100% + 20px)
 		.slider-control-simple
 			display: none
@@ -759,19 +771,21 @@ body
 		margin-bottom: 10px
 	f()
 	fw()
-	margin-bottom: 40px
+	margin: 30px 0
 .tag__el
 	+below(767px)
 		width: 48%
 		margin-right: 0
 	flex(mid)
-	br(18px)
+	br(4px)
 	border 1px solid
 	margin-right: 15px
 	margin-bottom: 15px
 	padding: 10px 20px
-	height: 38px
+	height: 50px
 	text-decoration: none
+	background: white
+	border-color #eaeaea!important
 .tag__el-icon
 	.icon
 		size 26px
@@ -780,10 +794,11 @@ body
 	+below(640px)
 		font-size: 12px
 	@extend .type--lg
-	font-weight: 500
 	margin-top: -1px
 	white-space nowrap
-
+	text-transform: uppercase
+	font-size: 12px
+	font-weight:500
 tag($color)
 	border-color $color
 	tr(all)
@@ -872,10 +887,12 @@ tag($color)
 		margin-left: -10px
 	f()
 	fl()
+	transition box-shadow .9s
 	position: relative
+	br(10px)
 	&:hover
-		.item__content
-			border-color $red
+		+above(641px)
+			bsh-hover()
 		.item__descr
 			@extend .hidden-block
 		.item-ingr
@@ -916,22 +933,25 @@ tag($color)
 	bg-full()
 	padding: 30% 10%
 	height: 285px!important
-	border-radius 30px 30px 0 0
+	border-radius 20px 20px 0 0
 	position: relative
 .item__content
 	+below(640px)
 		width: 65%
 		border 0
 		padding: 0 0 0 10px
+		box-shadow 0 0 0
+		background: none
 	f()
 	fl()
 	tr(all)
 	background: white
 	padding: 20px
-	border-radius 0 0 30px 30px
-	border 1px solid $border-color
+	border-radius 0 0 20px 20px
+	//border 1px solid $border-color
 	border-top 0
 	flex-grow 1
+	bsh()
 .item__title
 	@extend .type--xl
 	font-weight:700
@@ -984,6 +1004,7 @@ tag($color)
 	border-bottom 1px solid $border-color
 	border-radius 38px
 	user-select none
+	background: white
 .incr__nav
 	flex(mid)
 	tr(background )
@@ -1118,10 +1139,14 @@ tag($color)
 .sale-list__el
 	+below(1024px)
 		padding: 25% 10%
+	&:hover
+		background-size:120%
+	transition all .9s
 	bg-full()
+	background-size:100%
 	padding: 20% 10%
 	position: relative
-	border-radius 30px
+	border-radius 10px
 	overflow: hidden
 .sale-list__el-title
 	f()
@@ -1136,14 +1161,15 @@ tag($color)
 	span
 		margin-top: auto
 		color white
-		font-weight: 700
+		font-weight: 500
 		line-height: 1.6
+
 
 .sale-list__el-filter
 	position: absolute
 	top 0
 	left 0
-	background-image linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%)
+	background-image linear-gradient(to top, rgb(38, 10, 7) 0%, rgba(0,0,0,0) 100%)
 	height: 100%
 	width: 100%
 
@@ -1233,12 +1259,13 @@ tag($color)
 
 .review__el-content
 	padding: 20px 20px 40px 20px
-	border 1px solid $border-color
 	margin-top: -5px
 	border-top 0
-	border-radius 0 0 30px 30px
+	border-radius 0 0 20px 20px
 	flex-grow 1
 	position: relative
+	background: white
+	bsh()
 .review__el-title
 	@extend .type--xl
 	font-weight 700
@@ -1253,7 +1280,6 @@ tag($color)
 		display: none
 	f()
 	justify-content: space-between
-
 .add-text__col
 	+below(640px)
 		width: 100%
@@ -1273,7 +1299,7 @@ tag($color)
 
 .page-footer
 	+below(768px)
-		margin-top: 30px
+		margin-top: 0
 	margin-top: 100px
 .footer
 	+below(640px)
@@ -1412,7 +1438,7 @@ tag($color)
 	+below(640px)
 		display: none
 	width: 63%
-	border-radius 30px
+	border-radius 20px
 	overflow: hidden
 	max-height 390px
 .position-list
@@ -1479,8 +1505,7 @@ tag($color)
 	+below(768px)
 		margin-top: 20px
 	flex(between)
-	margin-top: 50px
-	margin-bottom: 30px
+	margin: 30px 0
 .bread
 	+below(768px)
 		display: none
@@ -1786,6 +1811,9 @@ tag($color)
 	z-index 20
 	background: white
 	border-bottom 1px solid $border-color
+	border-top 0
+	.cart
+		box-shadow 0 0 0
 @-webkit-keyframes slideInDown {
 	from {
 		transform: translate3d(0, -100%, 0)
@@ -1800,12 +1828,12 @@ tag($color)
 
 
 .head-main-logo
-	+above(767px)
+	+above(769px)
 		display: none
 	width: 130px
 
 .head-main-call
-	+above(768px)
+	+above(769px)
 		display: none
 	margin-right: 20px
 	margin-left: auto
@@ -1823,12 +1851,12 @@ tag($color)
 		display: none
 
 .tag__el--full
-	+below(767px)
+	+below(768px)
 		width: 100%
 		justify-content: flex-start
 
 .tag__el-drop
-	+above(767px)
+	+above(768px)
 		display: none
 	cp()
 .tag__el-drop--active
@@ -1944,6 +1972,7 @@ tag($color)
 	position: relative
 	.icon
 		size 24px
+		fill #1b2230
 
 .login-auth__icon-check
 	position: absolute
@@ -2487,7 +2516,7 @@ tag($color)
 	f()
 	br(10px)
 	tr(all)
-	background: #f7f7f7
+	background: white
 	padding: 20px
 	align-items: center
 	transform-style: preserve-3d;
@@ -2784,8 +2813,11 @@ tag($color)
 .vacancy-list__el
 	overflow: hidden
 	border-radius 10px
-	bsh-hover()
+	&:hover
+		bsh-hover()
+	bsh()
 	cp()
+	tr(all)
 .vacancy-list__img
 	padding: 45% 10%
 	bg-full()
@@ -2887,7 +2919,7 @@ tag($color)
 	flex(mid)
 	cp()
 	margin-right: 20px
-	+above(767px)
+	+above(769px)
 		display: none
 	.icon
 		size 25px
@@ -2901,7 +2933,7 @@ tag($color)
 		display: none
 
 .slide-menu
-	+above(767px)
+	+above(768px)
 		display: none !important
 	+below(640px)
 		top: 50px //Высота хедера
@@ -3114,7 +3146,12 @@ tag($color)
 .basket-list
 	+below(768px)
 		width: 100%
-	width: 68%
+	+below(640px)
+		padding: 0
+	width: 75%
+	padding: 30px
+	background: white
+	br(10px)
 .basket-el
 	+below(640px)
 		fw()
@@ -3138,7 +3175,7 @@ tag($color)
 	width: 50%
 .basket-el__title
 	+below(640px)
-		max-width calc(100% - 35px)
+		max-width calc(100% - 25px)
 	@extend .type--md
 	font-weight 700
 	margin-bottom: 15px
@@ -3163,6 +3200,7 @@ tag($color)
 	height: 25px
 	tr(all)
 	cp()
+	background: white
 	&:hover
 		border-color $red
 		color $red
@@ -3235,7 +3273,7 @@ tag($color)
 	width: 25%
 	padding:0 0 40px 25px
 	margin-left: 25px
-	border-left 1px solid $border-color
+	//border-left 1px solid $border-color
 
 //.basket-info
 .basket-cost
@@ -3638,6 +3676,7 @@ select.select-beauty
 	margin-right: auto
 	overflow: hidden
 	margin-bottom: 30px
+	background: white
 .cafe-tab__el
 	cp()
 	tr(all)
@@ -3647,14 +3686,14 @@ select.select-beauty
 	width: 50%
 	font-weight 500
 .cafe-tab__el--active
-	background: black
-	color white
+	background: #ebebeb
 	br(25px)
 .cafe-tab-info
 	@extend .hidden-block
 .cafe-tab-info--active
 	@extend .visible-block
 .cafe-map
+	bsh()
 	padding: 40% 10%
 	background: $gray
 	position: relative
@@ -3676,8 +3715,11 @@ select.select-beauty
 	+below(480px)
 		grid-template-columns 1fr
 	display: grid
-	grid-gap 30px
+	grid-gap 20px
 	grid-template-columns repeat(3, 1fr)
+.cafe-list__el
+	bsh()
+	br(20px)
 .cafe-list__el-wrap
 	br(20px)
 	overflow: hidden
@@ -3696,9 +3738,10 @@ select.select-beauty
 		br(20px)
 	tr(all)
 	padding: 20px
-	border 1px solid $border-color
+	//border 1px solid $border-color
 	border-top 0
 	border-radius 0 0 20px 20px
+	background: white
 .cafe-list__el-title
 	@extend .type--md
 	margin-bottom: 20px
@@ -3770,3 +3813,265 @@ select.select-beauty
 	@extend .btn--mark
 	margin-top: 30px
 	padding: 15px 50px
+
+.white-box
+	padding: 40px 0
+	background: white
+
+.modal--cart
+	.basket-list
+		+below(640px)
+			padding: 0px
+	.basket-el__incr
+		margin-left: 0
+
+.basket-cont
+	+below(1024px)
+		width: calc(100% - 340px)
+	width: calc(100% - 380px)
+	+below(768px)
+		width: 100%
+
+.panel
+	+below(768px)
+		flex(mid)
+		width: 100%
+	+below(768px)
+		display: none
+.panel--show
+	display: flex!important
+.panel-wrap
+	+below(480px)
+		width: 100%
+	width: 320px
+	box-shadow 0 10px 20px rgba(0, 0, 0, 0.1)
+	background-color #ffffff
+	padding: 20px 25px 45px 25px
+.panel-head
+	@extend .type--xl
+	font-weight 700
+	padding-bottom: 10px
+	border-bottom 1px solid #f1eeeb
+	margin-bottom: 35px
+	f()
+	align-items: center
+.panel-head__numb
+	margin-left: auto
+	@extend .type--main
+.panel-total
+	//border-top 1px solid #f1eeeb
+	padding-top: 10px
+	flex(between)
+	margin-bottom: 20px
+.panel-text
+	@extend .type--lg
+	font-weight 700
+.panel-val
+	color $red
+	@extend .type--xxl
+	font-weight 700
+//.panel-footer
+.panel-get
+	@extend .btn--md
+	@extend .btn--mark
+	width: 100%
+	margin-bottom: 15px
+.panel-back
+	@extend .btn--md
+	@extend .btn--light
+	width: 100%
+
+.order-tab
+	f()
+	border 1px solid $red
+	margin-bottom: 30px
+	border-radius 10px
+	overflow: hidden
+.order-tab__el
+	padding: 15px 20px
+	width: 50%
+	text-align: center
+	color $red
+	cp()
+.order-tab__el--active
+	background: $red
+	color white
+
+.order
+	+below(1024px)
+		width: 100%
+	+below(768px)
+		margin-bottom: 30px
+	+below(640px)
+		width: 100%
+	width: 70%
+
+.order-time
+	+below(480px)
+		fl()
+		flex(mid)
+	f()
+	align-items: center
+	margin-bottom: 20px
+	.nice-select
+		+below(768px)
+			width: 100%
+		margin-bottom: 0
+		width: 60%
+.order-time__title
+	+below(480px)
+		width: 100%
+		text-align: center
+		margin-bottom: 20px
+	@extend .type--md
+	margin-right: 20px
+.radio-list
+	.check-el
+		margin-bottom: 20px
+
+.order-title
+	@extend .type--lg
+	font-weight: 700
+	margin-bottom: 20px
+//.payment__type-tab
+.payment__type__el
+	margin-bottom: 20px
+//.payment__type-cont
+//.payment__type-cont-el
+//.payment-card
+.payment-card__el
+	+below(380px)
+		width: 100%
+	flex(between)
+	@extend .btn--md
+	@extend .btn--light
+	padding: 20px
+	margin-bottom: 20px
+	width 320px
+	br(4px)
+	&:hover
+		.icon
+			fill white
+	.icon
+		width 45px
+		height: 15px
+		margin-right: 20px
+		fill $red
+		margin-bottom: -2px
+//.payment-card__el-icon
+//.icon
+//.payment-card__el-val
+.payment-card__other
+	+below(380px)
+		width: 100%
+	@extend .btn--md
+	@extend .btn--light
+	padding: 20px
+	margin-bottom: 20px
+	width 320px
+	br(4px)
+	up()
+.payment-card__el--active
+	background: $red
+	color white
+	.icon
+		fill white
+//.range
+.range-wrap
+	margin-bottom: 50px
+.irs-slider
+	background: $red
+	round()
+	border 1px solid darken($red,10)
+.irs-line-left
+	background: #cbbaac
+.irs-line-right
+	background: #cbbaac
+	border-radius 0px 5px 5px 0
+.irs-line-mid
+	background: #cbbaac
+.irs-bar-edge
+	background: $red
+	border-radius  5px 0 0 5px
+.irs-bar
+	background: $red
+.irs-min, .irs-max
+	display: none
+.irs-from, .irs-to, .irs-single
+	background: white
+	color black
+	@extend .type--main
+	top 45px
+
+.order-time__select
+	+below(768px)
+		width: 100%
+	width: 60%
+
+.panel-list
+	+below(480px)
+		grid-template-columns repeat(auto-fit, minmax(35px, 35px));
+	margin-top: -10px
+	display: grid
+	grid-gap 15px
+	grid-template-columns repeat(auto-fit, minmax(40px, 40px));
+	padding-bottom: 20px
+	margin-bottom: 15px
+	border-bottom 1px solid #f1eeeb
+.panel-list__el
+	+below(480px)
+		size 35px
+	size 40px
+	round()
+	bg-full()
+	border 1px solid #cbbaac
+	position: relative
+.panel-list__el-val
+	position: absolute
+	right: -8px
+	top -2px
+	size 24px
+	background: $red
+	color white
+	round()
+	flex(mid)
+	@extend .type--sm
+
+.panel-list__el--last
+	border 1px solid darken($red,10)
+	.panel-list__el-val
+		width: 100%
+		height: 100%
+		left 0
+		top 0
+		opacity .8
+		font-size: 14px
+
+.panel-row
+	f()
+	align-items: center
+	margin-bottom: 20px
+.panel-row__icon
+	margin-right: 20px
+	margin-top: 5px
+	.icon
+		size 24px
+		fill $brown
+.panel-row__text
+	line-height: 1.6
+
+.check-el--agree
+	.style-label
+		align-items: flex-start
+	@extend .type--sm
+	line-height: 1.6
+	margin-bottom: 25px
+
+.input-row--adress
+	+below(640px)
+		fw()
+	flex(between)
+	.input
+		+below(640px)
+			width: 48%
+		width: 23%

@@ -5,21 +5,19 @@ include block_html/_include.pug
 	.page-head
 	+header()
 
+	.main-slider
+		.slider-wrap
+			.slider-control-simple.slider-control--left
+				+icon("circle-arrow--left","icon")
+			.slider-control-simple.slider-control--right
+				+icon("circle-arrow--right","icon")
+			.slider.slider-item
+				- for (var i=0;i<3;i++)
+					a(href="#" style="background-image:url('img/slider-rds.jpg')").slider__el
+		//.slider-footer
+		//	.slider-footer__info за заказы можно получать бонусные баллы
+		//	a(href="#").slider-footer__get узнать подробности
 	.page-content
-		.main-cont
-			//main-slider
-			.main-slider
-				.slider-wrap
-					.slider-control-simple.slider-control--left
-						+icon("circle-arrow--left","icon")
-					.slider-control-simple.slider-control--right
-						+icon("circle-arrow--right","icon")
-					.slider.slider-item
-						- for (var i=0;i<3;i++)
-							a(href="#" style="background-image:url('img/banner.jpg')").slider__el
-				.slider-footer
-					.slider-footer__info за заказы можно получать бонусные баллы
-					a(href="#").slider-footer__get узнать подробности
 
 		.main-cont
 			//tags
@@ -80,7 +78,7 @@ include block_html/_include.pug
 			.title Акции
 			.sale-list
 				- for (var i=1;i<7;i++)
-					a(href="#" style="background-image:url('img/sale-block-"+i+".jpg')").sale-list__el
+					a(href="#" style="background-image:url('img/sale-"+i+".jpg')").sale-list__el
 						.sale-list__el-filter
 						.sale-list__el-title
 							span популярныe блюда с 13:00 до 16:00 по цене всего от 119 рублей
@@ -140,9 +138,7 @@ include block_html/_include.pug
 								+icon("circle-arrow--right","icon")
 							.position-slider.slider-item
 								- for (var i=0;i<3;i++)
-									a(href="#" style="background-image:url('img/slider-restaraunt.jpg')").position-slider__el
-
-
+									a(href="#" style="background-image:url('img/cafe.jpg')").position-slider__el
 
 			//review
 			.title.title--list.title--list-review
@@ -163,7 +159,6 @@ include block_html/_include.pug
 									+icon("star","icon")
 							.review-star__el.review-star__el--empty
 								+icon("star","icon")
-
 						.review__el-img
 							.review__el-img-el(style="background-image:url('img/review-"+i+".jpg')")
 							.review__el-img-el(style="background-image:url('img/review-"+i+".jpg')")
@@ -171,8 +166,6 @@ include block_html/_include.pug
 						.review__el-content
 							.review__el-title Вероника
 							.review__el-text Очень вкусные роллы!! Нам понравились. И упакованы хорошо. Доставка вовремя. Будем заказывать ещё)
-
-
 			+addtext()
 
 	.page-footer
