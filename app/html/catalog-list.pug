@@ -1,0 +1,48 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	.page-head
+		+header()
+	.page-content
+		.main-cont
+			.bread-row
+				.bread-title Заголовок
+				.bread
+					a(href="#").bread__el Главная
+					.bread__el Оформление заказа
+				a(href="#").page-nav
+					.page-nav__icon
+						+icon("arrow-back","icon")
+					.page-nav__text на главную
+			.title.title--mobile
+				span Меню
+			.catalog-sort
+				.catalog-sort__name Сортировка:
+				select.select-beauty
+					option(value="1" ) По умолчанию
+					option(value="2") Сначала дешевле
+					option(value="3") Сначала дороже
+
+			.title
+				span Суши
+			.items
+				- for (var i=0;i<9;i++)
+					+item()
+
+			.title Напитки
+			.add-list
+				- for (var i=0;i<5;i++)
+					+item-small-add()
+
+			//sale
+			.title Акции
+			.sale-list
+				- for (var i=1;i<7;i++)
+					a(href="#" style="background-image:url('img/sale-" + i + ".jpg')").sale-list__el
+						.sale-list__el-filter
+						.sale-list__el-title
+							span популярныe блюда с 13:00 до 16:00 по цене всего от 119 рублей
+	.page-footer
+		+footer()
+include ./block_html/_script.pug

@@ -604,4 +604,11 @@ $(document).ready(function (){
 		$(this).toggleClass('catalog-filter--active');
 	});
 	//catalog item toggle===end
+
+	//toggle size item
+	$('.item-toggle__el').click(function(){
+		$(this).closest('.item-toggle').find('.item-toggle__el').removeClass('item-toggle__el--active');
+		$(this).addClass('item-toggle__el--active');
+	});
+	//toggle size item ===end
 });

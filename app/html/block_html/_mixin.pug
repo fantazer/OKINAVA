@@ -110,7 +110,39 @@ mixin item-small()
               .incr__plus.incr__nav
                 +icon("plus","icon")
 
-
+mixin item-small-add()
+  .item.item--small.item--small-add
+    .item-check
+      +icon("checked","icon")
+    a(href="#" style="background-image:url('img/drink.jpg')").item__img
+      .item-tag
+        .item-tag__el.item-tag__el--purpur
+          +icon("pizza","icon")
+        .item-tag__el.item-tag__el--fire
+          +icon("fire","icon")
+        .item-tag__el.item-tag__el--veg
+          +icon("veg","icon")
+    .item__content
+      .item__title-wrap
+        a(href="#").item__title Сок Добрый
+        .item__descr-small Яблоко - вишня - черноплодная рябина
+      .item-toggle
+        .item-toggle__el.item-toggle__el--active 0,33 л
+        .item-toggle__el 0,5 л
+        .item-toggle__el 1 л
+      .item__footer
+        .item__price 399р
+        .item__get
+          .icr-btn.item__btn купить
+          .elements-icr-block.item__incr.hidden
+            .incr
+              .incr__minus.incr__nav
+                +icon("minus","icon")
+              .incr__val
+                span 1
+                .incr__val-coner
+              .incr__plus.incr__nav
+                +icon("plus","icon")
 mixin icon(name,cls)
   svg(class=cls)
     use(xlink:href="#" + name)
