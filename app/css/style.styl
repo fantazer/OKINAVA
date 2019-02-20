@@ -1520,7 +1520,6 @@ tag($color)
 
 .bread-row
 	+below(1200px)
-		margin-top: 0
 		margin-bottom: 30px
 	+below(768px)
 		margin-top: 20px
@@ -3130,7 +3129,7 @@ tag($color)
 	margin-bottom: 20px
 
 .add-list
-	+below(1200px)
+	+below(1280px)
 		grid-template-columns repeat(4, 1fr)
 	+below(1024px)
 		grid-template-columns repeat(3, 1fr)
@@ -4276,3 +4275,265 @@ catalog-sort__name
 
 .item-toggle__el--active
 	background: #ededed
+
+//map
+.deliver-list
+	+below(768px)
+		grid-template-columns repeat(1,1fr);
+		margin-bottom: 20px
+	display: grid
+	grid-gap 20px
+	grid-template-columns repeat(3,1fr);
+	margin-bottom: 50px
+.deliver-list__el
+	padding: 25px
+	br(5px)
+	background: white
+	bsh()
+.deliver-list__el--active
+	background: $red
+	.deliver-list__title
+		color white
+.deliver-list__title
+	@extend .type--xl
+	color $red
+	margin-bottom: 15px
+	font-weight: 700
+.deliver-list-wrap
+	fw()
+	f()
+	justify-content: space-between
+	margin-top: 20px
+.deliver-list-col
+	+below(1024px)
+		width: 100%
+	width: 48%
+.deliver-list-col__title
+	+below(1024px)
+		font-size: 14px
+	margin-bottom: 20px
+	color white
+	@extend .type--lg
+.deliver-list-col__text
+	color white
+	margin-bottom: 10px
+	font-size: 12px
+.deliver-list__title-sub
+	margin-bottom: 20px
+	@extend .type--md
+	font-weight: 500
+.deliver-list__title-text
+	line-height: 1.6
+.deliver-map
+	+below(768px)
+		fw()
+	f()
+	justify-content: space-between
+	align-items:stretch
+
+.deliver-map__item
+	+below(768px)
+		width: 100%
+		margin-bottom: 20px
+	width: 66%
+.deliver-map__item-el
+	+below(768px)
+		height: 350px
+	background: #f2f2f2
+	height: 100%
+	br(10px)
+.deliver-map__col
+	+below(768px)
+		width: 100%
+	width: 32%
+	.title--sm
+		margin-bottom: 10px
+
+.deliver-map__col-item
+	margin-bottom: 40px
+	&:last-child
+		margin-bottom: 0px
+	padding-top: 20px
+	border-top 4px solid $red
+	.book-row
+		margin-bottom: 15px
+//.deliver-map__col-item--green
+.deliver-map__text
+	line-height: 1.6
+//map
+
+.deliver-map__phone
+	@extend .type--md
+	margin-top: 20px
+	font-weight: 700
+
+.deliver-payment-wrap
+	display: inline-block
+
+.deliver-payment
+	f()
+	margin-top: 30px
+	border 1px solid $border-color
+	padding: 5px 10px
+	br(10px)
+	background: white
+	.icon
+		size 60px
+		margin-right: 10px
+
+.deliver-note
+	+below(768px)
+		fw()
+	f()
+	justify-content: space-between
+	margin-top: 30px
+.deliver-note__el
+	+below(768px)
+		width: 100%
+		margin-bottom: 20px
+	width: 32%
+	f()
+	padding: 30px 20px
+	background: white
+	br(10px)
+	bsh()
+.deliver-note__icon
+	margin-right: 20px
+	.icon
+		size 60px
+		fill $red
+.deliver-note__text
+	line-height: 1.6
+
+
+.goods
+	+below(640px)
+		fw()
+		margin-bottom: 30px
+	f()
+	justify-content: space-between
+	align-items: flex-start
+	margin-bottom: 100px
+.goods-img
+	+below(1200px)
+		width: calc(100% - 440px)
+	+below(640px)
+		margin-bottom: 20px
+		padding: 40% 10%
+		margin-left: -10px
+		br(0)
+		width calc(100% + 20px)
+	br(20px)
+	bg-full()
+	position: relative
+	width: 60%
+	padding: 20% 10%
+//.item-tag
+//.item-tag__el
+//.item-tag__el--purpur
+//.icon
+//.item-tag__el--fire
+//.item-tag__el--veg
+.goods-cont
+	+below(640px)
+		width: 100%
+		min-width initial
+	min-width 420px
+	width: 37%
+	.soc-row
+		margin-bottom: 10px
+.goods-title
+	@extend .type--xxl
+	font-weight 700
+	line-height: 1.2
+	margin-bottom: 20px
+.goods-descr
+	margin-bottom: 20px
+.goods-add
+	display: grid
+	grid-gap 20px
+	grid-template-columns 1fr 1fr
+	margin-bottom: 20px
+	display: none
+.goods-add__el
+	f()
+	br(20px)
+	cp()
+	padding: 5px 15px
+	border 1px solid $border-color
+	align-items: center
+.goods-add__icon
+	.icon
+		size 26px
+		margin-right: 20px
+.goods-add__text
+	font-weight 700
+
+.goods-consist
+	+below(480px)
+		fw()
+	f()
+.goods-consist__el
+	+below(480px)
+		width: 50%
+	flex(mid)
+	fl()
+	border-right 1px solid #f4f3f3
+	padding: 20px 10px
+	width: 25%
+	&:last-child
+		border 0
+.goods-consist__val
+	color #aaadb2
+	font-size 20px
+	font-weight 700
+.goods-consist__name
+	font-size: 13px
+.goods-cond
+	+below(480px)
+		justify-content: space-between
+	f()
+	margin-bottom: 20px
+.goods-cond__el
+	+below(480px)
+		margin-right: 10px
+	f()
+	align-items: center
+	margin-right: 20px
+.goods-cond__icon
+	.icon
+		size 25px
+		margin-right: 10px
+		fill #aaadb2
+.goods-cond__text
+	+below(480px)
+		font-size: 10px
+.goods-footer
+	+below(480px)
+		fw()
+	flex(between)
+.goods-cost
+	+below(480px)
+		flex(mid)
+		fl()
+		width: 100%
+		margin-bottom: 20px
+
+.goods-cost__val
+	@extend .type--xxl
+	font-weight 700
+	font-size: 32px
+//.goods-cost__sale
+.goods-get
+	+below(480px)
+		width: 100%
+	@extend .btn--md
+	@extend .btn--mark
+	width: 50%
+	up()
+
+.goods-consist-wrap
+	margin: 20px 0
+	background: white
+	br(20px)
+	overflow: hidden
