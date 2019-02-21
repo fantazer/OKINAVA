@@ -347,14 +347,70 @@ mixin footer()
 			//cart === end
 
 			//cart
-			.modal.modal--lg.modal--cart(data-modal="addsale")
+			.modal.modal--addsale(data-modal="addsale")
 				.modal-content
 					.modal-close
 						+icon("close-fat","icon")
 					.modal-title Минимальная сумма заказа 1000 рублей
 					.modal-text Предлагаем вам еще добрать товаров к этой сумме
-					.add-list
+					.addsale-list
 						- for (var i=0;i<5;i++)
 							+item-small()
+			//cart === end
+
+			//login
+			.modal.modal--md(data-modal="login")
+				.modal-content
+					.modal-close
+						+icon("close-fat","icon")
+					.login-drop__head
+						.login-toggle.login-switch.login-toggle--active(data-switch='enter') Вход
+						.login-toggle.login-switch(data-switch='registration') Регистрация
+					//enter form
+					.login-wrap.login-wrap--active(data-cont='enter')
+						form(action="#").login-form
+							input(type="text" placeholder="Электр. почта/Телефон" class="input")
+							input(type="text" placeholder="Пароль" class="input")
+							input(type="submit" value="Войти" class="btn--md btn--mark")
+						.login-remember
+							+checkbox('Запомнить меня')
+						.login-fogot.login-switch(data-switch='fogot') Забыли пароль?
+						.login-soc
+							.login-soc__text Войти с помощью соц. сетей
+							.login-soc-row
+								a(href="#").login-soc-el
+									+icon("vk--color","icon")
+								a(href="#").login-soc-el
+									+icon("facebook--color","icon")
+					//registration form
+					.login-wrap.login-wrap--registration(data-cont='registration')
+						form(action="#").login-form
+							input(type="text" placeholder="Имя" class="input")
+							input(type="text" placeholder="Телефон" class="input")
+							input(type="text" placeholder="E-mail" class="input")
+							input(type="password" placeholder="Пароль" class="input")
+							input(type="password" placeholder="Повторить пароль" class="input")
+							.login-remember
+								+checkbox('Соглашаюсь с условиями обработки персональных данных')
+							input(type="submit" value="Войти" class="btn--md btn--mark")
+						.login-soc
+							.login-soc__text Зарегистрироваться с помощью соц. сетей
+							.login-soc-row
+								a(href="#").login-soc-el
+									+icon("vk--color","icon")
+								a(href="#").login-soc-el
+									+icon("facebook--color","icon")
+					//registration form
+					.login-wrap.login-wrap--registration(data-cont='fogot')
+						form(action="#").login-form
+							input(type="text" placeholder="Электр. почта" class="input")
+							.login-btn-code.login-switch(data-switch='code') Отправить код
+					.login-wrap.login-wrap--registration(data-cont='code')
+						.login-code-text Вам на e-mail/телефон отправлен код подтверждения
+						form(action="#").login-form
+							input(type="text" placeholder="Введите код" class="input")
+							.login-btn-code Подтвердить
+							.login-btn-recode Выслать повторно
+							.login-btn-back.login-switch(data-switch='fogot') Назад к восстановлению
 			//cart === end
 	//block footer end

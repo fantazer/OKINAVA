@@ -102,6 +102,7 @@ body
 	+below(768px)
 		width: 100%
 		box-shadow 0 0 0
+		transition opacity 1s
 	box-shadow 0 2px 4px rgba(0, 0, 0, 0.24)
 	transform translateY(-350%)
 	position: absolute
@@ -114,6 +115,11 @@ body
 .modal--lg
 	max-width 1250px
 	width: 100%
+
+.modal--addsale
+	max-width 768px
+	width: 100%
+
 .modal-content
 	+below(640px)
 		height: 100%
@@ -408,7 +414,6 @@ body
 		padding-right: 30px
 .head-main-wrap
 	+below(768px)
-		height: 50px
 		border-bottom 1px solid $border-color
 		margin-top: 0
 	background: white
@@ -458,7 +463,7 @@ body
 		border-radius 0
 	flex(mid)
 	tr(all)
-	margin-left: auto
+	margin-left: 20px
 	text-decoration: none
 	padding: 5px 20px
 	height: 100%
@@ -490,6 +495,7 @@ body
 		font-size: 10px
 	font-weight:700
 	margin-top: 5px
+	white-space nowrap
 
 .cart-info
 	+below(1200px)
@@ -598,6 +604,7 @@ body
 .login-toggle
 	opacity:.6
 	border-bottom 1px dashed $border-color
+	cp()
 	&:nth-child(1)
 		padding-right: 5px
 		margin-right: 5px
@@ -763,7 +770,8 @@ body
 
 .main-slider
 	overflow: hidden
-	+below(767px)
+	+below(768px)
+		display: none
 		margin-left: -20px
 		width calc(100% + 20px)
 		.slider-control-simple
@@ -771,7 +779,7 @@ body
 .tag
 	+below(767px)
 		justify-content: space-between
-		margin-bottom: 10px
+		margin: 10px 0
 	f()
 	fw()
 	margin: 30px 0
@@ -892,6 +900,7 @@ tag($color)
 		flex-flow row
 		align-items: flex-start
 		margin-left: -10px
+		box-shadow 0 0 0
 	f()
 	fl()
 	transition box-shadow .2s
@@ -3141,13 +3150,28 @@ tag($color)
 	grid-template-columns repeat(5, 1fr)
 	margin-bottom: 50px
 
+.addsale-list
+	+below(768px)
+		grid-template-columns repeat(2, 1fr)
+		margin-bottom: 30px
+	+below(640px)
+		grid-template-columns 1fr
+	display: grid
+	grid-gap 30px
+	grid-template-columns repeat(3, 1fr)
+
+
 .add-list-wrap
 	+below(640px)
 		display: none
 
 .item--small
+	+below(640px)
+		box-shadow none
 	bsh()
 	.item__img
+		+below(640px)
+			padding: 15% 10%
 		height: auto!important
 		padding: 45% 10%
 	.item__title-wrap
@@ -3173,6 +3197,10 @@ tag($color)
 	justify-content: space-between
 	align-items: flex-start
 	margin-bottom: 100px
+
+.modal
+	.basket-wrap
+		margin-bottom: 0
 .basket-list
 	+below(768px)
 		width: 100%
@@ -3854,6 +3882,10 @@ select.select-beauty
 			padding: 0px
 	.basket-el__incr
 		margin-left: 0
+
+.modal--md
+	width: 100%
+	max-width 400px
 
 .basket-cont
 	+below(1024px)
@@ -4537,3 +4569,10 @@ catalog-sort__name
 	background: white
 	br(20px)
 	overflow: hidden
+
+.catalog-filter--main
+	margin-top: 20px
+
+.tag-wrap
+	+below(640px)
+		display: none

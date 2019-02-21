@@ -20,45 +20,50 @@ include block_html/_include.pug
 	.page-content
 
 		.main-cont
+			.catalog-filter.catalog-filter--main
+				.catalog-filter__icon
+					+icon("filter","icon")
+				span Категории
 			//tags
-			.tag
-				.tag__el.tag__el-drop.tag__el--full
-					.tag__el-icon
-						+icon('set-suchi',"icon")
-					.tag__el-text японская кухня
-				.tag__el-sub-wrap
-					.tag__el-sub
-						-
-							var items = [
-								'суши',
-								'сэты',
-								'жаренные роллы',
-								'основные роллы',
-								'острые роллы',
-								'запеченные роллы',
-								'классические роллы'
-								];
-						each item in items
-							a(href="#").tag__el-sub__el #{item}
-				-
-					var items = [
-							{"icon":"sushi","name":"суши","class":"tag__el--red tag__el--hidden"},
-							{"icon":"snack","name":"горячие закуски","class":"tag__el--fiolet tag__el--full"},
-							{"icon":"pizza","name":"пицца","class":"tag__el--purpur tag__el--full"},
-							{"icon":"set","name":"сеты","class":"tag__el--blue tag__el--hidden"},
-							{"icon":"roll","name":"роллы","class":"tag__el--sky tag__el--hidden"},
-							{"icon":"cake","name":"десерты","class":"tag__el--green"},
-							{"icon":"wok","name":"блюда wok","class":"tag__el--grass"},
-							{"icon":"supe","name":"супы","class":"tag__el--yellow"},
-							{"icon":"salad","name":"салаты","class":"tag__el--orange"},
-							{"icon":"drink","name":"напитки","class":"tag__el--rose"},
-							{"icon":"sauce","name":"соусы","class":"tag__el--gray"}
-						];
-				each item in items
-					a(href="#" class="tag__el "+item.class)
+			.tag-wrap
+				.tag
+					.tag__el.tag__el-drop.tag__el--full
 						.tag__el-icon
-							+icon(item.icon,"icon")
-						.tag__el-text #{item.name}
+							+icon('set-suchi',"icon")
+						.tag__el-text японская кухня
+					.tag__el-sub-wrap
+						.tag__el-sub
+							-
+								var items = [
+									'суши',
+									'сэты',
+									'жаренные роллы',
+									'основные роллы',
+									'острые роллы',
+									'запеченные роллы',
+									'классические роллы'
+									];
+							each item in items
+								a(href="#").tag__el-sub__el #{item}
+					-
+						var items = [
+								{"icon":"sushi","name":"суши","class":"tag__el--red tag__el--hidden"},
+								{"icon":"snack","name":"горячие закуски","class":"tag__el--fiolet tag__el--full"},
+								{"icon":"pizza","name":"пицца","class":"tag__el--purpur tag__el--full"},
+								{"icon":"set","name":"сеты","class":"tag__el--blue tag__el--hidden"},
+								{"icon":"roll","name":"роллы","class":"tag__el--sky tag__el--hidden"},
+								{"icon":"cake","name":"десерты","class":"tag__el--green"},
+								{"icon":"wok","name":"блюда wok","class":"tag__el--grass"},
+								{"icon":"supe","name":"супы","class":"tag__el--yellow"},
+								{"icon":"salad","name":"салаты","class":"tag__el--orange"},
+								{"icon":"drink","name":"напитки","class":"tag__el--rose"},
+								{"icon":"sauce","name":"соусы","class":"tag__el--gray"}
+							];
+					each item in items
+						a(href="#" class="tag__el "+item.class)
+							.tag__el-icon
+								+icon(item.icon,"icon")
+							.tag__el-text #{item.name}
 
 
 			//list items

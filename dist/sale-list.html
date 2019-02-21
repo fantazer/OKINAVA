@@ -1967,7 +1967,7 @@
                 </div>
                 <!--cart === end-->
                 <!--cart-->
-                <div class="modal modal--lg modal--cart" data-modal="addsale">
+                <div class="modal modal--addsale" data-modal="addsale">
                     <div class="modal-content">
                         <div class="modal-close">
                             <svg class="icon">
@@ -1976,7 +1976,7 @@
                         </div>
                         <div class="modal-title">Минимальная сумма заказа 1000 рублей</div>
                         <div class="modal-text">Предлагаем вам еще добрать товаров к этой сумме</div>
-                        <div class="add-list">
+                        <div class="addsale-list">
                             <div class="item item--small">
                                 <div class="item-check">
                                     <svg class="icon">
@@ -2252,6 +2252,113 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <!--cart === end-->
+                <!--login-->
+                <div class="modal modal--md" data-modal="login">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close-fat"></use>
+                            </svg>
+                        </div>
+                        <div class="login-drop__head">
+                            <div class="login-toggle login-switch login-toggle--active" data-switch="enter">Вход</div>
+                            <div class="login-toggle login-switch" data-switch="registration">Регистрация</div>
+                        </div>
+                        <!--enter form-->
+                        <div class="login-wrap login-wrap--active" data-cont="enter">
+                            <form class="login-form" action="#">
+                                <input class="input" type="text" placeholder="Электр. почта/Телефон" />
+                                <input class="input" type="text" placeholder="Пароль" />
+                                <input class="btn--md btn--mark" type="submit" value="Войти" />
+                            </form>
+                            <div class="login-remember">
+                                <div class="check-el">
+                                    <label class="style-label style-label--checkbox">
+                                        <input class="sytle-input" type="checkbox" />
+                                        <div class="sytle-input-element">
+                                            <svg class="icon-check">
+                                                <use xlink:href="#checked"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="sytle-input-text">Запомнить меня</div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="login-fogot login-switch" data-switch="fogot">Забыли пароль?</div>
+                            <div class="login-soc">
+                                <div class="login-soc__text">Войти с помощью соц. сетей</div>
+                                <div class="login-soc-row">
+                                    <a class="login-soc-el" href="#">
+                                        <svg class="icon">
+                                            <use xlink:href="#vk--color"></use>
+                                        </svg>
+                                    </a>
+                                    <a class="login-soc-el" href="#">
+                                        <svg class="icon">
+                                            <use xlink:href="#facebook--color"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--registration form-->
+                        <div class="login-wrap login-wrap--registration" data-cont="registration">
+                            <form class="login-form" action="#">
+                                <input class="input" type="text" placeholder="Имя" />
+                                <input class="input" type="text" placeholder="Телефон" />
+                                <input class="input" type="text" placeholder="E-mail" />
+                                <input class="input" type="password" placeholder="Пароль" />
+                                <input class="input" type="password" placeholder="Повторить пароль" />
+                                <div class="login-remember">
+                                    <div class="check-el">
+                                        <label class="style-label style-label--checkbox">
+                                            <input class="sytle-input" type="checkbox" />
+                                            <div class="sytle-input-element">
+                                                <svg class="icon-check">
+                                                    <use xlink:href="#checked"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="sytle-input-text">Соглашаюсь с условиями обработки персональных данных</div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <input class="btn--md btn--mark" type="submit" value="Войти" />
+                            </form>
+                            <div class="login-soc">
+                                <div class="login-soc__text">Зарегистрироваться с помощью соц. сетей</div>
+                                <div class="login-soc-row">
+                                    <a class="login-soc-el" href="#">
+                                        <svg class="icon">
+                                            <use xlink:href="#vk--color"></use>
+                                        </svg>
+                                    </a>
+                                    <a class="login-soc-el" href="#">
+                                        <svg class="icon">
+                                            <use xlink:href="#facebook--color"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--registration form-->
+                        <div class="login-wrap login-wrap--registration" data-cont="fogot">
+                            <form class="login-form" action="#">
+                                <input class="input" type="text" placeholder="Электр. почта" />
+                                <div class="login-btn-code login-switch" data-switch="code">Отправить код</div>
+                            </form>
+                        </div>
+                        <div class="login-wrap login-wrap--registration" data-cont="code">
+                            <div class="login-code-text">Вам на e-mail/телефон отправлен код подтверждения</div>
+                            <form class="login-form" action="#">
+                                <input class="input" type="text" placeholder="Введите код" />
+                                <div class="login-btn-code">Подтвердить</div>
+                                <div class="login-btn-recode">Выслать повторно</div>
+                                <div class="login-btn-back login-switch" data-switch="fogot">Назад к восстановлению</div>
+                            </form>
                         </div>
                     </div>
                 </div>

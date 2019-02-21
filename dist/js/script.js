@@ -601,6 +601,7 @@ $(document).ready(function (){
 
 	$('.catalog-filter').click(function(){
 		$('.catalog-tool').slideToggle();
+		$('.tag-wrap').slideToggle();
 		$(this).toggleClass('catalog-filter--active');
 	});
 	//catalog item toggle===end
