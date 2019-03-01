@@ -338,8 +338,9 @@ gulp.task( 'ftp', function() {
 				host: 'deploys.ru',
 				user: ftpConf.user,
 				password: ftpConf.pass,
-				parallel: 1,
-				maxConnections:1
+				parallel: 3,
+				maxConnections:2,
+				log:ftp.log
 		});
 		var globs = [
 				'dist/**/**/**.*'

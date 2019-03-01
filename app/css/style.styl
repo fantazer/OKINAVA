@@ -922,6 +922,9 @@ tag($color)
 		align-items: flex-start
 		margin-left: -10px
 		box-shadow 0 0 0
+	+below(480px)
+		flex-flow column
+		width calc(100% + 20px)
 	f()
 	fl()
 	bsh()
@@ -974,6 +977,11 @@ tag($color)
 		width: 35%
 		border-radius 0 30px 30px 0
 		min-height 150px
+	+below(480px)
+		padding: 35% 10%
+		width: 100%
+		border-radius 0
+		margin-bottom: 20px
 	bg-full()
 	transition all .2s
 	padding: 30% 10%
@@ -984,9 +992,11 @@ tag($color)
 	+below(640px)
 		width: 65%
 		border 0
-		padding: 0 0 0 10px
+		padding: 0 10px
 		box-shadow 0 0 0
 		background: none
+	+below(480px)
+		width: 100%
 	f()
 	fl()
 	tr(all)
@@ -1033,7 +1043,7 @@ tag($color)
 //.item__weight
 .item__get
 	+below(640px)
-		width: 90px
+		width: 140px
 .item__btn
 	+below(640px)
 		padding: 10px
@@ -1185,6 +1195,7 @@ tag($color)
 	+below(480px)
 		grid-template-columns 1fr
 		margin-bottom: 40px
+		grid-gap 10px
 	display: grid
 	grid-gap 30px
 	grid-template-columns repeat(3,1fr)
@@ -4604,3 +4615,52 @@ catalog-sort__name
 .tag-wrap
 	+below(640px)
 		display: none
+
+.tag-mobile
+	+above(641px)
+		display: none
+	display: grid
+	grid-gap 3px
+	grid-template-columns: 1fr 1fr
+	margin-bottom: 30px
+.tag-mobile__el
+	bg-full()
+	flex(mid)
+	position: relative
+	padding: 26% 10%
+	min-height 150px
+.tag-mobile__filter
+	filter()
+	background: rgba(0, 0, 0, 0.45)
+
+.tag-mobile__title
+	up()
+	flex(mid)
+	position: absolute
+	top 0
+	left 0
+	width: 100%
+	height: 100%
+	color white
+	text-align: center
+	@extend .type--md
+	line-height: 1.4
+	padding: 10px
+.tag-mobile__el--toggle
+	grid-column 1/3
+
+.tag-mobile__drop
+	grid-column 1/3
+
+.tag-mobile__drop
+	display: none
+	.tag-mobile__el
+		padding: 11% 10%
+		margin-bottom: 3px
+		min-height 60px
+
+.tag-mobile-wrap
+	display: none
+
+.irs--flat .irs-from:before, .irs--flat .irs-to:before, .irs--flat .irs-single:before
+	display: none

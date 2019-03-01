@@ -599,11 +599,7 @@ $(document).ready(function (){
 		$(this).addClass('catalog-sort__el--active');
 	});
 
-	$('.catalog-filter').click(function(){
-		$('.catalog-tool').slideToggle();
-		$('.tag-wrap').slideToggle();
-		$(this).toggleClass('catalog-filter--active');
-	});
+
 	//catalog item toggle===end
 
 	//toggle size item
@@ -620,4 +616,15 @@ $(document).ready(function (){
 		scale: 1.05
 	});*/
 	//3d effect===end
+
+	//toggle tags-submenu
+	$('.catalog-filter').click(function(){
+		$('.catalog-tool').slideToggle();
+		$('.tag-mobile-wrap').slideToggle();
+		$(this).toggleClass('catalog-filter--active');
+	});
+	$('.tag-mobile__el--toggle').click(function(){
+		$('.tag-mobile__drop').slideToggle();
+	});
+	//toggle tags-submenu===end
 });

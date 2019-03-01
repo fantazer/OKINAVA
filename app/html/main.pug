@@ -18,12 +18,80 @@ include block_html/_include.pug
 		//	.slider-footer__info за заказы можно получать бонусные баллы
 		//	a(href="#").slider-footer__get узнать подробности
 	.page-content
-
 		.main-cont
 			.catalog-filter.catalog-filter--main
 				.catalog-filter__icon
 					+icon("filter","icon")
 				span Категории
+			//tag-mobile
+			.tag-mobile-wrap
+				.tag-mobile
+					.tag-mobile__el.tag-mobile__el--toggle(style="background-image:url('img/japan.jpg')")
+						.tag-mobile__filter
+						.tag-mobile__title
+							span японская <br> кухня
+					.tag-mobile__drop
+						a(href="#" style="background-image:url('img/sushi.jpg')").tag-mobile__el
+							.tag-mobile__filter
+							.tag-mobile__title
+								span суши
+						a(href="#" style="background-image:url('img/sets.jpg')").tag-mobile__el
+							.tag-mobile__filter
+							.tag-mobile__title
+								span сэты
+						a(href="#" style="background-image:url('img/zhar_rolls.jpg')").tag-mobile__el
+							.tag-mobile__filter
+							.tag-mobile__title
+								span жаренные роллы
+						a(href="#" style="background-image:url('img/osn_rolls.jpg')").tag-mobile__el
+							.tag-mobile__filter
+							.tag-mobile__title
+								span основные роллы
+						a(href="#" style="background-image:url('img/ostr_rolls.jpg')").tag-mobile__el
+							.tag-mobile__filter
+							.tag-mobile__title
+								span острые роллы
+						a(href="#" style="background-image:url('img/zap_rolls.jpg')").tag-mobile__el
+							.tag-mobile__filter
+							.tag-mobile__title
+								span запеченные роллы
+						a(href="#" style="background-image:url('img/classic_rolls.jpg')").tag-mobile__el
+							.tag-mobile__filter
+							.tag-mobile__title
+								span классические роллы
+					a(href="#" style="background-image:url('img/gorjachie.jpg')").tag-mobile__el
+						.tag-mobile__filter
+						.tag-mobile__title
+							span горячие закуски
+					a(href="#" style="background-image:url('img/pizza.jpg')").tag-mobile__el
+						.tag-mobile__filter
+						.tag-mobile__title
+							span пицца
+					a(href="#" style="background-image:url('img/deserts.jpg')").tag-mobile__el
+						.tag-mobile__filter
+						.tag-mobile__title
+							span десерты
+					a(href="#" style="background-image:url('img/wok.jpg')").tag-mobile__el
+						.tag-mobile__filter
+						.tag-mobile__title
+							span wok
+					a(href="#" style="background-image:url('img/soup.jpg')").tag-mobile__el
+						.tag-mobile__filter
+						.tag-mobile__title
+							span супы
+					a(href="#" style="background-image:url('img/salat.jpg')").tag-mobile__el
+						.tag-mobile__filter
+						.tag-mobile__title
+							span салаты
+					a(href="#" style="background-image:url('img/drinks.jpg')").tag-mobile__el
+						.tag-mobile__filter
+						.tag-mobile__title
+							span напитки
+					a(href="#" style="background-image:url('img/souces.jpg')").tag-mobile__el
+						.tag-mobile__filter
+						.tag-mobile__title
+							span соусы
+			//tag-mobile===end
 			//tags
 			.tag-wrap
 				.tag
