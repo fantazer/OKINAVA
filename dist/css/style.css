@@ -2816,6 +2816,7 @@ body {
 }
 @media only screen and (max-width: 480px) {
   .item__img {
+    padding: 35% 10%;
     width: 100%;
     -webkit-border-radius: 0;
             border-radius: 0;
@@ -2931,7 +2932,7 @@ body {
 }
 @media only screen and (max-width: 640px) {
   .item__get {
-    width: 90px;
+    width: 140px;
   }
 }
 .item__btn {
@@ -9475,6 +9476,7 @@ catalog-sort__name span,
 }
 .catalog-filter--main {
   margin-top: 20px;
+  display: none;
 }
 @media only screen and (max-width: 640px) {
   .tag-wrap {
@@ -9559,6 +9561,13 @@ catalog-sort__name span,
   min-height: 60px;
 }
 .tag-mobile-wrap {
+  margin-left: -10px;
+  width: -webkit-calc(100% + 20px);
+  width: calc(100% + 20px);
+}
+.irs--flat .irs-from:before,
+.irs--flat .irs-to:before,
+.irs--flat .irs-single:before {
   display: none;
 }
 @-webkit-keyframes rubberBand {
