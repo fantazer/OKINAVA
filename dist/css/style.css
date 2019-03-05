@@ -2386,8 +2386,6 @@ body {
 }
 .tag__el:hover,
 .tag__el-sub__el:hover {
-  -webkit-animation-name: rubberBand;
-          animation-name: rubberBand;
   -webkit-box-shadow: 0px 10px 10px #c5c2c2;
           box-shadow: 0px 10px 10px #c5c2c2;
 }
