@@ -610,11 +610,11 @@ $(document).ready(function (){
 	//toggle size item ===end
 
 	//3d effect
-	/*$('.item').tilt({
+	$('.item').tilt({
 		maxTilt:25,
 		perspective:1200,
 		scale: 1.05
-	});*/
+	});
 	//3d effect===end
 
 	//toggle tags-submenu
